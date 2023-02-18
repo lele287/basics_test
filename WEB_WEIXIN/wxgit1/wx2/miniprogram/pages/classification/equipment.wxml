@@ -1,0 +1,63 @@
+<view class="sidebar">
+  <van-sticky offset-top="{{textareaHeight}}">
+    <view class="left"  style="{{leftHeight}}">
+      <van-sidebar active-key="{{ equipmentSidebarIndex }}" bind:change="equipmentSidebarChange">
+        <view wx:for="{{equipmentSidebarOptions}}" wx:key="index" class="left_Side">
+          <van-sidebar-item title="{{item.name}}" />
+          <view class="left_badge">{{item.total}}</view>
+        </view>
+      </van-sidebar>
+    </view>
+  </van-sticky>
+
+  <view wx:for="{{equipmentSidebarOptions}}" wx:for-index="sidebarIndex" wx:for-item="items" wx:key="sidebarIndex">
+    <!-- 判断右侧显示内容 -->
+    <view wx:if="{{equipmentSidebarIndex==sidebarIndex}}" class="rigth">
+      <!-- 加载中 -->
+      <van-transition show="{{ equipmentLoading }}" name="slide-down" duration="{{ { enter: 200, leave: 140 } }}">
+        <view class="Loading" wx:if="{{equipmentLoading}}">
+          <van-loading type="spinner" color="#1989fa" />
+        </view>
+      </van-transition>
+      <!-- 判断数据源是否为空 -->
+      <view wx:if="{{equipmentData.length>0}}">
+        <!-- <view wx:if="{{items=='全部'}}"> -->
+        <view class="DeviceInformation" wx:for="{{equipmentData}}" wx:key="index">
+          <view class="ico" data-Sidebar="{{items}}" data-modelid="{{item.EquipmentModelID}}"
+            bindtap="detailsEquipment">
+            <image src="../../images/1.png" class="companyImg" wx:if="{{item.EquipmentTypeName=='无线AP'}}"></image>
+            <image src="../../images/2.png" class="companyImg"
+              wx:if="{{item.EquipmentTypeName=='4G路由器'&&item.EquipmentModelName!='忒易通TET-0001'}}"></image>
+            <image src="../../images/3.png" class="companyImg" wx:if="{{item.EquipmentTypeName=='网关路由器'}}"></image>
+            <image src="../../images/4.png" class="companyImg" wx:if="{{item.EquipmentTypeName=='交换机'}}"></image>
+            <image src="../../images/tuiyitong.png" class="companyImg" wx:if="{{item.EquipmentModelName=='忒易通TET-0001'}}">
+            </image>
+            <image src="https://imgservice.suning.cn/uimg1/b2c/image/X_uafhY-w4ewrqPmyTFemw.jpg_800w_800h_4e" class="companyImg" style="" wx:if="{{item.EquipmentModelName=='ASK-AL00x'}}">
+            </image>
+            <image src="https://2d.zol-img.com.cn/product/207/449/cezqkcqrhOSi.jpg" class="companyImg" style="width: 150rpx;height: 120rpx; margin-top: 15rpx;" wx:if="{{item.EquipmentModelName=='PDVM00'}}">
+            </image>
+            <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1821276576,833899051&fm=224&gp=0.jpg" class="companyImg" wx:if="{{item.EquipmentModelName=='Redmi Note9'}}">
+            </image>
+          </view>
+          <view class="briefIntroduction">
+            <view>
+              <text class="companyName">型号：{{item.EquipmentModelName}}</text>
+            </view>
+            <view>
+              <text class="companyType">在线数量：{{item.OnlineCount}}</text>
+            </view>
+            <view>
+              <text class="companyType">离线数量：{{item.OfflineCount}}</text>
+            </view>
+            <view>
+              <text class="companyType">备机数量：{{item.BakCount}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else class="EmptyState">
+        <van-empty class="custom-image" image="/images/icon/EmptyState.png" description="暂无数据" />
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,59 @@
+.bule {
+  background-color: #7fbaf5;
+}
+
+
+.grey {
+  background-color: #cdd0cd;
+}
+
+
+.green {
+  background-color: #9cf7a7;
+}
+
+
+
+.label {
+  width: 110rpx;
+  font-size: 26rpx;
+  margin: 2rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 15rpx;
+  float: right;
+  display: inline-block;
+}
+.card {
+  width: 95%;
+  height: 166rpx;
+  background-color: #f0ffff;
+  margin: auto;
+  margin-top: 20rpx;
+  padding: 10rpx;
+}
+
+.green {
+  background-color: #9cf7a7;
+  
+  font-weight: 500;
+}
+
+
+.red {
+  background-color: #f8c9cf;
+  
+  font-weight: 500;
+}
+
+
+.pink {
+  background-color: #FFCC33;
+  
+  font-weight: 500;
+}
+
+.lv{
+  background-color: #C7E8F5;
+  font-weight: 500;
+ }

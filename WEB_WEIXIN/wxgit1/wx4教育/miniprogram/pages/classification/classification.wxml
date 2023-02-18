@@ -1,0 +1,78 @@
+<!-- <view class="subject">
+  搜索
+  <view>
+    <van-search value="{{ inputVal }}" label="" placeholder="请输入搜索关键词" shape="round"></van-search>
+  </view>
+  顶部导航栏
+  <van-tabs sticky active="{{ activeTab }}" bind:change="onChangeTab" color='#1989fa'>
+    侧边栏
+    <van-tab title="">
+      <include src="company.wxml"></include>
+    </van-tab>
+    <van-tab title="">
+      <include src="store.wxml"></include>
+    </van-tab>
+    <van-tab title="">
+      <include src="equipment.wxml"></include>
+    </van-tab>
+    <van-tab title="">
+      <include src="card.wxml"></include>
+    </van-tab>
+  </van-tabs>
+</view> -->
+
+<view class="subject">
+  <view>
+    <van-search value="{{ inputVal }}" label="" placeholder="请输入搜索关键词" shape="round"></van-search>
+  </view>
+  <!-- 顶部 -->
+  <view class="top">
+    <view class="topImg">
+      <image data-index="0" bindtap="onSwitchTab"
+        src="https://tenfei04.cfp.cn/creative/vcg/veer/800water/veer-107987698.jpg"
+        class="TabImg {{activeTab==0?'Select':''}}"></image>
+      <view class="topText {{activeTab==0?'SelectText':''}}">
+        <text>计算机类</text>
+      </view>
+    </view>
+    <view class="topImg">
+      <image data-index="1" bindtap="onSwitchTab"
+        src="https://alifei01.cfp.cn/creative/vcg/veer/800water/veer-309773630.jpg"
+        class="TabImg {{activeTab==1?'Select':''}}"></image>
+      <view class="topText {{activeTab==1?'SelectText':''}}">
+        <text>财会类</text>
+      </view>
+    </view>
+    <view class="topImg">
+      <image data-index="2" bindtap="onSwitchTab"
+        src="https://tenfei04.cfp.cn/creative/vcg/veer/800water/veer-133226808.jpg"
+        class="TabImg {{activeTab==2?'Select':''}}"></image>
+      <view class="topText {{activeTab==2?'SelectText':''}}">
+        <text>学历</text>
+      </view>
+    </view>
+    <view class="topImg">
+      <image data-index="3" bindtap="onSwitchTab"
+        src="https://tenfei05.cfp.cn/creative/vcg/veer/800water/veer-304777039.jpg"
+        class="TabImg {{activeTab==3?'Select':''}}"></image>
+      <view class="topText {{activeTab==3?'SelectText':''}}">
+        <text>其他</text>
+      </view>
+    </view>
+  </view>
+  <!-- 侧边插件 -->
+  <view class="swiperContent">
+    <view wx:if="{{activeTab==0}}">
+      <include src="company.wxml"></include>
+    </view>
+    <view wx:if="{{activeTab==1}}">
+      <include src="store.wxml"></include>
+    </view>
+    <view wx:if="{{activeTab==2}}">
+      <include src="equipment.wxml"></include>
+    </view>
+    <view wx:if="{{activeTab==3}}">
+      <include src="card.wxml"></include>
+    </view>
+  </view>
+</view>

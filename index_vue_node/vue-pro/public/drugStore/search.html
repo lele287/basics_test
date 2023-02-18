@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>药房页面-搜索</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- 引入我们初始化样式文件 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+<script>
+    function toShopping() {
+        top.location.href = "../shopping.html"
+
+    }
+</script>
+
+<body>
+    <article>
+        <div class="article-top">
+            <a href="../index.html"> <img src="../images/logo2.jpg" alt=""></a>
+            <div class="search">
+                <input style="color: #555;" type="search" id="txtsearch" placeholder="搜索本店商品">
+                <input type="button" id="btnsearch" value="搜索" onclick="query()">
+            </div>
+            <div class="article-shopping">
+                <img src="../images/gwc.png" alt="">
+                <span class="article-shopping-span">购物车</span>
+
+            </div>
+            <div class="erweima">
+                <span>手机窝窝</span>
+                <img src="../images/ewm.png" alt="">
+                <i class="erweima-btn">×</i>
+            </div>
+        </div>
+    </article>
+
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<view class="subject">
+  <view class="container" wx:if="{{!readOnly}}">
+    <view class="titleTips">当前门店</view>
+    <view bindtap="onSwitch" class="ScanCodeContainer">
+      <image src="../../images/switch.png" alt="" class="switch_img"></image>
+      <text>{{optionsData.ShopName}}</text>
+    </view>
+  </view>
+
+
+  <!--客户 弹出层 -->
+  <view>
+    <!-- 弹出层 -->
+    <van-dialog show="{{ SignalState }}" title="请选择设备" use-slot show-cancel-button bind:close="onSignalHide"
+      bind:confirm="SignalYes" confirm-button-color="#40A9FF">
+      <van-picker columns="{{ SignalData }}" bind:change="onSignal" />
+    </van-dialog>
+  </view>
+
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}">
+    <!-- 加载中 -->
+    <van-transition show="{{ SignalLoading }}" name="fade-down">
+      <view class="Loading" wx:if="{{SignalLoading}}">
+        <van-loading type="spinner" color="#1989fa" />
+      </view>
+    </van-transition>
+    <block wx:if="{{signalData.length!=0}}">
+      <block wx:for="{{signalData}}" wx:key="index">
+        <van-collapse-item title="{{index==0?'主卡':''}}{{index==1?'副卡':''}}{{index==2?'三卡':''}}" name="{{index}}"
+          border="{{false}}" wx:if="{{item.iccid!==''}}">
+          <view class="InformationBorder">
+            <view class="row">
+              <view class="tit">卡号</view>
+              <view class="Val">{{item.iccid}}</view>
+            </view>
+            <view class="row">
+              <view class="tit">类型</view>
+              <view class="Val">{{item.nettype}}{{item.netType}}</view>
+            </view>
+            <view class="row">
+              <view class="tit">信号值</view>
+              <view class="Val">{{item.single}}{{item.signal}}</view>
+            </view>
+          </view>
+        </van-collapse-item>
+      </block>
+      <view class="button_Center">
+        <van-button type="primary" round color="#1989fa" size="large" bindtap="whetherConfirm">
+          保存
+        </van-button>
+      </view>
+    </block>
+
+  </van-collapse>
+  <view wx:if="{{signalData.length==0}}">
+    <van-empty image="/images/icon/EmptyState.png" description="暂无信号信息" />
+  </view>
+</view>
+
+
+<van-dialog id="van-dialog" bind:confirm="ReplacementEquipment" confirm-button-color="#40A9FF" />

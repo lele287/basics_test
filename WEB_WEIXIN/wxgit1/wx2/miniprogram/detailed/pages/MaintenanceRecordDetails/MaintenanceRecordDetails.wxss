@@ -1,0 +1,32 @@
+
+.InformationPadding{
+  padding: 0 40rpx;
+}
+
+/* 时间轴 */
+.container{
+  display: flex;
+}
+.container>view:nth-child(1){
+  flex: 1;
+}
+.container>view:nth-child(2){
+  flex: 3;
+}
+.time{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.time>view{
+  color: #969799;
+  font-size: 24rpx;
+}
+.repairProgress{
+  margin-top: 30rpx;
+  font-size: 30rpx;
+}
+
+.van-step__title{
+  font-size: 24rpx;
+}

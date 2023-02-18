@@ -1,0 +1,22 @@
+/* pages/holdAll/holdAll.wxss */
+.upDown{
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 20rpx 0;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.whole{
+  border: 1px solid #f8f9fa;
+}
+.upDownRigth>image{
+  width:50rpx;
+  height: 50rpx;
+}
+.GonggeContainer{
+  margin: 40rpx 0;
+}
+.GonggeBorder{
+  border: 1px solid #f8f9fa;
+}

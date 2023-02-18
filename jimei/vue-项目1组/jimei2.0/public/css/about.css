@@ -1,0 +1,119 @@
+#main {
+  width: 100%;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+#bs-example-navbar-collapse-1{
+  background-color: transparent;
+ 
+}
+#bs-example-navbar-collapse-1{
+  background-color:transparent;
+}
+
+.navbar{
+  border: none;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a{
+  color:#fff;
+}
+#img{
+  width: 100%;
+}
+#img img{
+  width: 100%;
+}
+
+#JiMei{
+  width: 90.5px;
+  position: fixed;
+  top: 0;
+  left: 48%;
+  font-size: 40px;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.JiMei{
+  transition: .7s ease-out;
+}
+.top_head{
+  width: 100%;
+  top: 0px;
+  position: absolute;
+  opacity: 0;
+  z-index: 20;
+}
+.fixed {
+  width: 100%;
+  height: 50px;
+  top: 0;
+  transition: .7s ease-in;
+  position: fixed;
+  z-index: 20;
+}
+
+.contain{
+  height: 300px;
+}
+.about{
+  display: block;
+  text-align: center;
+  font-size: 33px;
+  line-height: 80px;
+  font-weight: 700px;
+}
+.about_2{
+  text-indent: 2em;
+  line-height: 40px;
+  display: block;
+  font-size: 23px;
+}
+#footer {
+  height: 150px;
+  margin-top: 150px;
+  bottom: 0;
+  background-color: #333;
+  color: #ccc;
+}
+#footer_main {
+  width: 1190px;
+  height: 150px;
+  margin: 0 auto;
+}
+#footer-left,#footer-center,#footer-right{
+  width: 330px;
+  height: 100px;
+  float: left;
+  margin: 15px 32px 5px;
+  line-height: 30px;
+  font-size: 15px;
+}
+#footer-center{
+  position: relative;
+}
+
+#footer-center-pic{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  left:120px;
+  background:url(../images/erweima.jpg);
+  background-size: 100% 100%;
+}
+#footer-bottom{
+  width: 1190px;
+  height: 25px;
+  float: left;
+  text-align: center;
+}
+#footer a,#footer span{
+  font-size: 15px;
+  color: #ccc;
+  margin-left: 40px;
+}

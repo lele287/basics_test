@@ -1,0 +1,36 @@
+/* pages/delete/delete.wxss */
+page{
+  background-color:#fff;
+}
+.goodbutton {
+  width: 90%;
+  font-size:14px;
+  background-color: #2d68f4!important;
+  color: #fff;
+  border: 0;
+  margin-top: 35px;
+}
+ 
+/* 按下变颜色 */
+.hover {
+  background:  rgb(236, 179, 156);
+}
+.display{
+  display:flex;
+  flex-direction:row;
+  border:1rpx solid #b1b1b1;
+  border-radius:5rpx;
+  width:90%;
+  margin:30rpx auto 30rpx;
+  padding:15rpx 0;
+  font-size:32rpx;
+  justify-content:space-around;
+
+}
+.euipementBetail{
+
+}
+.lable{
+   /*margin-left: 37.5rpx;*/
+   /*font-weight: 700;*/
+ }

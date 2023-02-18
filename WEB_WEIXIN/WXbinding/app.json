@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/singleCard/singleCard",
+    "pages/role/role",
+    "pages/uploadPictures/uploadPictures",
+    "pages/shop/shop",
+    "pages/currentsign/currentsign",
+    "pages/install/install",
+    "pages/apDetail/apDetail",
+    "pages/wifiTest/wifiTest",
+    "pages/change/change",
+    "pages/update/update",
+    "pages/query/query",
+    "pages/client/client",
+    "pages/testlog/testlog",
+    "pages/step/step",
+    "pages/logs/logs",
+    "pages/testlogdetail/testlogdetail",
+    "pages/shoplog/shoplog",
+    "pages/systemlog/systemlog",
+    "pages/service/service",
+    "pages/delete/delete",
+    "pages/jumpUp/jumpUp",
+    "pages/installAndDistribute/installAndDistribute"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4876fd",
+    "navigationBarTitleText": "苏州群睿",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

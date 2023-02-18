@@ -1,0 +1,46 @@
+<view class="subject">
+  <van-sticky>
+    <van-cell-group border="{{ false }}">
+      <!--客户 弹出层 -->
+      <view>
+        <van-cell bind:click="onCompanyShow" is-link title="公司" value="{{CompanyVal}}" />
+        <!-- 弹出层 -->
+        <van-dialog show="{{ CompanyState }}" title="请选择公司" use-slot show-cancel-button bind:close="onCompanyHide"
+          bind:confirm="CompanyYes" confirm-button-color="#40A9FF">
+          <!-- <van-picker columns="{{ CompanyData }}" default-index="{{ myDefaultIndex }}" bind:change="onCompany" class="picker1" /> -->
+          <van-picker columns="{{ CompanyData }}" bind:change="onCompany" />
+        </van-dialog>
+      </view>
+
+      <van-field model:value="{{ keyword }}" label="查找门店" placeholder="请输入内容" use-button-slot>
+        <van-button slot="button" size="small" type="primary" color="#0268ff" bindtap="onSearchBlur">查找
+        </van-button>
+      </van-field>
+    </van-cell-group>
+  </van-sticky>
+  <view class="DeviceInformation" wx:for="{{ShopData}}" wx:key="index">
+    <view class="briefIntroductions" data-storeChoice="{{item}}" bindtap="detailsStore" wx:if="{{ShopData.length>0}}">
+      <view>
+        <text class="companyName">{{item.ShopCode}}_{{item.ShopName}}</text>
+      </view>
+      <view>
+        <text class="companyAttribute">网络类型：{{item.NetType}}</text>
+      </view>
+      <view>
+        <text class="companyType">{{item.ChargeName}}_{{item.ChargePhone}}</text>
+      </view>
+      <view class="fsize">
+        <text class="companyAddress">{{item.ShopAddress}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 加载中 -->
+  <van-transition show="{{ shopLoading }}" name="fade-down">
+    <view class="Loading" wx:if="{{shopLoading}}">
+      <van-loading type="spinner" color="#1989fa" size="40rpx">加载中...</van-loading>
+    </view>
+  </van-transition>
+  <view wx:if="{{ShopData.length==0}}" class="custom-image">
+    <van-empty image="/images/icon/EmptyState.png" description="暂无数据" />
+  </view>
+</view>

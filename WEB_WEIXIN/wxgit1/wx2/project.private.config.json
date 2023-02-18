@@ -1,0 +1,36 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "detailed/pages/ContinueOrSignout/ContinueOrSignout",
+          "pathName": "detailed/pages/ContinueOrSignout/ContinueOrSignout",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "detailed/pages/FamilyMartIp/FamilyMartIp",
+          "pathName": "detailed/pages/FamilyMartIp/FamilyMartIp",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "detailed/pages/SeeFlow/SeeFlow",
+          "pathName": "detailed/pages/SeeFlow/SeeFlow",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

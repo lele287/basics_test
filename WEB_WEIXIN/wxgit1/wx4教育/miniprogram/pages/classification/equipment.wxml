@@ -1,0 +1,12 @@
+<view class="sidebar">
+  <view class="left">
+    <van-sidebar active-key="{{ company }}" bind:change="onCompany" >
+      <van-sidebar-item title="专升本" />
+      <van-sidebar-item title="高升专" />
+      <van-sidebar-item title="考研" />
+    </van-sidebar>
+  </view>
+  <view class="rigth">
+    <text>内容区域：{{company+1}}</text>
+  </view>
+</view>

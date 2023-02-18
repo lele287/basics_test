@@ -1,0 +1,308 @@
+#body {
+    width: 205px;
+    height: 650px;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    margin-left: 35px;
+    top: 0px;
+}
+
+#body .gn {
+    font-size: 20px;
+}
+
+#body a {
+    color: #6c6c6c;
+}
+
+#body dd {
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#body dd:nth-child(1) {
+    font-size: 24px;
+}
+
+#body dd:hover {
+    background: rgb(76, 212, 166);
+}
+
+#body dd:nth-child(1):hover {
+    background-color: #fff;
+}
+
+#body dd:hover a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#body1 {
+    width: 1170px;
+    height: 100%;
+    margin: 30px auto;
+    margin-top: 50px;
+    /* background-color: #ff0;   */
+    position: relative;
+    /* background-color: #fafafa; */
+}
+
+.navbar {
+    border: none;
+    margin-bottom: 0px;
+    background-color: #333;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #333;
+}
+
+.navbar li:hover {
+    background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li:hover>a {
+    color: #333;
+}
+
+a {
+    font-size: 18px;
+}
+
+main {
+    margin-left: 270px;
+    width: 800px;
+    /* box-shadow: 1px 2px 5px rgb(72, 212, 166); */
+    overflow: hidden;
+    background-color: #fff;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 22px;
+}
+
+h3 {
+    position: absolute;
+    top: 62px;
+}
+
+table {
+    width: 740px;
+    margin: 0px auto;
+}
+
+main table tr {
+    height: 30px;
+}
+
+table tr td:nth-child(1) {
+    padding: 0 20px;
+    text-align: right;
+}
+
+input {
+    width: 400px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.addressContent span {
+    display:block;
+}
+input[type='file'] {
+    display: none;
+}
+
+.cityWhere {
+    width: 290px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.schoolName {
+    width: 290px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+textarea {
+    max-width: 600px;
+    min-width: 600px;
+    min-height: 77px;
+    max-height: 150px;
+    overflow: hidden;
+    /* resize: none; */
+}
+
+input[type='button'] {
+    border: 0;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 2px;
+    margin: 10px 680px;
+    background-color: rgb(72, 212, 166);
+}
+
+.btnAddress {
+    width: 180px;
+    height: 30px;
+    margin-left: 153px;
+    /* border: 1px solid #00f; */
+}
+
+[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+}
+
+.next-table-ul li+li {
+    text-align: center;
+    border-left: 1px solid #fff;
+}
+
+.upload {
+    width: 100px;
+    height: 100px;
+    border: 1px dashed #ccc;
+    background-color: #FCFCFC;
+}
+
+.upload img {
+    margin: 30px;
+    width: 100px;
+    height: 100px;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+.next-table {
+    width: 800px;
+    height: 600px;
+    background-color: #fff;
+    /* border: 1px solid #f00; */
+    margin-top: 10px;
+    margin-left: 270px;
+    /* float: left; */
+}
+
+.next-table ul {
+    width: 800px;
+    /* line-height: 30px; */
+    /* background-color: rgb(230, 228, 228); */
+}
+
+.next-table ul li {
+    float: left;
+}
+
+.next-table-ul li {
+    width: 200px;
+    text-align: center;
+}
+
+.addressContent li {
+    line-height: 65px;
+    height: 65px;
+    width: 800px;
+}
+
+.addressContent li span {
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+.addressContent li span:nth-child(5) {
+    width: 80px;
+}
+
+.addressContent li span:last-of-type {
+    display: inline-block;
+    width: 60px;
+}
+.addressContent li span input:nth-child(1){
+    width: 100px;
+    text-align: center;
+}
+.ad {
+    width: 1190px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.ad img {
+    width: 1190px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#footer {
+    height: 150px;
+    margin-top: 150px;
+    bottom: 0;
+    background-color: #333;
+    color: #ccc;
+}
+
+#footer_main {
+    width: 1190px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#footer-left,
+#footer-center,
+#footer-right {
+    width: 330px;
+    height: 100px;
+    float: left;
+    margin: 15px 30px 5px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+#footer-center {
+    position: relative;
+}
+
+#footer-center-pic {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 120px;
+    background: url(../images/erweima.jpg);
+    background-size: 100% 100%;
+}
+
+#footer-bottom {
+    width: 1190px;
+    height: 25px;
+    float: left;
+    text-align: center;
+}
+
+#footer a,
+#footer span {
+    font-size: 15px;
+    color: #ccc;
+    margin-left: 40px;
+}

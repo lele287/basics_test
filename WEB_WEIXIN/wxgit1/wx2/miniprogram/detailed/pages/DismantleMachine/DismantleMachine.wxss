@@ -1,0 +1,61 @@
+.euipementBetail {
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+  margin-top: 10rpx;
+  padding: 16rpx;
+  display: flex;
+}
+
+.euipementBetail_Son{
+  height: 50rpx;
+  line-height: 50rpx;
+  flex: 1;
+  text-align: left;
+}
+
+.euipementBetail_Son:nth-child(3){
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.delete {
+  font-size: 46rpx;
+}
+
+
+.van-cell__title,
+.van-cell__value {
+  height: 80rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+
+.result {
+  margin-bottom: 20rpx;
+  padding-left: 34rpx;
+  color: #9a9ea5;
+}
+.container{
+  margin: 50rpx 0;
+}
+.ScanCodeContainer {
+  margin: 30rpx 0;
+  display: flex;
+  justify-content: center;
+}
+
+.ScanCode {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+
+.switch_img {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.information{
+  margin-bottom: 100rpx;
+}

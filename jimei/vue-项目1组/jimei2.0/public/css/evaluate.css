@@ -1,0 +1,195 @@
+a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+a:link {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: green;
+}
+
+.navbar {
+    border: none;
+    margin-bottom: 0px;
+    background-color: #333;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #333;
+}
+
+.navbar li:hover {
+    background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li:hover>a {
+    color: #333;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+.main {
+    width: 1170px;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    margin: 30px 0 40px;
+}
+
+.eval {
+    width: 1000px;
+    margin: 30px auto 100px;
+    border: 1px solid rgb(72, 212, 166);
+}
+
+form {
+    width: 800px;
+    margin: 50px auto;
+}
+
+form .img {
+    float: left;
+}
+
+form .img img {
+    width: 150px;
+    height: 150px;
+}
+
+form .title {
+    float: right;
+    width: 600px;
+    font-size: 24px;
+}
+
+form .title span {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+form .title span:nth-child(5) {
+    font-size: 20px;
+}
+
+form .title span:nth-child(3) {
+    font-size: 20px;
+    color: #f00;
+}
+
+form .grade {
+    clear: both;
+    padding: 30px;
+    font-size: 20px;
+}
+
+form .grade span {
+    margin-right: 40px;
+}
+
+form .describe textarea {
+    min-width: 800px;
+    max-width: 800px;
+    min-height: 300px;
+    max-height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    overflow: hidden;
+}
+
+.submitbtn {
+    display: block;
+    border: 0;
+    width: 90px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px auto;
+    background-color: rgb(72, 212, 166);
+    font-size: 18px;
+    color: #fff;
+}
+
+.ad {
+    width: 1190px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.ad img {
+    width: 1190px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#footer {
+    height: 150px;
+    /* margin-top: 150px; */
+    bottom: 0;
+    background-color: #333;
+    color: #ccc;
+}
+
+#footer_main {
+    width: 1190px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#footer-left,
+#footer-center,
+#footer-right {
+    width: 330px;
+    height: 100px;
+    float: left;
+    margin: 15px 30px 5px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+#footer-center {
+    position: relative;
+}
+
+#footer-center-pic {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 120px;
+    background: url(../images/erweima.jpg);
+    background-size: 100% 100%;
+}
+
+#footer-bottom {
+    width: 1190px;
+    height: 25px;
+    float: left;
+    text-align: center;
+}
+
+#footer a,
+#footer span {
+    font-size: 15px;
+    color: #ccc;
+    margin-left: 40px;
+}

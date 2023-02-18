@@ -1,0 +1,25 @@
+/* pages/NewSite/NewSite.wxss */
+.Tipss{
+  text-align:center;
+  padding: 40rpx 0;
+}
+/* .van-cell__value{
+  text-align:left !important;
+  position: relative;
+  left: -100rpx;
+} */
+.Marked{
+  color: #f00;
+  position: relative;
+  left: 10rpx;
+  top: 60rpx;
+  z-index: 1;
+}
+.MarkedHidden{
+  visibility:hidden;
+}
+.dlico{
+  font-size: 40rpx;
+  position: relative;
+  top: 8rpx;
+}

@@ -1,0 +1,84 @@
+<view class="weui-cells__title">选择</view>
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">设备信息：</view>
+        </view>
+        <view class="weui-cell__bd">
+            <picker bindchange="bindCountryChange" value="{{countryIndex1}}" range="{{countries1}}">
+                <view class="weui-select weui-select_in-select-after">
+                    {{countries1[countryIndex1]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">故障分类：</view>
+        </view>
+        <view class="weui-cell__bd">
+            <picker bindchange="bindCountryChange2" value="{{countryIndex2}}" range="{{countries2}}">
+                <view class="weui-select weui-select_in-select-after">
+                    {{countries2[countryIndex2]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">故障问题：</view>
+        </view>
+        <view class="weui-cell__bd">
+            <picker bindchange="bindCountryChange3" value="{{countryIndex3}}" range="{{countries3}}">
+                <view class="weui-select weui-select_in-select-after">
+                    {{countries3[countryIndex3]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+</view>
+<view>
+    <mp-cell prop="qq" title="报修人：" ext-class="">
+        <input bindinput="formInputChange" data-field="administrators" class="weui-input" placeholder="请输入报修人" value="管理员" />
+    </mp-cell>
+</view>
+<view>
+    <mp-cell prop="qq" title="备注：" ext-class="">
+        <input bindinput="remarks" data-field="administrators" class="weui-input" placeholder="请填写备注" />
+    </mp-cell>
+</view>
+<view class="weui-cells__title">描述</view>
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+        <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="请输入描述信息" style="height: 3.3em" />
+            <view class="weui-textarea-counter">0/200</view>
+        </view>
+    </view>
+</view>
+<view class="body-view">
+    <text>是否派遣员工：</text>
+    <switch checked="{{switch1Checked}}" bindchange="switch1Change" />
+</view>
+<view wx:if="{{switch1Checked}}">
+    
+
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">服务商：</view>
+        </view>
+        <view class="weui-cell__bd">
+            <picker bindchange="bindCountryChange4" value="{{countryIndex4}}" range="{{countries4}}">
+                <view class="weui-select weui-select_in-select-after">
+                    {{countries4[countryIndex4]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+</view>
+</view>

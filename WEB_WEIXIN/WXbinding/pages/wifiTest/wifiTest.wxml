@@ -1,0 +1,13 @@
+<!--pages/wifiTest/wifiTest.wxml-->
+<view class="step">
+<zan-steps type="horizon" steps="{{steps}}"></zan-steps>
+</view>
+<view class="content">
+       <view class="content-font">
+        <zan-steps type="vertical" steps="{{step}}"></zan-steps>
+       </view>
+</view>
+           <!--按钮-->
+<view class="loginBtnView">
+      <button class="loginBtn" type="primary" bindtap="isConnected">下一步</button>
+</view>

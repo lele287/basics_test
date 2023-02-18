@@ -1,0 +1,88 @@
+<!--pages/holdAll/holdAll.wxml-->
+<view class="subject">
+  <!-- 宫格 -->
+  <view class="GonggeContainer">
+    <view class="upDown">
+      <view>自定义常用功能</view>
+      <view class="upDownRigth" bindtap="functionSwitch">
+        <image src="../../images/icon/FunctionSetting.png"></image>
+      </view>
+    </view>
+    <view class="GonggeBorder">
+      <van-grid column-num="4" border='{{fales}}'>
+        <block wx:for="{{SwitchInformation}}" wx:key="index" wx:if="{{item.SwitchState}}">
+          <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}?url={{item.parameterUrl}}"
+            text="{{item.tit}}" wx:if="{{item.parameterUrl}}" />
+          <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}" text="{{item.tit}}"
+            wx:if="{{!item.parameterUrl}}" />
+        </block>
+      </van-grid>
+    </view>
+  </view>
+  <!-- 宫格 -->
+  <view>
+    <!-- <view class="upDown">全部功能</view> -->
+    <view>
+      <view class="upDown">站点类</view>
+      <view class="GonggeBorder">
+        <van-grid column-num="4" border='{{fales}}'>
+          <block wx:for="{{siteClass}}" wx:key="index">
+            <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}?url={{item.parameterUrl}}"
+              text="{{item.tit}}" wx:if="{{item.parameterUrl}}" />
+            <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}" text="{{item.tit}}"
+              wx:if="{{!item.parameterUrl}}" />
+          </block>
+        </van-grid>
+      </view>
+    </view>
+    <view>
+      <view class="upDown">设备类</view>
+      <view class="GonggeBorder">
+        <van-grid column-num="4" border='{{fales}}'>
+          <block wx:for="{{equipmentClass}}" wx:key="index">
+            <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}?url={{item.parameterUrl}}"
+              text="{{item.tit}}" wx:if="{{item.parameterUrl}}" />
+            <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}" text="{{item.tit}}"
+              wx:if="{{!item.parameterUrl}}" />
+          </block>
+        </van-grid>
+      </view>
+    </view>
+    <view>
+      <view class="upDown">查询类</view>
+      <view class="GonggeBorder">
+        <van-grid column-num="4" border='{{fales}}'>
+          <block wx:for="{{queryClass}}" wx:key="index">
+            <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}?url={{item.parameterUrl}}"
+              text="{{item.tit}}" wx:if="{{item.parameterUrl}}" />
+            <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}" text="{{item.tit}}"
+              wx:if="{{!item.parameterUrl}}" />
+          </block>
+        </van-grid>
+      </view>
+    </view>
+    <view>
+      <view class="upDown">维修类</view>
+      <view class="GonggeBorder">
+        <van-grid column-num="4" border='{{fales}}'>
+          <block wx:for="{{repairClass}}" wx:key="index">
+            <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}?url={{item.parameterUrl}}"
+              text="{{item.tit}}" wx:if="{{item.parameterUrl}}" />
+            <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}" text="{{item.tit}}"
+              wx:if="{{!item.parameterUrl}}" />
+          </block>
+        </van-grid>
+      </view>
+    </view>
+    <!-- <view class="GonggeBorder">
+      <van-grid column-num="4" border='{{fales}}'>
+        <block wx:for="{{SwitchInformation}}" wx:key="index">
+          <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}?url={{item.parameterUrl}}"
+            text="{{item.tit}}" wx:if="{{item.parameterUrl}}" />
+          <van-grid-item icon="{{item.icon}}" link-type="navigateTo" url="{{item.url}}" text="{{item.tit}}"
+            wx:if="{{!item.parameterUrl}}" />
+        </block>
+      </van-grid>
+    </view> -->
+  </view>
+</view>

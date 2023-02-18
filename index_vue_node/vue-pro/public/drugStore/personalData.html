@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <!-- 引入我们初始化样式文件 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- <link rel="stylesheet" href="../css/header_nav.css"> -->
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/personalData.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/personalData.js"></script>
+    <script src="../js/judge.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-nav">
+            <ul class="left">
+                <li><a href="#">欢迎来到康乐窝窝！</a></li>
+                <li><a href='../index.html'>首页</a></li>
+                <div class="wdl">
+                    <li><a href='./login.html'>请登录</a></li>
+                    <li><a href='../register.html'>免费注册</a></li>
+                </div>
+                <div class="ydl">
+                    <li><a href=""></a></li>
+                    <li><a href="">退出登录</a></li>
+                </div>
+            </ul>
+            <ul class="right">
+                <li><a href="">手机版</a></li>
+                <li>
+                    <img class="header-nav-img" src="../images/gwc.png" alt="">
+                    <a href='../shopping.html'>购物车</a>
+                </li>
+                <li><a href='../drugStore/personalData.html'>我的窝窝</a></li>
+
+            </ul>
+        </div>
+    </header>
+    <main>
+        <article>
+            <div class="article-top">
+                <a href="../index.html"> <img src="../images/logo2.jpg" alt=""></a>
+                <div class="search">
+                    <input style="color: #555;" type="search" id="txtsearch" placeholder="搜索本店商品" name="name" value="">
+                    <input type="button" id="btnsearch" value="搜索" name="sou" onclick="query()">
+                </div>
+                <div class="article-shopping">
+                    <img src="../images/gwc.png" alt="">
+                    <span class="article-shopping-span">购物车</span>
+
+                </div>
+                <div class="erweima">
+                    <span>手机窝窝</span>
+                    <img src="../images/ewm.png" alt="">
+                    <i class="erweima-btn">×</i>
+                </div>
+            </div>
+        </article>
+        <div class="section">
+            <div class="aside">
+                <ul>
+                    <li class="li1">订单中心</li>
+                    <li class="lis_3"><a href="#">我的订单</a></li>
+                    <li class="lis_4"><a href="#">我的售后</a></li>
+                    <li></li>
+                    <li class="li1">个人信息</li>
+                    <li class="lis_1"><a href="#">个人资料</a></li>
+                    <li><a href="#">我的优惠卷</a></li>
+                    <li class="lis_2"><a href="#">收货地址</a></li>
+                </ul>
+            </div>
+            
+            <div class="artion_dz">
+                <p class="shdz">收货地址</p>
+                <div class="xian"></div>
+                <table class="tb2">
+                    <tr>
+                        <td>收货人:</td>
+                        <td>
+                            <input class="full-name" type="text" placeholder="请输入收货人姓名">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手机号码:</td>
+                        <td><input class="cell-phone" type="text" placeholder="请输入收货人手机号"></td>
+                    </tr>
+                    <tr>
+                        <td>所在地区:</td>
+                        <td>
+                            <select id="province" onChange="changeCity()" style="width:120px;">
+                                <option>请选择省/城市</option>
+                            </select>
+                            <select id="city" style="width:130px;">
+                                <option>请选择城市/地区</option>
+                            </select></dd>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>详细地址:</td>
+                        <td><input class="Detailed-address" type="text" class="input_text"
+                                placeholder="如XX路XX号、XX小区、XX办公楼等"></td>
+                    </tr>
+                    <tr>
+                        <td>楼层门牌:</td>
+                        <td><input class="House-number input_text" type="text" placeholder="单元号/楼层/门牌号等"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="" id="">
+                            <span>设置为默认收货地址</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="保存" class="btn_bc2" onclick="preservation()">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="artion_diz">
+                <div class="artion_diz_left">
+                    <p class="shdz">收货地址</p>
+                </div>
+                <div class="artion_diz_right">
+                    <button class="xinzeng" onclick="xinzeng()">
+                        新增收货地址
+                    </button>
+                </div>
+                <div class="xian"></div>
+            </div>
+            <div class="artion_dd">
+                <h2 class="wddd">我的订单</h2>
+                <div class="xian"></div>
+                <div class="div_lis">
+                    <ul class="div_ul">
+                        <li class="li-all" id="curent" onclick="shopping(0)">全部
+                        </li>
+                        <li class="li-all" onclick="shopping(1)">待付款
+                        </li>
+                        <li class="li-all" onclick="shopping(2)">待收货 
+                        </li>
+                            <!-- <div class="last-amount">
+                                <p >订单总金额：￥90</p>
+                            </div> -->
+                    </ul>
+                </div>
+                <div class="all-order" style="display: block;">
+                    <div class="all-order-first-top">
+                        <p class="top-left">订单号：1024374958389</p>
+                        <div class="square1"></div>
+                    </div>
+                    <div class="all-order-first-bottom">
+                        <ul class="all-order-first-bottom-ul">
+                            <li class="list">商品</li>
+                            <li class="textall">价格(元)</li>
+                            <li class="textall">数量</li>
+                            <li class="textall">小计(元)</li>
+                        </ul>
+                        <table height="100px">
+                            <tr>
+                                <td id="img1">
+                                    <img src="../images/abc1.jpg" alt="">
+                                    <div class="infor">
+                                        <p class="title">肛泰</p>
+                                        <p class="gg">10ml*10支</p>
+                                    </div>
+                                </td>
+                                <td id="txt1"><span>￥90</span></td>
+                                <td id="txt2">1</td>
+                                <td id="txt3">￥90</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                    <div class="all-order">
+                        <div class="all-order-first-top">
+                            <p class="top-left">订单号：1024857936542</p>
+                            <p class="top-right">取消订单</p>
+                            <p class="top-right">待付款</p>
+                            
+                            <div class="square1"></div>
+                        </div>
+                        <div class="all-order-first-bottom">
+                            <ul class="all-order-first-bottom-ul">
+                                <li class="list">商品</li>
+                                <li class="textall">价格(元)</li>
+                                <li class="textall">数量</li>
+                                <li class="textall">小计(元)</li>
+                            </ul>
+                            <table height="100px">
+                                <tr>
+                                    <td id="img1">
+                                        <img src="../images/abc1.jpg" alt="">
+                                        <div class="infor">
+                                            <p class="title">肛泰</p>
+                                            <p class="gg">10ml*10支</p>
+                                        </div>
+                                    </td>
+                                    <td id="txt1"><span>￥40</span></td>
+                                    <td id="txt2">1</td>
+                                    <td id="txt3">￥40</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                        <div class="all-order">
+                            <div class="all-order-first-top">
+                                <p class="top-left">订单号：1024337462947</p>
+                                <p class="top-right">待收货</p>
+                                <div class="square1"></div>
+                            </div>
+                            <div class="all-order-first-bottom">
+                                <ul class="all-order-first-bottom-ul">
+                                    <li class="list">商品</li>
+                                    <li class="textall">价格(元)</li>
+                                    <li class="textall">数量</li>
+                                    <li class="textall">小计(元)</li>
+                                </ul>
+                                <table height="100px">
+                                    <tr>
+                                        <td id="img1">
+                                            <img src="../images/abc1.jpg" alt="">
+                                            <div class="infor">
+                                                <p class="title">肛泰</p>
+                                                <p class="gg">10ml*10支</p>
+                                            </div>
+                                        </td>
+                                        <td id="txt1"><span>￥60</span></td>
+                                        <td id="txt2">1</td>
+                                        <td id="txt3">￥60</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- <div class="last-amount">
+                                <p >订单总金额：￥90</p>
+                            </div> -->
+                        </div>
+                        <!-- <div class="last-amount">
+                            <p >订单总金额：￥90</p>
+                        </div> -->
+                    <!-- </div> -->
+                <!-- <div class="service_tp">
+                    <img src="../images/service.png" alt="">
+                    <p>暂无订单</p>
+                </div> -->
+            </div>
+            <div class="artion_zl" >
+                <h2 class="grzl">个人资料</h2>
+                <div class="xian"></div>
+                <form action="http://localhost:3000/users/Profile" method="POST" enctype="multipart/form-data">
+                    <table style="margin-left: 50px;">
+                        <tr class="trSculpture">
+                            <td>
+                                <img src="http://localhost:3000/upload/touxiang.jpg" alt="" onclick="sculpture()" class="headPortrait">
+                                <input type="file" name="portrait" id="" onchange="adda(this)">
+                            </td>
+                            <td>当前头像</td>
+                        </tr>
+                        <tr>
+                            <td>昵称：</td>
+                            <td>
+                                <input type="text" name="Nickname" placeholder="请输入您的昵称" class="input1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>健康号：</td>
+                            <td class="HealthNumber">163506090701</td>
+                        </tr>
+                        <tr>
+                            <td>性别：</td>
+                            <td>
+                                <div class="d_radio">
+                                    <input type="radio" id="man" name="men" value="男" checked>男
+                                </div>
+                                <div class="d_radio">
+                                    <input type="radio" name="men" value="女">女
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>体征：</td>
+                            <td class="td_text">
+                                <div class="d_text">
+                                    <span>身高：</span>
+                                    <input type="text" name="height" placeholder="0" class="userHigh">
+                                    <span>cm</span>
+                                </div>
+                                <div class="d_text">
+                                    <span>体重：</span>
+                                    <input type="text" name="weight" placeholder="0" class="userWeight">
+                                    <span>kg</span>
+                                </div>
+                                <div class="d_text">
+                                    <span>年龄:</span>
+                                    <input type="text" name="Age" placeholder="请输入" class="userAge">
+                                    <span>岁</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="hidden" name="userName" value="" class="hidden">
+                                <input type="submit" value="保存" class="btn_bc1" >
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="artion_sh">
+                <h2 class="wdsh">我的售后</h2>
+                <div class="xian"></div>
+                <div>
+                    <div class="service service_1">商品详情
+                        <div class="details">
+                            <img src="../images/abc1.jpg" alt="">
+                            <p class="title">肛泰</p>
+                            <p class="gg">10ml*10支</p>
+                        </div>
+                    </div>
+                    <div class="service service_2">退款金额
+                        <div class="price">
+                            <p>￥90</p>
+                        </div>
+                    </div>
+                    <div class="service service_3">售后状态
+                        <div class="state">
+                            <p>申请售后</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service_tp">
+                    <img src="../images/service.png" alt="">
+                    <p>暂无数据</p>
+                </div>
+            </div>
+        </div>
+    </main>
+        <div class="overallbtn"></div>
+        <div class="independence">
+            <h1 class="independence-h1">新增地址</h1>
+            <div class="independence-mian">
+                <form action="">
+                    <div class="independence-mian-from">
+                        <div class="independence-mian-from-span">
+                            <span>*</span>收货人：
+                        </div>
+                        <div class="independence-mian-from-input">
+                            <input type="text" class="input111" placeholder="请输入收货人姓名">
+                        </div>
+                    </div>
+                    <div class="independence-mian-from">
+                        <div class="independence-mian-from-span">
+                            <span>*</span>手机号码：
+                        </div>
+                        <div class="independence-mian-from-input">
+                            <input type="text" class="input222" placeholder="请输入手机号">
+                        </div>
+                    </div>
+                    <div class="independence-mian-from">
+                        <div class="independence-mian-from-span">
+                            <span>*</span>所在地区：
+                        </div>
+                        <div class="independence-mian-from-input">
+                            <input type="text" class="input333" placeholder="请输入省市区">
+                        </div>
+                    </div>
+                    <div class="independence-mian-from">
+                        <div class="independence-mian-from-span">
+                            <span>*</span>详细地址：
+                        </div>
+                        <div class="independence-mian-from-input">
+                            <input type="text" class="input444" placeholder="如XX路XX号、XX小区、XX办公楼等" style="width: 300px;">
+                        </div>
+                    </div>
+                    <div class="independence-mian-from">
+                        <div class="independence-mian-from-span">
+                            <span>*</span>楼层门牌：
+                        </div>
+                        <div class="independence-mian-from-input">
+                            <input type="text" class="input555" placeholder="单元号/楼层/门牌号等" style="width: 300px;">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="independence-foot">
+                <button class="btngg independence-foot-btn" onclick="preserve()">保 存</button>
+                <button class="btngg independence-foot-btn1" onclick="cancel()">取 消</button>
+            </div>
+        </div>
+    <div class="app-popup-mask"></div>
+    <div class="sale">
+        <img src="../images/kf.png" alt="">
+    </div>
+    <div class="middle">
+        <div id="div2">
+            <div class="middle_top">
+                <img src="../images/kftx.png" alt="">
+                <h2>窝窝客服</h2>
+                <p>| 专门为您解决各类账户、订单、支付等问题，快速响应</p>
+                <i class="close">×</i>
+            </div>
+            <div class="ddd">
+                <div id="information">
+                    <dev class="leftPost ee">欢迎来到康乐窝窝!( •͈ᴗ⁃͈)ᓂ- - -♡﻿</dev>
+                </div>
+            </div>
+            <img id="portrait" src="../images/kefutx.png" alt="">
+            <input id="text1" type="text" onkeydown="myFunction(event)">
+            <input id="btn1" type="button" value="发送">
+        </div>
+    </div>
+    <footer>
+        <div class="content-bx">
+            <div class="content-top">
+                <div class="content-top-left">
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd>品牌真品防伪码</dd>
+                        <dd>正品保证</dd>
+                        <dd>专属客服服务</dd>
+                    </dl>
+                    <dl>
+                        <dt>支付方式</dt>
+                        <dd>货到付款</dd>
+                        <dd>在线支付</dd>
+                        <dd>余额支付</dd>
+                        <dd>现金券支付</dd>
+                    </dl>
+                    <dl>
+                        <dt>配送方式</dt>
+                        <dd>包邮政策</dd>
+                        <dd>配送说明</dd>
+                        <dd>运费说明</dd>
+                        <dd>验货签收</dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <dd>正品承诺</dd>
+                        <dd>售后咨询</dd>
+                        <dd>退货政策</dd>
+                        <dd>退货办理</dd>
+                    </dl>
+                    <dl>
+                        <dt>关注我们</dt>
+                        <dd class="ddimg">
+                            <img src="../images/erweima1.png" alt=""
+                            id="wbs">
+                            <span class="wbs">微信二维码</span>
+                            <img src="../images/erweima2.jpg" alt="" id="wb">
+                            <span class="wb">微博二维码</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="content-bx1">
+            <div class="content-middle">
+                <div class="content-middle-left">
+                    <img src="../images/rx.png" alt="">
+                    <p>服务热线</p>
+                    <p>400 - 038 - 5580</p>
+                </div>
+                <div class="content-middle-right">
+                    <img src="../images/wx.png" alt="">
+                    <img src="../images/wb.png" alt="">
+                    <img src="../images/dy.png" alt="">
+                    <img src="../images/qq.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <p> ©2018-2020 驰星教育 版权所有 ICP证: 沪ICP备18024971号-1</p>
+            <p><a style="color: rgb(0, 0, 0);"
+                    href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402004802"
+                    target="_blank">沪公网安备 31010402004802号</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

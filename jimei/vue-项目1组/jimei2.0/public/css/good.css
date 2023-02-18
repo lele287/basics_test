@@ -1,0 +1,418 @@
+body {
+    background-color: #f5f5f5;
+}
+
+#main {
+    width: 1190px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: block;
+}
+
+.navbar {
+    border: none;
+    margin-bottom: 0px;
+    background-color: #333;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #333;
+}
+
+.navbar li:hover {
+    background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li:hover>a {
+    color: #333;
+}
+
+.lj {
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    z-index: 20;
+    top: -50px;
+    left: 0;
+}
+
+.good {
+    clear: both;
+    min-width: 80%;
+    margin: 10px auto;
+    margin-top: 50px;
+    border: 1px solid #ddd;
+    height: 600px;
+}
+
+.goodPic {
+    margin-top: 50px;
+    border: 1px solid black;
+    width: 430px;
+    height: 430px;
+    float: left;
+    margin-left: 6em;
+}
+
+.goodMes {
+    width: 530px;
+    float: right;
+    margin-right: 4em;
+}
+
+.goodMes span {
+    font-size: 18px;
+}
+
+.goodMes img:nth-child(1) {
+    width: 24px;
+    height: 27px;
+}
+
+.goodMes input[type='text'] {
+    width: 50px;
+    color: #000;
+    border: 1px solid #ccc;
+    position: relative;
+    top: 2px;
+}
+
+.good span {
+    display: block;
+    margin-top: 20px;
+}
+
+.messageBoard {
+    clear: both;
+}
+
+.goodMes .title {
+    font-size: 26px !important;
+    margin-top: 50px;
+}
+
+.goodMes .goodMessage {
+    display: inline-block;
+    vertical-align: top;
+    width: 440px;
+    font-weight: 400 !important;
+    margin-top: 0;
+    font-size: 16px !important;
+}
+
+.userEvaluation .evalspan {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #333;
+}
+
+.goodMes :nth-child(1) {
+    font-weight: 700;
+    font-size: 1.35em;
+    overflow: hidden;
+    color: black;
+}
+
+.goodMes :nth-child(2) {
+    color: red;
+}
+
+.goodMes :nth-child(3) span {
+    display: inline;
+    color: red;
+    margin-left: 5px;
+}
+
+.goodMes :nth-child(4) span {
+    display: inline;
+    margin-left: 10px;
+    font-size: 1em;
+}
+
+.goodMes #gHits,
+.goodMes #gNum,
+.goodMes #gDiscount {
+    font-size: 18px;
+    font-style: normal;
+    margin-left: 10px;
+}
+
+.button {
+    width: 430px;
+    float: right;
+    margin-right: 6em;
+    height: 12em;
+    position: relative;
+    top: 50px;
+    left: -20px;
+}
+
+.add [type="button"] {
+    font-size: 18px !important;
+    color: white;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(61, 214, 100);
+    font-size: 1.1em;
+    border: transparent;
+}
+
+.buy {
+    float: left;
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    margin-right: 20px;
+}
+
+.buy [type="button"] {
+    font-size: 18px !important;
+    color: white;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(243, 58, 58);
+    font-size: 1.1em;
+    border: transparent;
+}
+
+.goods_other {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.like {
+    display: inline-block;
+    width: 28%;
+    padding: 10px;
+}
+
+.like .likeproduct {
+    width: 4em;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #333;
+    margin: 0 auto;
+}
+
+.userEvaluation {
+    display: inline-block;
+    width: 80%;
+    border-left: 1px solid #ccc;
+    padding: 10px;
+    padding-left: 80px;
+}
+
+.like_goods_message {
+    width: 190px;
+    height: 230px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.like_goods_message:hover {
+    transition: .2s ease-out;
+    box-shadow: 0px 3px 7px 1px #ccc;
+    transform: scale(1.01);
+    transform: translate(0, -2px);
+}
+
+.like_goods li+li {
+    border-top: 1px solid #ccc;
+}
+
+.like_goods_message img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 10px auto 0;
+}
+
+.like_goods_message span {
+    display: block;
+    width: 190px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.userEvaluation li {
+    border-top: 1px solid #ccc;
+}
+
+.userEvaluation li:nth-child(1) {
+    border-top: 1px solid #f5f5f5;
+}
+
+.noEvaluation {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 250px;
+}
+
+.evaluation li {
+    padding: 30px 0;
+}
+
+.evaluation .messagetitle {
+    margin-top: 20px;
+}
+
+.evaluation .messagetitle span:nth-child(2) {
+    margin-left: 450px;
+}
+
+.evaluation .messagetitle span:nth-child(3) {
+    margin-left: 50px;
+}
+
+.thisPic1 {
+    width: 430px;
+    height: 430px;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+#thisPic2 {
+    width: 982px;
+    height: 982px;
+}
+
+#left,
+#right {
+    float: left;
+}
+
+#left {
+    width: 430px;
+    height: 430px;
+    position: relative;
+    /* border: 1px solid #fff; */
+}
+
+#mask {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    display: none;
+}
+
+#right {
+    margin-top: 20px;
+    width: 430px;
+    height: 430px;
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    left: 550px;
+    top: 30px;
+    z-index: 999;
+}
+
+.ad {
+    width: 1190px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.ad img {
+    width: 1190px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#footer {
+    height: 150px;
+    margin-top: 150px;
+    bottom: 0;
+    background-color: #333;
+    color: #ccc;
+}
+
+#footer_main {
+    width: 1190px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#footer-left,
+#footer-center,
+#footer-right {
+    width: 330px;
+    height: 100px;
+    float: left;
+    margin: 15px 30px 5px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+#footer-center {
+    position: relative;
+}
+
+#footer-center-pic {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 120px;
+    background: url(../images/erweima.jpg);
+    background-size: 100% 100%;
+}
+
+#footer-bottom {
+    width: 1190px;
+    height: 25px;
+    float: left;
+    text-align: center;
+}
+
+#footer a,
+#footer span {
+    font-size: 15px;
+    color: #ccc;
+    margin-left: 40px;
+}
+
+a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+a:link {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: green;
+}

@@ -1,0 +1,156 @@
+/* pages/role/role.wxss */
+page {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.comm{
+  padding:0;
+  margin:0;
+  padding-left:10rpx;
+}
+.line{
+   height: 2rpx;
+   width: 400rpx;
+   background: radial-gradient(black 24%, white 100%);
+}
+.header{
+  width: 100%;
+  height:335rpx;
+  background-color: skyblue;
+  background-size: 800rpx;
+  background-repeat: no-repeat;
+  color:white;
+  padding:20rpx;
+  box-sizing:border-box;
+}
+.service-item{
+  width:20%;
+  text-align: center;
+}
+.service-item:active{
+  background-color: #ccc;
+}
+.icon-style{
+  margin-top:10rpx;
+}
+
+.infoName{
+  font-size:28rpx;
+width:20%;
+text-align:center;
+height:50rpx;
+line-height:50rpx;
+background-color:#4b7ff7;
+color:#ffffff;
+border-radius:10rpx;
+
+
+}
+
+.font{
+  position: relative;
+  font-weight: 700;   
+}
+
+.city{
+  width:100%;
+  text-align:center;
+}
+.current-temp{
+  font-size:3rem;
+}
+.temp-desc{
+  vertical-align:baseline;
+}
+.desc{
+  position:relative;
+  height:100rpx;
+}
+.button{
+  width: 90%;
+  height:80rpx;
+  font-size:14px;
+  background-color: #2d68f4!important;
+  color: #fff;
+  border: 0;
+  border-radius:8rpx;
+  line-height:80rpx;
+  text-align: center;
+}
+.iconaoxiang{
+  width:100rpx;
+  height: 100rpx;
+  margin-right: 0;
+}
+.iconaoxiang image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 添加 */
+.tabName{
+  display: flex;
+  width: 100%;
+  height:80rpx;
+  line-height:80rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+.tabLi{
+  width: 25%;
+  text-align: center;
+  border-right:1rpx solid #dfdfdf; 
+}
+.tabLi:last-child{
+  border-right:none; 
+}
+/* .tbTile{
+  overflow: hidden;
+  width:100%;
+}
+.titleBg{
+  width:8rpx;
+  height:40rpx;
+  float: left;
+  margin:20rpx 10rpx 20rpx 16rpx;
+  background-color: #3e8ffa;
+} */
+/* .my-client{
+  line-height:40rpx;
+  height:40rpx;
+  color:#000000;
+  font-size:32rpx;
+  float:left;
+  margin: 20rpx 0;
+} */
+.euipmentWrap{
+  /* width:90%;
+  box-shadow:0 0 10rpx #dad9d9;
+  border-radius:10rpx;
+  margin:20rpx auto; */
+}
+
+.euipment-info{
+  height:180rpx;
+  box-sizing:border-box;
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
+  font-size:28rpx;
+  border-bottom:1rpx solid #ededed;
+}
+.euipment-info:last-child{
+  border-bottom:0rpx dashed #ccc;
+}
+
+.btFz{
+  width:100%;
+  height:80rpx;
+  background-color:#ffffff;
+  position:fixed;
+  bottom:0;
+  left:50%;
+  margin-left:-45%;
+  padding:20rpx 0;
+}

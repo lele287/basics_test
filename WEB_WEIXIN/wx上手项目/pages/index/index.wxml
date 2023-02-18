@@ -1,0 +1,6 @@
+<!--index.wxml-->
+
+<view>
+  <!-- 搜索框 -->
+  <SearchInput></SearchInput>
+</view>

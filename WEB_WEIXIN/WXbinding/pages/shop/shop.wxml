@@ -1,0 +1,122 @@
+<!--pages/shop/shop.wxml-->
+<!-- <view class="page_row">
+    <view class="search">
+        <view class="search_arr">
+          <input placeholder="请输入店名或店号"  type='text' name='info' value='{{info}}' class="inputView" bindinput='infoChange'/>
+        </view>
+      </view>
+      <button class='button' formType="submit" bindtap='getShop'>搜索</button>
+</view> -->
+<!-- <block wx:for="{{shop}}" wx:key="{{code}}">
+    <view class='shop' bindtap='jumpService' data-index='{{index}}'>
+        <view>站点编号:{{item.shop_code}}</view>
+        <view>站点名称:{{item.shop_name}}</view>
+        <view>地址:{{item.shop_address==null?'无':item.shop_address}}</view>
+        <view>店长:{{item.duty_charge_name==null?'无':item.duty_charge_name}}</view>
+        <view>联系方式:{{item.duty_charge_phone==null?'无':item.duty_charge_phone}}</view>
+        <view class='equipment-list'>
+                设备编号:
+                <block wx:for="{{item.equipments}}" wx:for-item="cityItem" wx:key="{{index}}">
+                  {{cityItem.static_info}}({{cityItem.info_code}})
+                </block>
+        </view>
+    </view>
+</block> -->
+<!-- <view class="table">
+  <view class="tr bg-w">
+    <view class="th th_store_code">店号</view>
+    <view class="th th_store_name">店名</view>
+  </view>
+ </view>
+
+ <scroll-view class='body-v' scroll-y>
+  <block wx:for="{{shop}}" wx:key="{{code}}">
+
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}" bindtap='jumpShop' data-index='{{item.shop_code}}'>
+        <view class="td_shop_code">{{item.shop_code}}</view>
+        <view class="td_shop_name">{{item.shop_name}}</view>
+    </view> 
+    <view class="tr" wx:if="{{index % 2 != 0}}"  bindtap='jumpShop' data-index='{{item.shop_code}}'>
+      <view class="td_shop_code">{{item.shop_code}}</view> 
+      <view class="td_shop_name">{{item.shop_name}}</view>
+    </view>
+  </block>
+</scroll-view>
+ <view class="bottom">
+    <view class="data_page">
+      共1792家门店
+    </view>
+ </view>
+<view class="no-data" wx:if="{{shop.length == 0}}">
+      <view class='noData iconaoxiang icon-style'></view>  
+</view> -->
+<view class="searchHdeader">
+    <form bindsubmit="getShopByKey" bindreset="formReset">
+        <view class='page_row'>
+            <view class="search">
+                <view class="search_arr">
+                    <icon class="searchcion" size='15' type='search' color="#ffffff"/>
+                    <icon class='clear' wx:if="{{clearShow}}" type="clear" bindtap='clear' size='15'/>
+                    <input  placeholder-style="font-size:12px; color:#ffffff" placeholder="请输入店号或店名"  type='text' name='info' value='{{info}}' bindinput='infoChange'/>
+                </view>
+            </view>
+            <button class='button' formType="submit">搜索</button>
+        </view>
+    </form>
+</view>
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th th_code">门店</view>
+    <view class="th th_net_type">类型</view>
+    <view class="th th_sc_ip">SC_IP</view>
+  </view>
+ </view>
+<view class="bottom" wx:if="{{total != 0}}">
+    <view class="data_page">
+        共{{total}}家门店
+    </view>
+</view>
+<view class="scroVi">
+    <scroll-view class='body-v sv' scroll-y="true" bindscrolltolower="lower">
+        <block wx:for="{{shop}}" wx:key="{{code}}">
+            <view class="tr bg-g bg-s bg-p" wx:if="{{index % 2 == 0}}" bindtap='jumpService' data-index='{{item.id}}'>
+                <view class="td_shop_code">{{item.shop_code}}_{{item.shop_name}}</view>
+                 <view class="td_net_type">{{item.net_type==''?'宽带_263':(item.net_type==null?'宽带_263':item.net_type)}}</view>
+                  <view class="td_sc_ip">{{item.sc_ip==''?'0.0.0.0':(item.sc_ip==null?'0.0.0.0':item.sc_ip)}}</view>
+            </view>
+            <view class="tr bg-p" wx:if="{{index % 2 != 0}}"  bindtap='jumpService' data-index='{{item.id}}'>
+                <view class="td_shop_code">{{item.shop_code}}_{{item.shop_name}}</view>
+                <view class="td_net_type">{{item.net_type==''?'宽带_263':(item.net_type==null?'宽带_263':item.net_type)}}</view>
+                <view class="td_sc_ip">{{item.sc_ip==''?'0.0.0.0':(item.sc_ip==null?'0.0.0.0':item.sc_ip)}}</view>
+            </view>
+        </block>
+    </scroll-view>
+</view>
+
+   <block wx:if="{{shop.length == 0}}">
+       <view class="emTrfl">
+           <image src="/images/embg.png"></image>
+       </view>
+    </block>
+
+
+
+ <!-- <view class="container">
+    <view id="loading" hidden="{{loadingHidden}}">
+        <view id="loading-center">
+            <view id="loading-center-absolute">
+                <view class="object" id="object_one"></view>
+                <view class="object" id="object_two"></view>
+                <view class="object" id="object_three"></view>
+                <view class="object" id="object_four"></view>
+                <view class="object" id="object_five"></view>
+                <view class="object" id="object_six"></view>
+                <view class="object" id="object_seven"></view>
+                <view class="object" id="object_eight"></view>
+                <view class="object" id="object_big"></view>
+            </view>
+        </view>
+    </view>
+</view> -->
+

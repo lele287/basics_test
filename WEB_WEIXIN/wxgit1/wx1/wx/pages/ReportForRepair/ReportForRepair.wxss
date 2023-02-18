@@ -1,0 +1,14 @@
+.wx-switch-input {
+    width: 40px !important;
+    height: 20px !important;
+}
+
+.wx-switch-input::before {
+    width: 40px !important;
+    height: 20px !important;
+}
+
+.wx-switch-input::after {
+    width: 18px !important;
+    height: 18px !important;
+}

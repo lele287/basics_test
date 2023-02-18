@@ -1,0 +1,6 @@
+<view class="CommonSettings">常用功能设置</view>
+<view wx:for="{{SwitchInformation}}" wx:key="index">
+  <van-cell title="{{item.tit}}" icon="{{item.icon}}" size="large" center="true" border="{{false}}" title-class="fs">
+    <van-switch checked="{{ (item.SwitchState) }}" data-index="{{index}}" bind:change="onNewSite" size="46rpx"/>
+  </van-cell>
+</view>

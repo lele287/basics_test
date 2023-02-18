@@ -1,0 +1,17 @@
+/* pages/logs/logs.wxss */
+.service-item{
+  float:left;
+  width: 33%;
+  text-align: center;
+  height:250rpx;
+  padding: 5rpx 0;
+  font-size:32rpx;
+  margin-top:30rpx;
+}
+.service-item:active{
+  background-color: #ccc;
+}
+.dateImg{
+  width:70rpx;
+  height: 70rpx;
+}

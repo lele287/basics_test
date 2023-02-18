@@ -1,0 +1,12 @@
+<view class="sidebar">
+  <view class="left">
+    <van-sidebar active-key="{{ card }}" bind:change="onCard" >
+      <van-sidebar-item title="算法基础" />
+      <van-sidebar-item title="数据结构" />
+      <van-sidebar-item title="面试技巧" />
+    </van-sidebar>
+  </view>
+  <view class="rigth">
+    <text>内容区域：{{card+1}}</text>
+  </view>
+</view>

@@ -1,0 +1,85 @@
+<view class="subject">
+  <!-- <view class="store container">
+    <view class="titleTips">选择门店</view>
+    <view>
+      <van-cell-group border="{{ false }}">
+        <van-field model:value="{{ ShopCode }}" type="text" placeholder="请输入门店编号" border="{{ false }}"
+          readonly="{{readOnly}}" error-message="{{shopPromptInformation}}" bind:blur="onShopBlur">
+        </van-field>
+      </van-cell-group>
+      <view class="result">门店匹配结果：{{ShopName}}</view>
+    </view>
+  </view> -->
+  <view class="container" wx:if="{{!readOnly}}">
+    <view class="titleTips">当前门店</view>
+    <view bindtap="onSwitch" class="ScanCodeContainer">
+      <image src="../../images/switch.png" alt="" class="switch_img"></image>
+      <text>{{optionsData.ShopName}}</text>
+    </view>
+  </view>
+  <view class="container">
+    <view class="titleTips">方式一：扫码添加</view>
+    <view bindtap="scanCode" class="ScanCodeContainer">
+      <image src="../../../images/icon/ScanCode2.png" class="ScanCode"></image>
+    </view>
+  </view>
+  <view class="container">
+    <view class="store container">
+      <view class="titleTips">方式二：手动添加</view>
+      <view>
+        <van-cell-group border="{{ false }}">
+          <van-field model:value="{{ EquipmenCode }}" border="{{ false }}" placeholder="请输入设备编号"
+            error-message="{{equipmentPromptInformation}}" bind:change="onEquipmenChange">
+          </van-field>
+        </van-cell-group>
+      </view>
+    </view>
+  </view>
+  <view class="block container">
+    <view wx:if="{{!currentEquipment.Id}}">
+      <van-empty class="custom-image" image="/images/icon/EmptyState.png" description="暂无数据" />
+    </view>
+    <view wx:if="{{currentEquipment.Id}}">
+      <view class="row">
+        <view class="tit">设备类名</view>
+        <view class="Val">{{currentEquipment.EquipmentClassName}}</view>
+      </view>
+      <view class="row">
+        <view class="tit">设备编码</view>
+        <view class="Val">{{currentEquipment.EquipmentCode}}</view>
+      </view>
+      <view class="row">
+        <view class="tit">设备名称</view>
+        <view class="Val">{{currentEquipment.EquipmentName}}</view>
+      </view>
+      <view class="row">
+        <view class="tit">设备状态</view>
+        <view class="Val">{{currentEquipment.EquipmentStatus}}</view>
+      </view>
+      <view class="row">
+        <view class="tit">设备类型</view>
+        <view class="Val">{{currentEquipment.EquipmentTypeName}}</view>
+      </view>
+      <view class="row">
+        <view class="tit">安装日期</view>
+        <view class="Val">{{currentEquipment.InstallDate}}</view>
+      </view>
+      <!-- <view class="row">
+          <view class="tit">安装状态</view>
+          <view class="Val">{{currentEquipment.InState}}</view>
+        </view> -->
+    </view>
+
+  </view>
+  <view class="AddOperation container">
+    <van-button type="primary" round color="#1989fa" size="normal" bindtap="whetherConfirm">
+      确认添加
+    </van-button>
+    <van-button type="primary" round color="#FA8072" size="normal" bindtap="ResetEmpty">
+      重新添加
+    </van-button>
+  </view>
+
+</view>
+
+<van-dialog id="van-dialog" bind:confirm="installEquipment" confirm-button-color="#40A9FF"/>

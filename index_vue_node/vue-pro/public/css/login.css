@@ -1,0 +1,65 @@
+body{
+    background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1600489618745&di=86bc3428a15f48f184884a80a8e7b81a&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fd%2F59b0d93f74562.jpg') no-repeat;
+    background-size: cover ;
+    
+}
+.d1{
+    width: 350px;
+    height: 260px;
+    margin: 200px auto;
+    background-color: #fff;
+    background: rgba(0.4, 0.4, 0.4, 0.4);
+    position: relative;
+    padding: 30px 40px;
+    border-radius: 5px;
+}
+input{
+    border: 1px solid #000;
+    border-radius: 3px 3px;
+    margin: 10px;
+    font-size: 16px;
+    /* padding: 0 10px; */
+}
+input:nth-child(4),input:nth-child(2),input:nth-child(3){
+    width: 250px;
+    height: 40px;
+}
+span{
+    position: absolute;
+    left: 70px;
+    bottom: 16px;
+    color: #fff;
+}
+input:nth-child(5){
+    position: absolute;
+    left: 50px;
+    bottom: 20px;
+}
+p{
+    color: #fff;
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+    cursor: pointer;
+}
+.i1{
+    width: 260px;
+    height: 15px;
+    display: inline-block;
+    color: #f00;
+    position: absolute;
+    top: 14px;
+    left: 50px;
+    font-size: 12px;
+}
+.in1{
+    margin: 14px;
+}
+.in1:nth-child(4):active{
+    background-color: #fff;
+    width: 246px;
+    height: 38px;
+    position: relative;
+    left: 2px;
+    top: 1px;
+}

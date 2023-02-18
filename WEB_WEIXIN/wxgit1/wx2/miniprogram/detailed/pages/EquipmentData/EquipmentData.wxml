@@ -1,0 +1,104 @@
+<!-- <view class="subject"> -->
+<van-sticky id="textarea" z-index="200">
+  <view>
+    <van-search value="{{ keyword }}" label="" placeholder="请输入搜索关键词" shape="round" bind:search="onSearch"
+      bind:clear="onClearFocus" bind:change="onChangeFocus" bind:focus="onSearchFocus" bind:blur="onSearchBlur">
+    </van-search>
+    <view class="dropDown" wx:if="{{disHistory}}">
+      <view class="History">
+        <view>历史搜索</view>
+        <view bindtap="historyDelFn">
+          清空
+        </view>
+      </view>
+      <view class="HistoryList">
+        <view class="HistoryList_Text" wx:for="{{histroyRecord}}" wx:key="index" data-value="{{item.value}}"
+          bindtap="ClickHistory">{{item.value}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="QueryScope">
+    <view class="Exhibition">
+      <view>所属公司：</view>
+      <view bindtap="onCompanyShow">
+        <image src="../../images/switch.png" alt="" class="switch_img"></image>
+        {{selectedCompanyCompCnFullName}}
+      </view>
+
+      <van-dialog show="{{ CompanyState }}" title="请选择公司" use-slot show-cancel-button bind:close="onCompanyHide"
+        bind:confirm="CompanyYes" confirm-button-color="#40A9FF">
+        <van-picker columns="{{ CompanyData }}" bind:change="onCompany" />
+      </van-dialog>
+
+    </view>
+    <view class="Exhibition">
+      <view>当前查询范围：</view>
+      <view>{{Range}}</view>
+    </view>
+  </view> -->
+</van-sticky>
+<van-sticky offset-top="{{textareaHeight}}">
+  <view class="left" style="{{leftHeight}}">
+    <van-sidebar active-key="{{ equipmentSidebarIndex }}" bind:change="equipmentSidebarChange">
+      <van-sidebar-item wx:for="{{equipmentSidebarOptions}}" wx:key="index" title="{{item}}" />
+    </van-sidebar>
+  </view>
+</van-sticky>
+
+
+<view wx:for="{{equipmentSidebarOptions}}" wx:for-index="sidebarIndex" wx:for-item="items" wx:key="sidebarIndex">
+  <!-- 判断右侧显示内容 -->
+  <view wx:if="{{equipmentSidebarIndex==sidebarIndex}}" class="rigth">
+    <!-- 加载中 -->
+    <van-transition show="{{ equipmentLoading }}" name="fade-down">
+      <view class="Loading" wx:if="{{equipmentLoading}}">
+        <van-loading type="spinner" color="#1989fa" />
+      </view>
+    </van-transition>
+    <!-- 判断数据源是否为空 -->
+    <view wx:if="{{equipmentData.length>0}}">
+      <view class="DeviceInformation" wx:for="{{equipmentData}}" wx:key="index">
+        <view class="ico" data-item="{{item}}" bindtap="detailsEquipment">
+          <image src="/images/1.png" class="companyImg" wx:if="{{item.EquipmentTypeName=='无线AP'}}"></image>
+          <image src="/images/2.png" class="companyImg"
+            wx:if="{{item.EquipmentTypeName=='4G路由器'&&item.EquipmentModelName!='忒易通TET-0001'}}"></image>
+          <image src="/images/3.png" class="companyImg" wx:if="{{item.EquipmentTypeName=='网关路由器'}}"></image>
+          <image src="/images/4.png" class="companyImg" wx:if="{{item.EquipmentTypeName=='交换机'}}"></image>
+          <image src="/images/tuiyitong.png" class="companyImg" wx:if="{{item.EquipmentModelName=='忒易通TET-0001'}}">
+          </image>
+          <image src="https://imgservice.suning.cn/uimg1/b2c/image/X_uafhY-w4ewrqPmyTFemw.jpg_800w_800h_4e"
+            class="companyImg" style="" wx:if="{{item.EquipmentModelName=='ASK-AL00x'}}">
+          </image>
+          <image src="https://2d.zol-img.com.cn/product/207/449/cezqkcqrhOSi.jpg" class="companyImg"
+            style="width: 150rpx;height: 120rpx; margin-top: 15rpx;" wx:if="{{item.EquipmentModelName=='PDVM00'}}">
+          </image>
+          <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1821276576,833899051&fm=224&gp=0.jpg"
+            class="companyImg" wx:if="{{item.EquipmentModelName=='Redmi Note9'}}">
+          </image>
+        </view>
+        <view class="briefIntroduction">
+          <view>
+            <text class="companyName">设备编号：{{item.EquipmentCode}}</text>
+          </view>
+          <view>
+            <text class="companyAttribute">设备型号：{{item.EquipmentModelName}}</text>
+          </view>
+          <view>
+            <text class="companyAttribute">销售状态：{{item.EquipmentStatus}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 加载中 -->
+      <van-transition show="{{ equipmentLoading }}" name="fade-down">
+        <view class="Loading" wx:if="{{equipmentLoading}}">
+          <van-loading type="spinner" color="#1989fa" size="40rpx">加载中...</van-loading>
+        </view>
+      </van-transition>
+    </view>
+
+    <view wx:else class="EmptyState">
+      <van-empty class="custom-image" image="/images/icon/EmptyState.png" description="暂无数据" />
+    </view>
+  </view>
+</view>
+<!-- </view> -->

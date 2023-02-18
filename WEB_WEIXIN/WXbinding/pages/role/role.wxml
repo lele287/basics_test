@@ -1,0 +1,85 @@
+<!--pages/role/role.wxml-->
+<view class="tabName">
+  <view class="tabLi">设备名称</view>
+  <view class="tabLi">安装数量</view>
+  <view class="tabLi">离线数量</view>
+  <view class="tabLi">可用数量</view>
+</view>
+<view class="euipmentWrap">
+  <view class="euipment-info">
+    <view class="service-item" data-model='四信双4G路由器' bindtap='jumpModel'>
+      <view class="iconaoxiang icon-style">
+        <image src="/images/2.jpg"></image>
+      </view>
+      <view>4G路由器</view>
+    </view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="2" data-state='3'>{{ap.install_router}}</view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="2" data-state='1'>{{online.online_router}}</view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="2" data-state='2'>{{surplusAP.router}}台</view>
+  </view>
+  <view class="euipment-info">
+    <view class="service-item" data-model='深信服MIG' bindtap='jumpModel'>
+      <view class=" iconaoxiang icon-style">
+        <image src="/images/3.png"></image>
+      </view>
+      <view>MIG网关</view>
+    </view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="3" data-state='3'>{{ap.install_mig}}</view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="3" data-state='1'>{{online.online_mig}}</view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="3" data-state='2'>{{surplusAP.mig}}台</view>
+  </view>
+  <view class="euipment-info">
+    <view class="service-item" data-model='信锐无线AP' bindtap='jumpModel'>
+      <view class="iconaoxiang icon-style">
+        <image src="/images/1.png"></image>
+      </view>
+      <view>无线AP</view>
+    </view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="1" data-state='3'>{{ap.install_wifi_ap}}</view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="1" data-state='1'>{{online.online_wifi_ap}}</view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="1" data-state='2'>{{surplusAP.wifi_ap}}台</view>
+  </view>
+  <view class="euipment-info">
+    <view class="service-item" data-model='信锐交换机' bindtap='jumpModel'>
+      <view class="siconaoxiang iconaoxiang icon-style">
+        <image src="/images/4.png"></image>
+      </view>
+      <view>智能交换机</view>
+    </view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="4" data-state='3'>{{ap.install_switch1}}</view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="4" data-state='1'>{{online.online_switch1}}</view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="4" data-state='2'>{{surplusAP.switch1}}台</view>
+  </view>
+
+  <!-- <view class="euipment-info">
+    <view class="service-item" data-model='四信双4G路由器' bindtap='jumpModel'>
+      <view class="iconaoxiang icon-style">
+        <image src="/images/four.jpg"></image>
+      </view>
+      <view>单卡路由器</view>
+    </view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="2" data-state='3'>{{ap.install_router}}</view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="2" data-state='1'>{{online.online_router}}</view>
+    <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="2" data-state='2'>{{surplusAP.router}}台</view>
+  </view> -->
+</view>
+<!-- <view class="euipmentWrap">
+  <block wx:for="{{equipmentType}}" wx:key="{{index}}">
+    <view class="euipment-info">
+      <view class="service-item" data-model='四信双4G路由器' bindtap='jumpModel'>
+        <view class="iconaoxiang icon-style">
+          <image src="/images/{{item.staticOrder}}.png"></image>
+        </view>
+        <view>{{item.staticInfo}}</view>
+      </view>
+      <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="{{item.staticOrder}}" data-state='3'>{{equipmentNumber[item.staticOrder].install}}</view>
+      <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="{{item.staticOrder}}" data-state='1'>0</view>
+      <view class="infoName" bindtap='jumpPage' data-index='equipment' data-equipment="{{item.staticOrder}}" data-state='2'>{{equipmentNumber[item.staticOrder].surplus}}台</view>
+    </view>
+  </block>
+</view> -->
+<view class="btFz">
+  <view bindtap='jumpPage' data-index='shop' class='button mSbt'>
+    <view class="font">选择门店</view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/step/step.wxml-->
+<view class="step">
+<zan-steps type="horizon" steps="{{steps}}"></zan-steps>
+</view>
+
+<view class="content">
+      <view class="content-font">
+        <zan-steps type="vertical" steps="{{step}}"></zan-steps>
+      </view>
+      <view class='hint' wx:if="{{hint!=''}}"><font style="color:red">提示</font>：{{hint}}</view>
+      <view class='hint' wx:if="{{stephint!=''}}"><font style="color:red">提示</font>：请关掉设备电源，并插入<font style="color:red;font-weight:700;">{{stephint}}</font>后重启设备，等待设备信号灯亮后点击下一步</view>
+      <view class='hint' wx:if="{{thirdhint!=''}}"><font style="color:red">提示</font>：{{hint}}</view>
+</view>
+
+           <!--按钮-->
+<view class="loginBtnView">
+      <button class="loginBtn " type="primary" bindtap="{{method}}">下一步</button>
+</view>
+
+

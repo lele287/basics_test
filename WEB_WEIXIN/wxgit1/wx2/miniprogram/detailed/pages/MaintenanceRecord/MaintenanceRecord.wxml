@@ -1,0 +1,28 @@
+<view class="subject">
+  <view wx:for="{{Repair}}" wx:key="index" data-item="{{item}}" bindtap="onRepairDetails">
+    <view class="card">
+      <view style="font-weight: 600; margin-left: 20rpx;">{{item.RepairListNo}}
+        <view wx:if="{{item.RepairLevel!=='-'}}"
+          class="label {{item.RepairLevel === '普通'?'green':''}} {{item.RepairLevel ==='紧急'?'pink':''}} {{item.RepairLevel === '特急'?'red':''}}">
+          {{item.RepairLevel}}
+        </view>
+        <view style="margin-left: 10rpx; font-weight: 400;" wx:if="{{item.RepairLevel!=='-'}}"
+          class="label {{item.ListStatus === '待接单'?'bule':''}} {{item.ListStatus === '已结案'?'grey':''}} {{item.ListStatus === '维修中'?'lv':''}}">
+          {{item.ListStatus}}
+        </view>
+
+<!-- :class="{'bule':(item.ListStatus == '待接单'),'grey':(item.ListStatus == '已结案'),'lv':(item.ListStatus == '维修中')}">
+        {{item.ListStatus}} -->
+
+      </view>
+
+      <view style="margin-left: 20rpx; margin-top: 5rpx; font-size: 28rpx;">
+        故障问题：<text>{{item.ExceptionClassName}}</text></view>
+      <view style="margin-left: 20rpx; margin-top: 5rpx; font-size: 28rpx;">维修状态：<text>{{item.ListStatus}}</text>
+      </view>
+      <view style="margin-left: 20rpx; margin-top: 5rpx; font-size: 28rpx;">
+        报修时间：<text>{{item.CreatedAt}}</text>
+      </view>
+    </view>
+  </view>
+</view>

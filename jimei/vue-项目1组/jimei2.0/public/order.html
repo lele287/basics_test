@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单页面</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/order.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <div class="navbar-brand" style="width: 70px;height: 50px; background:url(images/logo.png) no-repeat;background-size:100% 100%;"></div>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="want.html">求购</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发布<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="release.html">发布商品</a></li>
+                            <li><a href="releaseWant.html">发布求购</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="personalCenter.html">个人中心</a></li>
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">欢迎您<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" id="userName">未登录</a></li>
+                            <li><a href="login.html" onclick="out()" id="login">登录/注册</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="top">
+            <span class="order">
+                    所有订单
+                </span>
+            <input type="button" value="删除选中订单" class="delAll">
+        </div>
+        <table class="tb">
+            <tr>
+                <td>商品</td>
+                <td>单价</td>
+                <td>数量</td>
+                <td>总价</td>
+                <td>状态</td>
+                <td>操作</td>
+            </tr>
+        </table>
+        <div class="orderBody">
+        </div>
+    </div>
+    </div>
+    <div id="footer">
+        <div id="footer_main">
+            <div id="footer-left">
+                联系我们：<br>
+                <span>QQ：1454581268</span> <br>
+                <span>地址：苏州工业园区独墅湖创客汇</span>
+            </div>
+            <div id="footer-center">
+                &nbsp;&nbsp;&nbsp;&nbsp;二维码：
+                <div id="footer-center-pic"></div>
+            </div>
+            <div id="footer-right">
+                二手指南：<br>
+                <a href="help.html">购买流程</a><br>
+                <a href="strategy.html">优质二手</a><br>
+            </div>
+            <div id="footer-bottom">
+                Copyright © 2020 JiMei 版权所有
+            </div>
+        </div>
+    </div>
+    <script src="js/bc.js" color="72, 212, 100" opacity="1" count="40" zindex="-1"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

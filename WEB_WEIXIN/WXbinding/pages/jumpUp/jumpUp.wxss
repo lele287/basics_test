@@ -1,0 +1,54 @@
+.tbTile{
+    overflow:hidden;
+    width:100%;
+    border-bottom:1rpx solid #dfdfdf;
+    margin:0 0 0 30rpx;    
+}
+.titleBg{
+  width:8rpx;
+  height:40rpx;
+  float: left;
+  margin:20rpx 10rpx 20rpx 0;
+  background-color: #3e8ffa;
+} 
+.my-client{
+  line-height:40rpx;
+  height:40rpx;
+  color:#000000;
+  font-size:32rpx;
+  float:left;
+  margin: 20rpx 0;
+}
+.modeWrap{
+    display: flex;
+    width: 100%;
+    justify-content:space-around;
+    flex-wrap:wrap;
+}
+.modeIn{
+    text-align:center;
+    width:30%;
+    font-size:28rpx;
+    /* border:1rpx solid #dfdfdf;
+    border-radius:10rpx;
+    padding:30rpx; */
+    margin-top:40rpx;
+
+}
+
+.modeIn image{
+    width:140rpx;
+    height: 140rpx;
+    margin:0 auto;
+    display: block;
+}
+.mbg{
+    border:none;
+}
+.mbg image{
+    background-color:#ffffff;
+    
+}
+.modeIn:active{
+  background-color: #ccc;
+}

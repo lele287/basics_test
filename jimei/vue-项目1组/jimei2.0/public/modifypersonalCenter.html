@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="css/modify.css">
+    <script src="js/modify.js"></script>
+    <title>修改资料</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <div class="navbar-brand" style="width: 70px;height: 50px; background:url(images/logo.png) no-repeat;background-size:100% 100%;"></div>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="want.html">求购</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发布<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="release.html">发布商品</a></li>
+                            <li><a href="releaseWant.html">发布求购</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="personalCenter.html">个人中心</a></li>
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">欢迎您<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" id="userName">未登录</a></li>
+                            <li><a href="#" onclick="out()" id="login">登录/注册</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="body1">
+        <div id="body">
+            <dl style="background: #fff;">
+                <dd class="gn">全部功能</dd>
+                <dd>
+                    <a href="modifypersonalCenter.html">我的资料</a>
+                </dd>
+                <dd><a href="order.html">我的订单</a></dd>
+                <dd><a href="publish.html">我的发布</a></dd>
+                <dd><a href="mywant.html">我的求购</a></dd>
+                <dd><a href="address.html">我的地址</a></dd>
+            </dl>
+        </div>
+        <main>
+            <h2><b>个人资料</b></h2>
+            <hr>
+            <form action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data" target="iframe_display">
+                <table>
+                    <tbody>
+                        <h3><b>&nbsp;&nbsp;&nbsp;&nbsp;亲爱的用户，填写真实的资料，有助于好友找到你哦。</b></h3>
+                        <tr>
+                            <td>当前头像:</td>
+                            <td>
+                                <input type="file" name="userHead" onchange="loadFile(this)">
+                                <div class="upload">
+                                    <img src="images/tx.jpg" alt="" id="table_head">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="display: none;">
+                            <td>用户名：</td>
+                            <td>
+                                <input type="text" name="userName" id="table_userName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>修改密码:</td>
+                            <td><input type="password" class="userPassword" placeholder="请输入密码"></td>
+                        </tr>
+                        <tr>
+                            <td>手机号:</td>
+                            <td><input type="text" class="userPhone" placeholder="请输入电话号码"></td>
+                        </tr>
+                        <tr>
+                            <td>*校园:</td>
+                            <td class="citywhereTd">
+                                <div class="cityWandn">
+                                    <select name="" class="cityWhere">
+                                    <option value="">哈尔滨</option>
+                                    <option value="">大庆</option>
+                                    <option value="">辽宁</option>
+                                    <option value="">吉林</option>
+                                    <option value="">苏州</option>
+                                    <option value="">上海</option>
+                                    <option value="">齐齐哈尔</option>
+                                    <option value="">牡丹江</option>
+                                    <option value="">北京</option>
+                                    <option value="">其他</option>
+                                </select>
+                                    <select name="" class="schoolName">
+
+                                    <option value="">哈尔滨师范大学</option>
+                                    <option value="">大庆师范学院</option>
+                                    <option value="">辽宁大学</option>
+                                    <option value="">吉林大学</option>
+                                    <option value="">苏州科技大学</option>
+                                    <option value="">上海交通大学</option>
+                                    <option value="">齐齐哈尔大学</option>
+                                    <option value="">牡丹江医学院</option>
+                                    <option value="">北京大学</option>
+                                    <option value="">其他</option>
+                                </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- <tr> -->
+                        <!-- <td>*收货地址：</td> -->
+                        <!-- <td>*收货人姓名:</td>
+                            <td><input type="text" name="sjName" id="sjName"></td>
+                        </tr> -->
+                        <!-- <tr>
+                            <td>*详细地址:</td>
+                            <td><textarea name="address" id="address" cols="10" rows="5"></textarea></td>
+                        </tr>
+                         -->
+                    </tbody>
+
+                </table>
+                <input type="button" value="保存" class="upDate">
+                <input type="submit" value="上传头像隐藏按钮" id="headupload" style="display: none;">
+            </form>
+            <iframe id="iframe_display" name="iframe_display" style="display: none;"></iframe>
+        </main>
+
+    </div>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

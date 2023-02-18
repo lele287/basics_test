@@ -1,0 +1,223 @@
+main {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.navbar {
+    border: none;
+    margin-bottom: 0px;
+    background-color: #333;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #333;
+}
+
+.navbar li:hover {
+    background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li:hover>a {
+    color: #333;
+}
+
+.pageTitle {
+    margin: 20px 0;
+}
+
+.pageTitle img {
+    width: 100px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+.delItem{
+    width: 1300px;
+    height: 50px;
+}
+.delItem span {
+    font-size: 26px;
+    line-height: 50px;
+    /* margin-right: 10px; */
+    /* margin-left: -95px; */
+    /* margin-top: 40px; */
+    
+    
+}
+.delItem button{
+    margin-left: 1020px;
+}
+.content {
+    overflow: hidden;
+    width: 1200px;
+    margin: 10px auto;
+    box-shadow: 2px 2px 5px rgb(133, 138, 136);
+}
+
+a {
+    font-size: 18px;
+}
+
+a:link {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: green;
+}
+
+table {
+    font-size: 16px;
+    width: 950px;
+    margin: 20px auto;
+}
+
+table:nth-child(1) {
+    font-size: 18px;
+    color: rgb(141, 140, 140);
+}
+
+
+/* table:nth-child(1) tr:nth-child(1) {
+    font-weight: 700;
+} */
+
+td {
+    text-align: center;
+    padding: 1-px;
+}
+
+table:nth-child(2) tr {
+    height: 100px;
+}
+
+tr td:nth-child(1) {
+    width: 60px;
+}
+
+tr td:nth-child(2) {
+    width: 120px;
+}
+
+tr td:nth-child(3) {
+    width: 100px;
+}
+
+tr td:nth-child(4) {
+    width: 220px;
+}
+
+tr td:nth-child(5) {
+    width: 180px;
+}
+
+tr td:nth-child(6) {
+    width: 50px;
+    cursor: pointer;
+}
+
+tr td:nth-child(6):hover {
+    color: rgb(72, 212, 166);
+    font-weight: 700;
+}
+
+.content ul {
+    /* 宽度不固定的盒子水平居中可以用display: table; */
+    display: table;
+    height: 20px;
+    margin: 10px auto;
+}
+
+.content ul li {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border: 1px solid rgb(72, 212, 166);
+    float: left;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.ad {
+    width: 1190px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.ad img {
+    width: 1190px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#footer {
+    height: 150px;
+    margin-top: 150px;
+    bottom: 0;
+    background-color: #333;
+    color: #ccc;
+}
+
+#footer_main {
+    width: 1190px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#footer-left,
+#footer-center,
+#footer-right {
+    width: 330px;
+    height: 100px;
+    float: left;
+    margin: 15px 30px 5px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+#footer-center {
+    position: relative;
+}
+
+#footer-center-pic {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 120px;
+    background: url(../images/erweima.jpg);
+    background-size: 100% 100%;
+}
+
+#footer-bottom {
+    width: 1190px;
+    height: 25px;
+    float: left;
+    text-align: center;
+}
+
+#footer a,
+#footer span {
+    font-size: 15px;
+    color: #ccc;
+    margin-left: 40px;
+}
+
+.img {
+    width: 120px;
+    height: 90px;
+    float: left;
+    background: url(../images/logo.png) no-repeat;
+    background-size: 100% 100%;
+}

@@ -1,0 +1,68 @@
+<view class="subject">
+  <van-sticky id="textarea" z-index="200">
+    <view>
+      <van-search value="{{ keyword }}" label="" placeholder="请输入搜索关键词" shape="round" bind:search="onSearch" bind:clear="onClearFocus"
+        bind:change="onChangeFocus" bind:focus="onSearchFocus" bind:blur="onSearchBlur"></van-search>
+      <view class="dropDown" wx:if="{{disHistory}}">
+        <view class="History">
+          <view>历史搜索</view>
+          <view bindtap="historyDelFn">
+            清空
+          </view>
+        </view>
+        <view class="HistoryList">
+          <view class="HistoryList_Text" wx:for="{{histroyRecord}}" wx:key="index" data-value="{{item.value}}" bindtap="ClickHistory">{{item.value}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 顶部 -->
+    <view class="top">
+      <view class="topImg">
+        <image data-index="0" data-title="公司" bindtap="tabChange" src="../../images/company.png"
+          class="TabImg {{tabIndex==0?'Select':''}}"></image>
+        <view class="topText {{tabIndex==0?'SelectText':''}}">
+          <text>公司</text>
+        </view>
+      </view>
+      <view class="topImg">
+        <image data-index="1" data-title="门店" bindtap="tabChange" src="../../images/store.png"
+          class="TabImg {{tabIndex==1?'Select':''}}"></image>
+        <view class="topText {{tabIndex==1?'SelectText':''}}">
+          <text>门店</text>
+        </view>
+      </view>
+      <view class="topImg">
+        <image data-index="2" data-title="资产" bindtap="tabChange" src="../../images/equipment.png"
+          class="TabImg {{tabIndex==2?'Select':''}}"></image>
+        <view class="topText {{tabIndex==2?'SelectText':''}}">
+          <text>资产</text>
+        </view>
+      </view>
+      <view class="topImg">
+        <image data-index="3" data-title="卡片" bindtap="tabChange" src="../../images/SIM.png"
+          class="TabImg {{tabIndex==3?'Select':''}}"></image>
+        <view class="topText {{tabIndex==3?'SelectText':''}}">
+          <text>卡片</text>
+        </view>
+      </view>
+    </view>
+  </van-sticky>
+  <!-- 侧边插件 -->
+  <view class="swiperContent">
+    <view wx:if="{{tabIndex==0}}">
+      <include src="company.wxml"></include>
+    </view>
+    <view wx:if="{{tabIndex==1}}">
+      <include src="store.wxml"></include>
+    </view>
+    <view wx:if="{{tabIndex==2}}">
+      <include src="equipment.wxml"></include>
+    </view>
+    <view wx:if="{{tabIndex==3}}">
+      <include src="card.wxml"></include>
+    </view>
+  </view>
+</view>
+
+<!-- 组件 -->
+<!-- <van-toast id="van-toast" /> -->

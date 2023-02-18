@@ -1,0 +1,5 @@
+<!--pages/systemlog/systemlog.wxml-->
+<!--pages/testlog/testlog.wxml-->
+<view class="content" wx:for="{{changeData}}" wx:key="index">
+<zan-cell title="旧:{{item.oldECode}} 新:{{item.newECode}}" label="{{item.changeTime}}" value="{{item.userName}}"></zan-cell>
+</view>

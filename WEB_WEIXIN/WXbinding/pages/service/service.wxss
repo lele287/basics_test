@@ -1,0 +1,87 @@
+/* pages/service/service.wxss */
+.sercBt{
+  padding-top:15px;
+  overflow:hidden;
+  width:90%;
+  margin:0 auto;
+  border-radius:10rpx;
+  box-shadow:0 0 30rpx #e8e8e8;
+}
+.service-item{
+  float:left;
+  width: 33%;
+  text-align: center;
+  /*height:175rpx;*/
+  padding: 5rpx 0;
+  margin-bottom:40rpx;
+}
+.service-item image{
+  width:90rpx;
+  height: 90rpx;
+}
+.service-item:active{
+  background-color: #ccc;
+}
+/* start */
+page{
+  background-color:#fff;
+}
+.section{
+  display: flex;
+  flex-direction: row;
+  margin-bottom:5px;
+  vertical-align:baseline;
+}
+.section view{
+  margin-right: 20rpx;
+}
+.btn-area{
+  margin: 20rpx;
+}
+button{
+  margin: 10rpx 0;
+}
+.shop{
+  /* border: 1rpx solid black; */
+  width:90%;
+  margin: 20rpx auto;
+  border-radius: 2%;
+}
+
+.shop_title{
+  padding:0 15px;
+  font-size:14px;
+  color: #b1b1b1;
+  margin-top:20rpx;
+}
+.equipemntInfo{
+  display:flex;
+  flex-direction: row;
+}
+.time-sn{
+  font-size: 25rpx;
+}
+.shop-info-title{
+  height:60vh;
+  font-size:12px;
+  color:#000;
+  overflow:scroll;
+  width:90%;
+  margin:30rpx auto;
+  box-shadow:0 0 30rpx #e8e8e8;
+}
+.font{
+  font-size: 12px;
+}
+.textMr{
+  min-width:140rpx;
+}
+.no-sn-time{
+    margin-bottom:5px;
+    vertical-align:baseline;
+}
+.equipment-name{
+  display: inline-block;
+  min-width: 140rpx;
+}
+/* end */

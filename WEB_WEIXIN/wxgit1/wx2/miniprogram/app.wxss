@@ -1,0 +1,132 @@
+/**app.wxss**/
+.subject {
+  padding: 0 30rpx;
+  font-family: sans-serif;
+  font-size: 28rpx;
+}
+
+.GonggeBorder {
+  width: 100%;
+  /* height: 154rpx; */
+  border: 1px solid #f8f9fa;
+}
+
+/* .van-grid-item{
+  height: 154rpx;
+} */
+.van-grid-item__icon {
+  font-size: var(--grid-item-icon-size, 56rpx) !important;
+}
+
+.van-grid-item__text {
+  margin-top: 16rpx !important;
+  font-size: var(--grid-item-text-font-size, 26rpx) !important;
+}
+
+.van-cell__title,
+.van-cell__value {
+  /* height: 40rpx; */
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+.van-collapse-item__content {
+  padding: 0 !important;
+}
+
+.collapse-item-index--van-cell {
+  padding: 30rpx 0 10rpx 0 !important;
+}
+
+.collapse-item-index--van-cell .van-cell__title {
+  font-size: var(--grid-item-text-font-size, 30rpx);
+}
+
+/* 表头 */
+/* van-cell van-cell--borderless van-cell--clickable */
+.van-collapse-item__title>.van-cell--clickable{
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+
+.van-cell--clickable.van-cell--borderless.van-cell>.van-cell__title{
+  padding-left: 30rpx;
+  /* text-shadow: 0px 1px 0px rgb(204, 204, 204), 0px 2px 0px rgb(201, 201, 201), 0px 3px 0px rgb(187, 187, 187), 0px 4px 0px rgb(185, 185, 185), 0px 5px 0px rgb(170, 170, 170), 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.25), 0px 20px 20px rgba(0, 0, 0, 0.15); */
+
+  background-image: linear-gradient(to bottom, #cfd9df 0%, #f4f4f4 100%);
+  /* background-image: linear-gradient(to bottom, #cfd9df 0%, #e2ebf0 100%); */
+
+  /* background-image: linear-gradient(to right, #cfd9df 0%, #e2ebf0 100%); */
+  border-radius: 30rpx;
+}
+
+/* 侧边栏 */
+.van-sidebar-item{
+  padding-left: 6rpx!important;
+  padding-right: 0!important;
+}
+
+/* 普通button： van-button van-button--primary van-button--large van-button--round */
+/* 日历button： van-button van-button--danger van-button--normal van-button--block van-button--round */
+.van-button.van-button--primary.van-button--large.van-button--round>.van-button__text{
+  font-size: 28rpx;
+}
+.van-button--round {
+  width: 250rpx !important;
+  height: 70rpx !important;
+  line-height: 140rpx !important;
+  font-size: 30rpx !important;
+}
+.van-button--normal{
+  width: 100% !important;
+}
+
+.button_Center {
+  width: 100%;
+  margin-top: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+
+/* 表格 */
+.row {
+  line-height: 30rpx;
+  padding: 10rpx 0;
+  display: flex;
+}
+
+.tit {
+  flex: 1;
+  color: #ababab;
+  text-indent: 40rpx;
+}
+
+.Val {
+  flex: 2;
+  color: #3a3a3a;
+}
+
+.InformationBorder {
+  border: 1px solid #eee;
+  font-size: 24rpx;
+}
+
+.equipmentRow {
+  margin-top: 10rpx;
+  border-top: 1px solid #f6f6f6;
+}
+
+/* title标题 */
+.titleTips {
+  font-size: 32rpx;
+  padding: 0 24rpx;
+  border-left: 3px solid #40a9ff;
+  margin: 20rpx 0;
+}
+
+/* 加载中 */
+.Loading{
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0;
+}

@@ -1,0 +1,48 @@
+<!--pages/update/update.wxml-->
+<!--pages/query/query.wxml-->
+
+<view class="shop_title">
+  <text class="title-font">门 店 信 息</text>
+</view>
+<view class="shop">
+<form bindsubmit="formSubmit" bindreset="formReset">
+ 
+  <view class="section">
+    <view>店号:</view>
+    {{shop.shop_code==null?'无':shop.shop_code}}
+  </view>
+  <view class="section">
+    <view>店名:</view>
+    {{shop.shop_name==null?'无':shop.shop_name}}
+  </view>
+  <view class="section">
+    <view>站点状态:</view>
+    <input name="shop_type" placeholder="站点状态" value="{{shop.shop_type}}"/>
+  </view>
+  <view class="section">
+    <view>服务商:</view>
+    <input name="partner_name" placeholder="服务商" value="{{shop.partner_name}}"/>
+  </view>
+  <view class="section">
+    <view>省/市/区:</view>
+    <input name="prov_and_cities" placeholder="预计安装时间" value="{{shop.prov_and_cities}}"/>
+  </view>
+  <view class="section">
+    <view>详细地址:</view>
+    <input name="shop_address" placeholder="详细地址" value="{{shop.shop_address}}"/>
+  </view>
+  <view class="section">
+    <view>担当人:</view>
+    <input name="duty_charge_name" placeholder="担当人" value="{{shop.duty_charge_name}}"/>
+  </view>
+  <view class="section">
+    <view>手机号:</view>
+    <input name="duty_charge_phone" placeholder="担当人" value="{{shop.duty_charge_phone}}"/>
+  </view> 
+    <button formType="submit" class="btn-area">提交</button> 
+</form>
+</view>
+
+
+  
+

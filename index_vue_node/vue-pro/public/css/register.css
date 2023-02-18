@@ -1,0 +1,65 @@
+body {
+    background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598186104820&di=87a9329f3ef72314b26a6522d943f6a4&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F1%2F59940cf3bfcaa.jpg') no-repeat;
+    background-size: cover;
+}
+
+.d1 {
+    width: 350px;
+    height: 300px;
+    margin: 200px auto;
+    background: rgba(0.4, 0.4, 0.4, 0.4);
+    position: relative;
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+
+input {
+    border: 1px solid #000;
+    border-radius: 3px 3px;
+    margin: 10px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+.in1{
+    margin: 20px 10px;
+}
+input:nth-child(2),
+input:nth-child(3),
+input:nth-child(4) {
+    width: 250px;
+    height: 40px;
+}
+
+input:nth-child(5) {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    top: 0;
+    left: 32px;
+}
+.form>span{
+    width: 270px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 14px;
+    left: 50px;
+    display: none;
+    color: #f00;
+    font-size: 12px;
+}
+.dian:active{
+    background-color: #fff;
+    width: 196px;
+    height: 38px;
+    position: relative;
+    left: 34px;
+    top: 1px;
+}
+.tip{
+    color: #f00;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    font-size: 14px;
+}

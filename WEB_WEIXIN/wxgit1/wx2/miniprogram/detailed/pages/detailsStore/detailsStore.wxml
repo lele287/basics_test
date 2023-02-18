@@ -1,0 +1,163 @@
+<view class="subject">
+  <!-- <view class="trademarkImg">
+    <swiper current="{{index}}" circular="true" indicator-dots="true" autoplay="true" class="swiperLogo">
+      <swiper-item>
+        <image src="https://t7.baidu.com/it/u=3258770622,2359714340&fm=193&f=GIF" class="swiperLogoImg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://t7.baidu.com/it/u=3281686603,2838365105&fm=193&f=GIF" class="swiperLogoImg"></image>
+      </swiper-item>
+    </swiper>
+  </view> -->
+
+
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}">
+    <van-collapse-item title="门店信息" name="门店信息" border="{{false}}">
+      <!-- <view class="TipsTit">进阶信息</view> -->
+      <view class="InformationBorder">
+        <view class="row">
+          <view class="tit">网络类型</view>
+          <view class="Val">{{detailsData.NetType}}</view>
+        </view>
+        <!-- <view class="row">
+          <view class="tit">站点类型</view>
+          <view class="Val">{{detailsData.ShopClass}}</view>
+        </view> -->
+        <view class="row">
+          <view class="tit">站点区域</view>
+          <view class="Val">{{detailsData.ShopAreaName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">站点讯息</view>
+          <view class="Val">{{detailsData.ShopCode}}_{{detailsData.ShopName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">站点状态</view>
+          <view class="Val">{{detailsData.ShopType}}</view>
+        </view>
+
+        <view class="row">
+          <view class="tit">安装时间</view>
+          <view class="Val">{{detailsData.InstallTime}}</view>
+        </view>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+
+
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}" wx:if="{{equipment.length>0}}">
+    <van-collapse-item title="设备信息" name="设备信息" border="{{false}}">
+      <view class="InformationBorder">
+        <view wx:for="{{equipment}}" wx:key="index">
+          <view class="row {{index!=0?'equipmentRow':''}}">
+            <view class="tit">设备讯息</view>
+            <view class="Val">{{item.EquipmentCode}}_{{item.EquipmentName}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">设备型号</view>
+            <view class="Val">{{item.EquipmentModelName}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">安装时间</view>
+            <view class="Val">{{item.InstallDate}}</view>
+          </view>
+        </view>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+
+  <block wx:if="{{see}}">
+    <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}" wx:if="{{equipment.length>0}}">
+      <van-collapse-item title="维修记录" name="维修记录" border="{{false}}">
+        <view class="InformationBorder">
+          <view class="row">
+            <view class="tit">总数</view>
+            <view class="Val">{{maintenance.total}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">处理</view>
+            <view class="Val">{{maintenance.handle}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">结案</view>
+            <view class="Val">{{maintenance.end}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">维修历史</view>
+            <view class="Val Val_tap" bindtap="onMaintenanceRecord">点击查看</view>
+          </view>
+        </view>
+      </van-collapse-item>
+    </van-collapse>
+  </block>
+
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}">
+    <van-collapse-item title="客户信息" name="客户信息" border="{{false}}">
+      <view class="InformationBorder">
+        <view class="row">
+          <view class="tit">客户名称</view>
+          <view class="Val">{{detailsData.ClientName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">品牌名称</view>
+          <view class="Val">{{detailsData.BrandName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">担当人</view>
+          <view class="Val">{{detailsData.ChargeName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">手机号</view>
+          <view class="Val">{{detailsData.ChargePhone}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">省市</view>
+          <view class="Val">{{detailsData.ProvAndCities}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">区域</view>
+          <view class="Val">{{detailsData.District}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">店址</view>
+          <view class="Val">{{detailsData.ShopAddress}}</view>
+        </view>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+
+  <view class="GonggeBorder">
+    <van-grid clickable column-num="4" border='{{fales}}'>
+      <van-grid-item icon="/images/icon/install.png" link-type="navigateTo"
+        url="../NewInstall/NewInstall?Code={{detailsData.ShopCode}}" text="安装设备" />
+
+      <van-grid-item icon="/images/icon/dismantle.png" link-type="navigateTo"
+        url="../DismantleMachine/DismantleMachine?Code={{detailsData.ShopCode}}" text="拆除设备"
+        wx:if="{{equipment.length>0}}" />
+
+      <van-grid-item icon="/images/icon/replace.png" link-type="navigateTo"
+        url="../ReplaceEquipment/ReplaceEquipment?Code={{detailsData.ShopCode}}" text="更换设备"
+        wx:if="{{equipment.length>0}}" />
+
+      <van-grid-item icon="/images/icon/journal.png" link-type="navigateTo"
+        url="../Journal/Journal?Code={{detailsData.ShopCode}}" text="日志" wx:if="{{equipment.length>0}}" />
+
+      <!-- <van-grid-item icon="/images/icon/signal.png" text="信号查询" wx:if="{{see}}" bindtap="onSignalNavigateTo" /> -->
+
+      <van-grid-item icon="/images/icon/signal.png" text="信号查询" wx:if="{{see}}" bindtap="onSingleNavigateTo" />
+
+      <van-grid-item icon="/detailed/images/icon/see.png" link-type="navigateTo"
+        url="../SeeFlow/SeeFlow?Code={{detailsData.ShopCode}}" text="流量查询" wx:if="{{see}}" />
+    </van-grid>
+  </view>
+</view>
+
+
+<!--客户 弹出层 -->
+<view>
+  <!-- 弹出层 -->
+  <van-dialog show="{{ SignalState }}" title="请选择设备" use-slot show-cancel-button bind:close="onSignalHide"
+    bind:confirm="SignalYes" confirm-button-color="#40A9FF">
+    <van-picker columns="{{ SignalData }}" bind:change="onSignal" />
+  </van-dialog>
+</view>

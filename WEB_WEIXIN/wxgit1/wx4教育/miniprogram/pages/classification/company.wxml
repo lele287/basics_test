@@ -1,0 +1,59 @@
+<view class="sidebar">
+  <view class="left">
+    <van-sidebar active-key="{{ equipment }}" bind:change="onEquipment">
+      <van-sidebar-item title="美工" />
+      <van-sidebar-item title="WEB前端开发工程师" />
+      <van-sidebar-item title="后端开发工程师" />
+      <van-sidebar-item title="数据库管理" />
+    </van-sidebar>
+  </view>
+  <view wx:if="{{equipment==0}}" class="rigth">
+    <!-- <view class="DeviceInformation" wx:for="{{setUp}}" wx:key="index">
+      <view class="ico" data-item="{{item}}" bindtap="detailsCompany">
+        <image src="../../images/icon/setUp1.png" class="companyImg"></image>
+      </view>
+      <view class="briefIntroduction">
+        <view>
+          <text class="companyName">{{item.CompCnName}}</text>
+        </view>
+        <view>
+          <text class="companyAttribute">公司属性：{{item.CompType}}</text>
+        </view>
+        <view>
+          <text class="companyType">公司类型：{{item.CompLevel==''?'---':item.CompLevel}}</text>
+        </view>
+        <view class="companyAddress">
+          <text>{{item.CompAddress}}</text>
+        </view>
+      </view>
+    </view> -->
+    <view class="column">
+      <view bindtap="detailsCompany">
+        <image
+          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fs4.sinaimg.cn%2Fmw690%2F001owXWuzy7txuqYBuba3%26690&refer=http%3A%2F%2Fs4.sinaimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611470199&t=a34b819c6e042da1070d5090ee6157cb"
+          class="informationImg">
+        </image>
+      </view>
+      <view class="inform">
+        <view class="informTit">
+          <text>框架设计面试精讲</text>
+        </view>
+        <view class="informText">
+          <text>专攻架构设计面试，剑指大厂高薪Offer</text>
+        </view>
+        <view class="informTrainer">
+          <view class="informTrainer_name">刘海丰</view>
+          <view class="informTrainer_position">京东集团高级架构师</view>
+        </view>
+        <view class="informCurriculum">
+          <view class="informCurriculum_shelves">
+            <text>12.28日上架</text>
+          </view>
+          <view class="informCurriculum_shelves">
+            <text>点击查看详情</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,104 @@
+
+/* article logo  */
+article{
+    background-color: #fff;
+}
+.article-top{
+    width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.article-top img{
+    width: 190px;
+    height: 60px;
+    margin: 20px 10px;
+    float: left;
+}
+/* 搜索框 */
+.article-top .search{
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+    float: left;
+    display: flex;
+}
+.search input{
+    height: 40px;
+    margin: 30px 0;
+    border: 2px solid #0dc572;
+    
+}
+.search [type="search"]{
+    flex: 3;
+    margin-left: 20px;
+    border-radius: 10px 0 0 10px;
+    padding-left: 15px;
+
+}
+.search [type="button"]{
+    flex: 1;
+    border-left: 1px solid transparent;
+    border-radius:  0 10px 10px 0 ;
+    background-color: #0dc572;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+.search [type="button"]:hover{
+    color: #cceed8;
+}
+/* 购物车 */
+.article-shopping{
+    width: 130px;
+    height: 40px;
+    border: 1px solid #eee;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.article-shopping img{
+    width: 32px;
+    height: 28px;
+    margin-top: 5px;
+    margin-left: 23px;
+}
+.article-shopping span{
+    line-height: 40px;
+    font-size: 14px;
+    margin-left: -10px;
+    color: #4ba57d;
+    cursor: pointer;
+}
+/* 二维码 */
+.article-top .erweima{
+    float: left;
+    width: 68px;
+    height: 80px;
+    /* background-color: #ff0; */
+    border: 1px solid #f0f0f0;
+    margin-top: 5px;
+    margin-left: 58px;
+    position: relative;
+}
+.article-top .erweima img{
+    width: 60px;
+    height: 60px;
+    margin: -2px 3px;
+}
+.article-top .erweima span{
+    color: #0dc572;
+    margin-left: 9px;
+}
+.article-top .erweima .erweima-btn{
+    position: absolute;
+    top: -1px;
+    left: -15px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ccc;
+    line-height: 11px;
+    text-align: center;
+    cursor: pointer;
+}

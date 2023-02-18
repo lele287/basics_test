@@ -1,0 +1,73 @@
+<view class="sidebar">
+  <van-sticky offset-top="{{textareaHeight}}">
+    <view class="left" style="{{leftHeight}}">
+      <van-sidebar active-key="{{ companySidebarIndex }}" bind:change="companySidebarChange">
+        <view wx:for="{{companySidebarOptions}}" wx:key="index" class="left_Side">
+          <van-sidebar-item title="{{item.name}}" />
+          <view class="left_badge">{{item.total}}</view>
+        </view>
+      </van-sidebar>
+    </view>
+
+  </van-sticky>
+  <view wx:for="{{companySidebarOptions}}" wx:for-index="sidebarIndex" wx:for-item="items" wx:key="sidebarIndex">
+    <!-- 判断右侧显示内容 -->
+    <view wx:if="{{companySidebarIndex==sidebarIndex}}" class="rigth">
+      <!-- 加载中 -->
+      <van-transition show="{{ companyLoading }}" name="fade-down">
+        <view class="Loading" wx:if="{{companyLoading}}">
+          <van-loading type="spinner" color="#1989fa" />
+        </view>
+      </van-transition>
+      <!-- 判断数据源是否为空 -->
+      <view wx:if="{{companyData.length>0}}">
+        <view class="wholeTop">
+          <van-sticky offset-top="{{textareaHeight}}">
+            <view class="SelectedItems">
+              <view>当前：</view>
+              <view>{{selectedCompany.CompCnName}}</view>
+              <view class="CloseShop">
+                <text class="CloseShop_test">含闭店</text>
+                <view>
+                  <van-switch checked="{{ CloseShop }}" bind:change="onCloseShopChange" custom-class="CloseShop_switch"
+                    size="32rpx" />
+                </view>
+              </view>
+            </view>
+          </van-sticky>
+
+          <view class="DeviceInformation" wx:for="{{companyData}}" wx:key="index" data-index="{{index}}"
+            data-item="{{item}}" bindtap="SelectedItems">
+            <view class="ico" data-item="{{item}}" bindtap="detailsCompany">
+              <image src="{{item.ImgUrl}}" class="companyImg"></image>
+            </view>
+            <view class="briefIntroduction">
+              <view class="SelectImg">
+                <image src="../../images/icon/Select1.png" class="companySelectImg" wx:if="{{item.Selected}}"></image>
+                <image src="../../images/icon/Select.png" class="companySelectImg" wx:if="{{!item.Selected}}"></image>
+              </view>
+              <view>
+                <text class="companyName">{{item.CompCnName}}</text>
+              </view>
+              <view>
+                <text class="companyAttribute">公司属性：{{item.CompType}}</text>
+              </view>
+              <view>
+                <text class="companyType">公司类型：{{item.CompLevel==''?'---':item.CompLevel}}</text>
+              </view>
+              <view class="companyAddress">
+                <text>{{item.CompAddress}}</text>
+              </view>
+            </view>
+          </view>
+
+
+        </view>
+
+      </view>
+      <view wx:else class="EmptyState">
+        <van-empty class="custom-image" image="/images/icon/EmptyState.png" description="暂无数据" />
+      </view>
+    </view>
+  </view>
+</view>

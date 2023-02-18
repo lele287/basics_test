@@ -1,0 +1,422 @@
+.navbar {
+    border: none;
+    margin-bottom: 0px;
+    background-color: #333;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #333;
+}
+
+.navbar li:hover {
+    background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li:hover>a {
+    color: #333;
+}
+
+.main {
+    width: 1170px;
+    margin: 0 auto;
+    background-color: #fafafa;
+    overflow: hidden;
+}
+
+.content {
+    width: 1100px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.titles {
+    float: left;
+    width: 200px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.titles div {
+    margin-top: 20px;
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.titles ul li {
+    height: 50px;
+    line-height: 50px;
+}
+
+.titles ul li a {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+}
+
+.titles ul li:hover {
+    background-color: rgb(72, 212, 166);
+}
+
+.self {
+    float: left;
+    width: 500px;
+    margin-left: 30px;
+    background-color: #fff;
+    padding: 20px 30px;
+    position: relative;
+    height: 335px;
+}
+
+.self #bodyRight img {
+    width: 130px;
+    height: 130px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.self #bodyRight span {
+    font-size: 24px;
+}
+
+.self #bodyRight input {
+    display: none;
+}
+
+.address {
+    width: 500px;
+    background-color: rgba(238, 234, 234, .9);
+    position: absolute;
+    left: 230px;
+    top: 170px;
+    display: none;
+    padding: 20px;
+}
+
+.address li {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.address li div {
+    float: left;
+    font-size: 16px;
+}
+
+.address li .rname {
+    width: 60px;
+    text-align: center;
+}
+
+.address li .rphone {
+    width: 110px;
+}
+
+.address li .raddress {
+    width: 290px;
+}
+
+.message {
+    position: absolute;
+    top: 90px;
+    left: 160px;
+    /* text-align: center; */
+}
+
+.message img {
+    width: 30px;
+    height: 30px;
+}
+
+.calendarOut {
+    float: left;
+    margin-left: 30px;
+    width: 340px;
+    padding: 0 40px;
+    background-color: #fff;
+}
+
+.calendar {
+    width: 300px;
+    height: 400px;
+    margin-left: -20px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.collect {
+    float: left;
+    width: 500px;
+    background-color: #fff;
+    margin-left: 230px;
+    margin-top: -60px;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+.collect .mycollect {
+    float: left;
+    font-size: 24px;
+}
+
+.collect .collectBtn {
+    float: right;
+    margin-top: 5px;
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 18px;
+    background-color: rgb(72, 212, 166);
+    color: #fff;
+    border-radius: 2px;
+    border: 1px solid rgb(72, 212, 166);
+}
+
+.collect .collectBtn:hover {
+    color: rgb(72, 212, 166);
+    background-color: #fff;
+}
+
+.collect .ulkey {
+    height: 50px;
+    margin-bottom: 0 !important;
+}
+
+.collect .ulkey {
+    clear: both;
+    margin-top: 60px;
+}
+
+.collect .ulkey li {
+    float: left;
+    font-size: 18px;
+}
+
+.collect .ulkey li:nth-child(1) {
+    margin: 0 22px;
+}
+
+.collect .ulkey li:nth-child(2) {
+    margin: 0 50px;
+}
+
+.collect .ulkey li:nth-child(3) {
+    margin: 0 30px;
+}
+
+.collect .ulkey li:nth-child(4) {
+    margin: 0 20px;
+}
+
+.collect .ulkey li:nth-child(5) {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.collect ul li a {
+    font-size: 18px;
+    color: #000 !important;
+}
+
+.collect .ulvalue li {
+    margin: 10px 0;
+}
+
+.collect .ulvalue li img {
+    width: 80px;
+    height: 80px;
+}
+
+.collect .ulvalue li span {
+    display: inline-block;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.collect .ulvalue li .collectTitle {
+    width: 120px;
+}
+
+.collect .ulvalue li .collectShop {
+    width: 100px;
+}
+
+.collect .ulvalue li .collectPrice {
+    width: 58px;
+}
+
+.collect .ulvalue li .collectDel {
+    width: 36px;
+    text-align: right;
+}
+
+.collect .ulvalue li .collectDel:hover {
+    color: rgb(72, 212, 166);
+}
+
+.collect .supplement {
+    margin: 30px 0;
+    margin-left: 50px;
+    font-size: 18px;
+}
+
+.collect .supplement img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.collect .supplement a {
+    color: #00f !important;
+}
+
+.body-list ul {
+    width: 100%;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.body-list ul li {
+    width: 14.28%;
+    height: 36px;
+    line-height: 36px;
+    list-style-type: none;
+    display: block;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+}
+
+#bodyRight {
+    position: relative;
+}
+
+.userName {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 150px;
+}
+
+.lightgrey {
+    color: #a8a8a8;
+    /*浅灰色*/
+}
+
+#allRec {
+    max-width: 100px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.darkgrey {
+    color: #565656;
+    /*深灰色*/
+}
+
+.green {
+    color: #6ac13c;
+    /*绿色*/
+}
+
+.greenbox {
+    border: 1px solid #6ac13c;
+    background: #e9f8df;
+    /*浅绿色背景*/
+}
+
+#prev {
+    font-size: 20px;
+    color: rgb(72, 212, 166);
+    /* background-color: #0ff; */
+}
+
+#next {
+    float: right;
+    font-size: 20px;
+    color: rgb(72, 212, 166);
+    /* background-color: #0ff; */
+}
+
+.ad {
+    width: 1190px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.ad img {
+    width: 1190px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#footer {
+    height: 150px;
+    margin-top: 150px;
+    bottom: 0;
+    background-color: #333;
+    color: #ccc;
+}
+
+#footer_main {
+    width: 1190px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#footer-left,
+#footer-center,
+#footer-right {
+    width: 330px;
+    height: 100px;
+    float: left;
+    margin: 15px 30px 5px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+#footer-center {
+    position: relative;
+}
+
+#footer-center-pic {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 120px;
+    background: url(../images/erweima.jpg);
+    background-size: 100% 100%;
+}
+
+#footer-bottom {
+    width: 1190px;
+    height: 25px;
+    float: left;
+    text-align: center;
+}
+
+#footer a,
+#footer span {
+    font-size: 15px;
+    color: #ccc;
+    margin-left: 40px;
+}

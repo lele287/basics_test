@@ -1,0 +1,25 @@
+<view class="subject">
+  <view class="sign">
+    <view class="trademarkImg">
+      <image src='../../images/144174933331120806.png' class="portraits"></image>
+    </view>
+    <view>
+      <van-cell-group>
+        <van-cell title="当前用户名称：" value="{{name}}" />
+      </van-cell-group>
+    </view>
+    <view>
+      <van-cell-group>
+        <van-cell title="全名：" value="{{FullNameEn}}" />
+      </van-cell-group>
+    </view>
+    <view>
+      <van-cell-group>
+        <van-cell title="当前用户身份：" value="{{NickName}}" />
+      </van-cell-group>
+    </view>
+    <van-button type="primary" round color="#1989fa" size="large" bindtap="signOut" >
+      退出登录
+    </van-button>
+  </view>
+</view>

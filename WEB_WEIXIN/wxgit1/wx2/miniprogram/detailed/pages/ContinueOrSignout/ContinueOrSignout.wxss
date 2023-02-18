@@ -1,0 +1,43 @@
+
+.Tips{
+  font-size: 36rpx;
+  margin: 100rpx 0;
+}
+.information{
+  margin-top: 100rpx;
+}
+
+.block{
+  line-height: 60rpx;
+  margin: 30rpx 0;
+  padding: 40rpx 30rpx;
+  border: 1px solid #40a9ff;
+  border-radius: 10rpx;
+  margin-bottom: 150rpx;
+}
+.row{
+  line-height: 30rpx;
+  padding: 10rpx 0;
+  display: flex;
+}
+.tit{
+  flex: 1;
+  color: #ababab;
+  text-indent: 40rpx;
+}
+.Val{
+  flex: 2;
+  color: #3a3a3a;
+}
+.van-button--large{
+  width: 400rpx!important;
+  height: 70rpx!important;
+  line-height: 140rpx!important;
+  font-size: 30rpx!important;
+}
+.button_Center{
+  width: 100%;
+  margin-top: 30rpx; 
+  display: flex;
+ justify-content: center;
+}

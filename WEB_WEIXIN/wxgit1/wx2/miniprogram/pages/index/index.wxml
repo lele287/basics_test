@@ -1,0 +1,39 @@
+<!-- <view class="content">
+  <view class="netTop">
+    <image src="../../images/605042067563128893.png" class="imgNetop"></image>
+  </view>
+  <view class="textNetop">
+    <view class="text">欢迎光临！</view>
+    <view class="text">为您提供最优网络</view>
+  </view>
+</view> -->
+<view class="subject">
+  <view class="table">
+    <van-sticky offset-top="{{ 0 }}">
+      <view class="tr Statistiche">
+        <text data-screen="总数" bindtap="onScreen" class="{{screens==='总数'?'fontLarge':''}}">总数 : {{Statistics.RepairTotal}}</text>
+        <text data-screen="派发中" bindtap="onScreen" class="{{screens==='派发中'?'fontLarge':''}}">派发 : {{Statistics.NotDistributeTotal}}</text>
+        <text data-screen="接单中" bindtap="onScreen" class="{{screens==='接单中'?'fontLarge':''}}">接单 : {{Statistics.AcceptingTotal}}</text>
+        <text data-screen="处理中" bindtap="onScreen" class="verde {{screens==='处理中'?'fontLarge':''}}" >处理 : {{Statistics.ProcessingTotal}}</text>
+        <text data-screen="超时" bindtap="onScreen" class="red {{screens==='超时'?'fontLarge':''}}">超时 : {{Statistics.TimeOutTotal}}</text>
+      </view>
+      <view class="tr bg-w">
+        <view class="th">客户</view>
+        <view class="th">店名</view>
+        <view class="th ">状态</view>
+        <view class="th ">类型</view>
+      </view>
+    </van-sticky>
+
+    <block wx:for="{{RepairLists}}" wx:key="index">
+      <!-- <view class="tr {{index % 2 == 0 ? 'bg-g':'' }}"> -->
+      <view class="tr {{item.ListStatus==='维修中'&&!NoEstimatedTime? 'verde':'' }} {{item.Straordinario? 'red':'' }}"
+        data-item="{{item}}" bindtap="onSingleCardDebugging">
+        <view class="td">{{item.ClientName}}</view>
+        <view class="td">{{item.ShopNames}}</view>
+        <view class="td">{{item.ListStatus}}</view>
+        <view class="td">{{item.ExceptionClassName}}</view>
+      </view>
+    </block>
+  </view>
+</view>

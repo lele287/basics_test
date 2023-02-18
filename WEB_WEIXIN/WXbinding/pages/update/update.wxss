@@ -1,0 +1,45 @@
+/* pages/update/update.wxss */
+page{
+  background-color:#fff;
+}
+.section{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+}
+.title-font{
+  color:skyblue;
+}
+.section view{
+  margin-right: 20rpx;
+}
+.btn-area{
+  margin: 20rpx;
+}
+button{
+  margin: 10rpx 0;
+}
+.shop{
+  width:90%;
+  margin: 20rpx auto;
+  height: 93vh;
+  position: relative;
+}
+
+.shop_title{
+  width:90%;
+  margin: 0rpx auto;
+  font-weight: 700;
+}
+.equipemntInfo{
+  display:flex;
+  flex-direction: row;
+}
+.btn-area{
+  position:absolute;
+  bottom:50rpx;
+  left:50%;
+  transform:translateX(-53%);
+  width:600rpx;
+  background-color:rgb(49, 158, 49);
+}

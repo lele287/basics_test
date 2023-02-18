@@ -1,0 +1,25 @@
+<view>
+
+    <view class="tbTile">
+        <view class="titleBg"></view>
+        <view class="my-client">设备型号</view>
+    </view>
+    <view class="modeWrap">
+        <block wx:for="{{modeIn}}" wx:key="{{index}}">
+            <view class="modeIn" data-staticOrder='{{item.static_order}}' bindtap='jumpInstallAndDistrubute'>
+              <image src="{{item.modeImg}}"/>
+              <view>{{item.static_info}}</view>
+            </view>
+        </block>
+        <!-- 空元素占位 -->
+        <view class="modeIn mbg">
+            <image src=""/>
+            <view></view>
+        </view>
+        <view class="modeIn mbg">
+            <image src=""/>
+            <view></view>
+        </view>
+      
+    </view>
+</view>

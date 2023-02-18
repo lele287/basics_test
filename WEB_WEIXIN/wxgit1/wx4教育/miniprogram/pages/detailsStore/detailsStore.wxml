@@ -1,0 +1,46 @@
+<view class="subject">
+  <view class="trademarkImg">
+    <swiper current="{{imgIndex}}" bindchange="changeImg" circular="true" indicator-dots="true">
+      <swiper-item>
+        <image
+          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F12109026030%2F1000.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611470033&t=b17e098d6d2c428c6fef631f482e9966"
+          class="CarouselImg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image
+          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.yipic.cn%2Fthumb%2F2aeb8272%2Fa9ecb08b%2Ffd950107%2Ff695968b%2Fbig_2aeb8272a9ecb08bfd950107f695968b.png&refer=http%3A%2F%2Fimg.yipic.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1611470082&t=393a4ace8f808860c4a0a97b40e02f0d"
+          class="CarouselImg" bindtap="curriculum"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="TipsTit">基本信息</view>
+  <view class="InformationBorder">
+    <view class="row">
+      <view class="tit">课程</view>
+      <view class="Val">WEB前端</view>
+    </view>
+    <view class="row">
+      <view class="tit">内容简介</view>
+      <view class="Val">前端全站开发</view>
+    </view>
+    <view class="row">
+      <view class="tit">作者</view>
+      <view class="Val">张三</view>
+    </view>
+  </view>
+
+
+  <view class="TipsTit">课程回放</view>
+  <view class="Carousel">
+    <swiper current="{{index}}"  circular="true" indicator-dots="true">
+      <swiper-item>
+        <video id="myVideo" src="https://mp4.vjshi.com/2020-12-25/163a930545c1749767df4dcb3d879094.mp4"
+          show-fullscreen-btn='true' class="video"></video>
+      </swiper-item>
+      <swiper-item>
+        <video id="myVideo" src="https://mp4.vjshi.com/2020-12-18/d406773ed808699de1de76c84ddbb4a8.mp4"
+          show-fullscreen-btn='true' class="video"></video>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

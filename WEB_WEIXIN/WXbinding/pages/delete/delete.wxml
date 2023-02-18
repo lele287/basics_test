@@ -1,0 +1,10 @@
+<!--pages/delete/delete.wxml-->
+ <view class="euipementBetail" wx:if="{{addEquipments.length != 0}}">
+        <block wx:for="{{equipment}}" wx:key="{{index}}">
+            <view class="display"> 
+                <view  class="lable">{{item.static_info}}:</view> <text>{{item.equipment_code}}</text>
+                <view class="iconfont icon-ziyuan:before" style='margin-left:60rpx' bindtap="clickDeleteOne" data-index='{{index}}'></view>  
+            </view> 
+        </block>
+       <button class='goodbutton'  hover-class="hover" bindtap='deleteAll'>全部拆除</button>
+ </view>

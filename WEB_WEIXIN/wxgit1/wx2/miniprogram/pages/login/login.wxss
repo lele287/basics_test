@@ -1,0 +1,81 @@
+/* pages/login/login.wxss */
+.subjects {
+  height: 1000rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.subject {
+  flex: 1;
+  padding: 0 100rpx;
+}
+
+.dlico {
+  font-size: 40rpx;
+  position: relative;
+  top: 8rpx;
+}
+
+
+.field-index--van-field {
+  /* height: 100rpx!important; */
+  padding-top: 35rpx !important;
+}
+
+.tail {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 26rpx;
+  left: 0;
+}
+
+.tail text {
+  font-size: 26rpx;
+  color: #a6a6a6;
+}
+
+.help {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.trademarkView {
+  width: 160rpx;
+  height: 160rpx;
+  overflow: hidden;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  margin-left: -80rpx;
+}
+
+.trademark {
+  width: 350rpx;
+  height: 240rpx;
+  position: absolute;
+  top: -40rpx;
+  left: -94rpx;
+  /* position: absolute;
+  left: 50%; */
+  /* margin-left: -80rpx; */
+}
+
+.InputBox {
+  margin-top: 80rpx;
+}
+
+.rememberPassword {
+  margin: 50rpx 20rpx;
+  float: right;
+}
+
+.rightIcon {
+  font-size: 44rpx !important;
+}

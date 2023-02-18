@@ -1,0 +1,15 @@
+<!--pages/logs/logs.wxml-->
+<view class="service-item" bindtap='jumpPage' data-index='test_log'>
+  <image class="dateImg" src="/images/date1.png"></image>
+  <view class="font">测试日志</view>
+</view>
+
+<view class="service-item" bindtap='jumpPage' data-index='shop_log'>
+  <image class="dateImg" src="/images/date2.png"></image>
+  <view class="font">拆机日志</view>
+</view>
+
+<view class="service-item" bindtap='jumpPage' data-index='change_log'>
+  <image class="dateImg" src="/images/date3.png"></image>
+  <view class="font">换机日志</view>
+</view>

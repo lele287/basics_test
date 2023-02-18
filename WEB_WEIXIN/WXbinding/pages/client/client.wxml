@@ -1,0 +1,34 @@
+<!--pages/client/client.wxml-->
+
+  <!--<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">-->
+    <!--<block wx:for="{{movies}}" wx:for-index="index" wx:key="{{key}}">-->
+      <!--<swiper-item>-->
+        <!--<image src="{{item.url}}" class="slide-image" mode="aspectFill"/>-->
+      <!--</swiper-item>-->
+    <!--</block>-->
+  <!--</swiper>-->
+<view class="indexBanner">
+    <image src="/images/logs.png"></image>
+</view>
+<view class="titleWrap">
+    <view class="titleBg"></view>
+    <view class="my-client">我的客户</view>
+</view>
+
+
+<view class="block image">
+  <block wx:for="{{client}}" wx:key="{{key}}">
+      <view class="client_info" bindtap='chooseClient' data-index='{{index}}'>
+          <view class="client-name">{{item.clientName}}</view>
+          <view class="client">
+              <image src="/images/shopping.png"></image>
+          </view>
+      </view>
+  </block>
+
+</view>
+
+<view class="btFz">
+    <view bindtap='quit' class='button mSbt'><view class="font">退 出 登 录</view></view> 
+</view>
+

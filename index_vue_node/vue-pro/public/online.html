@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线询问</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <style>
+        body {
+            background-color: #000;
+        }
+
+        .middle {
+            width: 720px;
+            height: 505px;
+        }
+
+        #portrait {
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        #text1 {
+            width: 490px;
+            height: 30px;
+            margin: 12px 30px;
+            padding: 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .ddd {
+            width: 100%;
+            height: 400px;
+            background: #f5f5f5;
+            writing-mode: lr-tb;
+            padding: 5px 20px;
+            overflow: auto;
+        }
+
+        .middle_top {
+            width: 100%;
+            height: 48px;
+            position: relative;
+        }
+
+        .middle_top img {
+            width: 70px;
+            height: 70px;
+            margin-left: 42px;
+            border-radius: 50%;
+            background: #fff;
+        }
+
+        .middle_top h2 {
+            position: absolute;
+            top: 5px;
+            left: 155px;
+            color: #666;
+            font-size: 26px;
+            font-weight: 450;
+            font-style: italic;
+            letter-spacing: 5px
+        }
+
+        .middle_top p {
+            color: #333;
+            position: absolute;
+            top: 20px;
+            left: 300px;
+        }
+
+        .close {
+            display: block;
+            width: 20px;
+            height: 20px;
+            color: #aaa;
+            font-size: 14px;
+            text-align: center;
+            line-height: 20px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            position: absolute;
+            right: 20px;
+            top: 14px;
+            cursor: pointer;
+        }
+
+        #div2 {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 15px;
+            margin: 0 auto;
+
+        }
+
+        .leftPost {
+            width: 505px;
+            float: left;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .leftPost img,
+        .rightPost img{
+            width: 40px;
+            height: 40px;
+        }
+        .rightPost {
+            float: right;
+            width: 505px;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        .ee {
+            font-size: 16px;
+            color: #333;
+            border-radius: 20px 20px 20px 4px;
+            padding: 5px 10px;
+            margin: 10px;
+            background-color: #fff;
+        }
+
+        .rr {
+            font-size: 16px;
+            color: #333;
+            border: 1px solid #0dc572;
+            border-radius: 20px 20px 4px 20px;
+            padding: 5px 10px;
+            margin: 10px;
+            background-color: #0dc572;
+        }
+
+        #btn1 {
+            display: inline-block;
+            background-color: #e9ecee;
+            color: #999;
+            padding: 6px 25px;
+            border: transparent;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .ddd {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="middle">
+        <div id="div2">
+            <div class="middle_top">
+                <img src="images/kftx.png" alt="">
+                <h2>窝窝客服</h2>
+                <p>| 专门为您解决各类账户、订单、支付等问题，快速响应</p>
+                <i class="close">×</i>
+            </div>
+            <div class="ddd">
+                <div id="information">
+                    <dev class="leftPost ee">欢迎来到康乐窝窝!( •͈ᴗ⁃͈)ᓂ- - -♡﻿</dev>
+                </div>
+            </div>
+            <img id="portrait" src="images/kefutx.png" alt="">
+            <input id="text1" type="text" onkeydown="myFunction(event)">
+            <input id="btn1" type="button" value="发送">
+        </div>
+    </div>
+    <script>
+        var onOff = true;
+        function myFunction(event) {
+            var x = event.keyCode;
+            if (x == 13) {
+                $('#btn1').click()
+            }
+        }
+        window.onload = function () {
+            var oText = document.getElementById('text1');
+            var oBtn = document.getElementById('btn1')
+            var oImg = document.getElementById('portrait')
+            var oDiv = document.getElementById('information')
+            oBtn.onclick = function () {
+                if ($('#text1').val() != '') {
+
+                    // oDiv.innerHTML += oText.value + '<br/>';
+                    // 一.创建img
+                    var contentImg = document.createElement("img")
+                    // 设置图片地址
+                    contentImg.setAttribute("src", oImg.src);
+                    // 二.创建dev
+                    var testDev = document.createElement("dev")
+                    testDev.setAttribute("class", onOff ? 'ee' : 'rr');
+                    // 把输入的标签填入到dev标签中
+                    testDev.innerHTML = oText.value;
+
+                    // 三.创建dev
+                    var test = document.createElement("dev");
+                    // 根据笑脸的状态设置不同的class
+                    test.setAttribute("class", onOff ? 'leftPost' : 'rightPost');
+
+                    // 创建div，放入第二步放入的dev标签
+                    var Div2 = document.createElement("div").appendChild(testDev);
+
+                    // 四.更改img和dev的位置
+                    if (onOff) {
+                        // 放入第一步放入的img标签
+                        test.appendChild(contentImg);
+                        // 放入第二步放入的dev标签
+                        test.appendChild(testDev);
+                    } else {
+                        test.appendChild(testDev);
+                        test.appendChild(contentImg);
+                    }
+                    // 更改div中的文字样式
+                    // Div2.className = 'rr'
+
+                    //  testDev.style.padding = '2px'
+                    // 把第三步创建的dev放到dev1下
+                    oDiv.appendChild(test);
+                    // 输入框置空
+                    oText.value = '';
+                }
+
+                // 图片切换
+                oImg.onclick = function () {
+                    if (onOff) {
+                        oImg.src = 'images/yonghutx.png';
+                        //oDiv.style.textAlign = 'right';
+                        onOff = false;
+                    } else {
+                        oImg.src = 'images/kefutx.png';
+                        //  oDiv.style.textAlign = 'left';
+                        onOff = true;
+                    }
+                }
+            }
+        }
+        $(function () {
+            $('.close').click(function () {
+                $('.middle').fadeOut()
+            })
+        })
+
+    </script>
+</body>
+
+</html>

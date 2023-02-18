@@ -1,0 +1,55 @@
+<view class="sidebar">
+  <van-sticky offset-top="{{textareaHeight}}">
+    <view class="left" style="{{leftHeight}}">
+      <van-sidebar active-key="{{ cardSidebarIndex }}" bind:change="cardSidebarChange">
+        <view wx:for="{{cardSidebarOptions}}" wx:key="index" class="left_Side">
+          <van-sidebar-item title="{{item.name}}" />
+          <view class="left_badge">{{item.total}}</view>
+        </view>
+      </van-sidebar>
+    </view>
+  </van-sticky>
+
+  <view wx:for="{{cardSidebarOptions}}" wx:for-index="sidebarIndex" wx:for-item="items" wx:key="sidebarIndex">
+    <!-- 判断右侧显示内容 -->
+    <view wx:if="{{cardSidebarIndex==sidebarIndex}}" class="rigth">
+      <!-- 加载中 -->
+      <van-transition show="{{ cardLoading }}" name="slide-down" duration="{{ { enter: 200, leave: 140 } }}">
+        <view class="Loading" wx:if="{{cardLoading}}">
+          <van-loading type="spinner" color="#1989fa" />
+        </view>
+      </van-transition>
+      <!-- 判断数据源是否为空 -->
+      <view wx:if="{{cardData.length>0}}">
+        <view class="DeviceInformation" wx:for="{{cardData}}" wx:key="index">
+          <view class="briefIntroductions" data-item="{{item}}">
+            <view>
+              <text class="companyName">{{item.Iccid}}_{{item.CardOperator}}</text>
+            </view>
+            <!-- <view>
+              <text class="companyAttribute">类型：{{item.CardOperator}}</text>
+            </view> -->
+            <view>
+              <text class="companyAttribute">门店讯息：{{item.ShopCode}}_{{item.ShopName}}</text>
+            </view>
+            <view>
+              <text class="companyType">设备编号：{{item.EquipmentCode}}</text>
+            </view>
+            <!-- <view class="fsize">
+              <text class="companyAddress">设备编号：{{item.EquipmentCode}}</text>
+            </view> -->
+          </view>
+        </view>
+        <!-- 加载中 -->
+        <!-- <van-transition show="{{ cardLoading }}" name="fade-down">
+          <view class="Loading" wx:if="{{cardLoading}}">
+            <van-loading type="spinner" color="#1989fa" size="40rpx">加载中...</van-loading>
+          </view>
+        </van-transition> -->
+      </view>
+      <view wx:else class="EmptyState">
+        <van-empty class="custom-image" image="/images/icon/EmptyState.png" description="暂无数据" />
+      </view>
+    </view>
+  </view>
+</view>

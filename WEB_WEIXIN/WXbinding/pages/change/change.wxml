@@ -1,0 +1,32 @@
+<!--pages/change/change.wxml-->
+  <view class="euipementBetail" wx:if="{{equs.length != 0}}">
+        <block wx:for="{{equs}}" wx:key="{{index}}">
+            <view class="display">
+                <view  class="lable">{{item.static_info}}:</view> <text style="font-size: 32rpx">{{item.equipment_code}}</text>
+                <view class="closeBt" style='' bindtap="clickDelete" data-index='{{index}}'>
+                    <image src="/images/close.png"></image>
+                </view>
+            </view>
+             <view class="display">
+                 <view  class="lable">{{item.new_static_info}}:</view>
+                 <input class="inputText" placeholder="请输入设备编号" placeholder-style="font-size:32rpx;"  value='{{item.new_equipment_code}}' bindinput='equipmentChange' data-index='{{index}}'/>
+            </view>
+            <view class="somBt" bindtap="click" data-index='{{index}}'>
+                <image src="/images/som.png"></image>
+            </view>
+        </block>
+       <button class='goodbutton'  hover-class="hover" bindtap='save'>保存</button>
+ </view>
+
+
+ <view class="euipementBetail" wx:if="{{addEquipments.length != 0}}">
+        <block wx:for="{{equipment}}" wx:key="{{index}}">
+            <view class="display">
+                <view  class="lable">{{item.static_info}}:</view> <text style="font-size: 32rpx">{{item.equipment_code}}</text>
+                <view class="iconfont changeNum" bindtap="clickChange" data-oneEqu='{{item}}'>
+                    更改设备
+                </view>
+            </view>
+        </block>
+ </view>
+

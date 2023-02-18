@@ -1,0 +1,106 @@
+<view class="subject">
+  <!-- <view class="trademarkImg">
+    <swiper current="{{index}}" circular="true" indicator-dots="true" autoplay="true" class="swiperLogo">
+      <swiper-item>
+        <image src="https://t7.baidu.com/it/u=3258770622,2359714340&fm=193&f=GIF" class="swiperLogoImg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://t7.baidu.com/it/u=3281686603,2838365105&fm=193&f=GIF" class="swiperLogoImg"></image>
+      </swiper-item>
+    </swiper>
+  </view> -->
+
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}">
+    <van-collapse-item title="基本信息" name="1" border="{{false}}">
+      <view class="InformationBorder">
+        <view class="row">
+          <view class="tit">公司属性</view>
+          <view class="Val">{{detailsData.CompType}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">中文简称</view>
+          <view class="Val">{{detailsData.CompCnName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">中文全称</view>
+          <view class="Val">{{detailsData.CompCnFullName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">英文简称</view>
+          <view class="Val">{{detailsData.CompEnName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">服务等级</view>
+          <view class="Val">{{detailsData.CompServiceLevel}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">公司类型</view>
+          <view class="Val">{{detailsData.CompLevel}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">公司域名</view>
+          <view class="Val">{{detailsData.CompDomain}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">公司地址</view>
+          <view class="Val">{{detailsData.CompAddress}}</view>
+        </view>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+
+  <view class="GonggeBorder">
+    <van-grid clickable column-num="4" border='{{fales}}'>
+
+      <van-grid-item icon="/images/icon/newlyAdded.png" link-type="navigateTo" url="../NewSite/NewSite?Initial=true" text="新增门店"/>
+
+      <van-grid-item icon="/images/icon/Ranking.png" link-type="navigateTo" url="../flowRanking/flowRanking" text="流量排行"/>
+
+      <van-grid-item icon="/images/icon/offLineAP.png" link-type="navigateTo" url="../OffLineAP/OffLineAP?companyName=全家" text="离线AP" wx:if="{{detailsData.CompCnName=='上海福满家'}}"/>
+
+      <van-grid-item icon="/images/icon/ip.png" link-type="navigateTo" url="../FamilyMartIp/FamilyMartIp?companyName=全家&Id={{detailsData.Id}}" text="IP查询" wx:if="{{detailsData.CompCnName=='上海福满家'}}"/>
+      <!-- detailsData.Id -->
+
+      <van-grid-item icon="/images/icon/ip.png" link-type="navigateTo" url="../FamilyMartIp/FamilyMartIp?companyName=贝瑞&Id={{detailsData.Id}}" text="IP查询" wx:if="{{detailsData.CompCnName=='集享贝瑞'}}"/>
+
+    </van-grid>
+  </view>
+
+  <!-- <view class="btnSubmit" wx:if="{{added}}">
+    <van-button type="primary" size="large" round color="#1989fa" bindtap="NewStores">
+      <van-icon name="add-o" class="dlico" color="#fff" />新增门店</van-button>
+  </view> -->
+</view>
+<!-- 功能选项栏 -->
+<!-- <view class="FunctionBar">
+  <swiper current="{{slideIndex}}" bindchange="changeswiper">
+    <swiper-item class="SinglePage">
+      <view class="FunctionIcon" bindtap="newlyAdded">
+        <van-icon name="/images/icon/newlyAdded.png" />
+      </view>
+      <view class="FunctionIcon">
+        <van-icon name="/images/icon/install.png" />
+      </view>
+      <view class="FunctionIcon">
+        <van-icon name="/images/icon/dismantle.png" />
+      </view>
+      <view class="FunctionIcon">
+        <van-icon name="/images/icon/replace.png" />
+      </view>
+      <view class="FunctionMore" bindtap="changeMore">
+        <van-icon name="/images/icon/more.png" />
+      </view>
+    </swiper-item>
+    <swiper-item class="SinglePage">
+      <view class="FunctionIcon">
+        <van-icon name="/images/icon/recovery.png" />
+      </view>
+      <view class="FunctionIcon" bindtap="newlyAdded">
+        <van-icon name="/images/icon/Report.png" />
+      </view>
+      <view class="FunctionIcon">
+        <van-icon name="/images/icon/repair.png" />
+      </view>
+    </swiper-item>
+  </swiper>
+</view> -->

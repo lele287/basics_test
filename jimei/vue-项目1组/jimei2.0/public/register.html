@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/register.js"></script>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <video src="video/01.mp4" autoplay muted loop defaultMuted>您的浏览器需要升级</video>
+    <form action="" class="register-form">
+        <h1>JiMei</h1>
+        <div class="txtb">
+            <input type="text" name="userName" id="userName" required autocomplete="off">
+            <span data-placeholder="用户名"></span>
+        </div>
+        <div class="txtb">
+            <input type="password" name="userPassword" id="userPassword" required>
+            <span data-placeholder="密码"></span>
+        </div>
+
+        <div class="txtb">
+            <input type="number" name="userNumber" id="userNumber" required autocomplete="off">
+            <span data-placeholder="手机号"></span>
+        </div>
+        <input type="button" value="获取验证码" onclick="getValidCode()" class="getValidCode">
+        <div class="txtb">
+            <input type="password" name="validCode" id="uservalidCode" required>
+            <span data-placeholder="验证码"></span>
+        </div>
+        <input type="button" value="注册" onclick="register()" class="logbtn">
+        <div class="bottom-text">
+            点错了
+            <a href="login.html">去登录</a>
+        </div>
+    </form>
+    <script>
+        $('.txtb input').on('focus', function() {
+            $(this).addClass('focus')
+        })
+        $('.txtb input').on('blur', function() {
+            if ($(this).val() == '')
+                $(this).removeClass('focus')
+        })
+    </script>
+</body>
+
+</html>

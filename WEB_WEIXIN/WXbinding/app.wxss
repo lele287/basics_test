@@ -1,0 +1,8 @@
+@import "/icon/iconfont.wxss";
+@import "/dist/index.wxss";
+@import "/icon/icon";
+@import "/images/image";
+
+page {
+  background-color:#ffffff;
+}

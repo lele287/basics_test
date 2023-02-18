@@ -1,0 +1,41 @@
+<!-- <view class="subject">
+  <view class="trademarkImg">
+    <image src="../../images/icon/setUp1.png" class="imageIcon"></image>
+  </view>
+  <view class="TipsTit">基本信息</view>
+  <view class="InformationBorder">
+    <view class="row">
+      <view class="tit">公司属性</view>
+      <view class="Val">{{detailsData.CompType}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">中文简称</view>
+      <view class="Val">{{detailsData.CompCnName}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">中文全称</view>
+      <view class="Val">{{detailsData.CompCnFullName}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">服务等级</view>
+      <view class="Val">{{detailsData.CompServiceLevel}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">公司类型</view>
+      <view class="Val">{{detailsData.CompLevel}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">公司域名</view>
+      <view class="Val">{{detailsData.CompDomain}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">英文简称</view>
+      <view class="Val">{{detailsData.CompEnName}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">公司地址</view>
+      <view class="Val">{{detailsData.CompAddress}}</view>
+    </view>
+  </view>
+
+</view> -->

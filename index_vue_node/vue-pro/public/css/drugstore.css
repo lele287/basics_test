@@ -1,0 +1,63 @@
+.center {
+    width: 1000px;
+    display: flex;
+
+}
+a{color: #fff;}
+a:hover{color: #fff;}
+.center li:nth-child(1) {
+    background-color: #0dc572;
+}
+
+.center li {
+    width: 200px;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: #3E424C;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.center>nav {
+    float: left;
+}
+
+.center_right {
+    float: left;
+    border: 1px solid #ccc;
+    width: 899px;
+    display: flex;
+    overflow: hidden;
+
+}
+/* 产品分类 */
+#products li {
+    height: 324px;
+    border: 1px solid #ccc;
+    width: 320px;
+    height: 324px;
+    margin: 3px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+#style_pic {
+    clear: both;
+    height: 322px;
+    width: 150px;
+    float: left;
+    margin-right: 10px;
+}
+#product_pic {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-top: 80px;
+    
+}
+footer{
+    clear: both;
+    
+}

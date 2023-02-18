@@ -1,0 +1,41 @@
+
+<view class="content">
+
+    <view class="install-background header">
+        <view style="overflow: hidden;margin-top: 30rpx;">
+            <view class="" style="height:36rpx;width:6rpx;background-color:#55a6fc;float: left;margin:6rpx 15rpx 0 30rpx;"></view>
+            <view style="font-size:32rpx;float: left">扫码添加设备</view>
+        </view>
+
+        <view class="sao iconfont" bindtap='click'>
+            <image src="/images/som.png"></image>
+        </view>
+    </view>
+    <view class="">
+        <view class="" style="height:36rpx;width:6rpx;background-color:#55a6fc;float: left;margin:7rpx 15rpx 0 30rpx;"></view>
+        <view class="destribute">设备编号</view>
+        <view class="input">
+            <input class="input-view" placeholder="请输入或扫描设备编号" value='{{equipmentNum}}' bindinput='equipmentChange'></input>
+            <view class="destributeTitle">正式设备:</view>
+            <switch class="content-switch" checked bindchange="switch1Change" />
+
+        </view>
+    </view>
+
+      <view class="insert" bindtap="addEquipment" data-equipmentNum='{{equipmentNum}}'>添加设备</view>
+
+      <view class="euipment-list">
+          <block class="no-data" wx:if="{{addEquipments.length == 0}}">
+               <view class='noData iconaoxiang noData no-data'></view>
+          </block>
+          <block class="no-data" wx:if="{{addEquipments.length != 0}}">
+             <block wx:for="{{addEquipments}}" wx:key="{{index}}">
+                <view class="equipment-info">
+                  {{item.type}}:{{item.info_code}}
+                  <view class="iconfont icon-ziyuan before" bindtap='clickDelete' data-index='{{index}}'></view>
+                </view>
+             </block>
+          </block>
+      </view>
+</view>
+<view class="insert" bindtap="save" wx:if="{{addEquipments.length != 0}}">保存</view>

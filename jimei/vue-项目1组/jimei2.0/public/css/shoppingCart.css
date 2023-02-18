@@ -1,0 +1,262 @@
+body,
+html {
+    height: 100%;
+    /* background-color: #eee; */
+}
+
+#main {
+    width: 1190px;
+    min-height: 716px;
+    margin: 0 auto;
+    position: relative;
+    /* bottom: -100px; */
+    background-color: #fff;
+}
+
+a {
+    font-size: 18px;
+}
+
+a:link {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: green;
+}
+
+.navbar {
+    border: none;
+    margin-bottom: 0px;
+    background-color: #333;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #333;
+}
+
+.navbar li:hover {
+    background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li:hover>a {
+    color: #333;
+}
+
+.body {
+    width: 1190px;
+    margin: 10px auto;
+}
+.item_top{
+    width: 100%;
+    height: 70px;
+}
+.item_top div {
+    float: left;
+    line-height: 50px;
+    margin: 10px;
+}
+
+.item_top :nth-child(2) {
+    width: 300px;
+    text-align: center;
+}
+
+.item_top :nth-child(3) {
+    width: 130px;
+    text-align: center;
+}
+
+.item_top :nth-child(4) {
+    width: 130px;
+    text-align: center;
+}
+
+.item_top :nth-child(5) {
+    width: 130px;
+    text-align: center;
+}
+
+.item_top :nth-child(6) {
+    width: 130px;
+    text-align: center;
+}
+
+.shoppingCart {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.item_bottom {
+    width: 1000px;
+    margin: 0 auto;
+    height: 80px;
+    background-color: #999;
+    border: 1px solid #999;
+    position: absolute;
+    left: 95px;
+}
+
+.item_bottom div {
+    float: left;
+    height: 80px;
+}
+
+.good {
+    width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid transparent;
+}
+
+.good div {
+    float: left;
+    height: 80px;
+    margin: 10px;
+    text-align: center;
+    line-height: 80px;
+}
+
+.good :nth-child(2) {
+    width: 360px;
+    margin-left: 40px;
+}
+
+.good :nth-child(3) {
+    width: 100px;
+}
+
+.good :nth-child(4) {
+    width: 165px;
+}
+
+.good :nth-child(5) {
+    width: 100px;
+}
+
+.good :nth-child(6) {
+    width: 100px;
+}
+
+.good :nth-child(6) :nth-child(1) {
+    width: 100%;
+    float: left;
+    height: 25px;
+    margin-top: 9px;
+    margin-left: 15px;
+    line-height: 25px;
+}
+
+.good :nth-child(6) :nth-child(2) {
+    width: 100%;
+    float: left;
+    height: 25px;
+    margin-top: 2px;
+    line-height: 25px;
+    margin-left: 15px;
+}
+.goods img {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.good span:nth-child(1) {
+    width: 280px;
+}
+
+.item_bottom :nth-child(1) {
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.item_bottom :nth-child(2) {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.item_bottom :nth-child(2) [type="button"] {
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+}
+
+.goodsPic {
+    display: block;
+}
+
+#footer {
+    height: 150px;
+    margin-top: -2px;
+    bottom: 0;
+    background-color: #333;
+    color: #ccc;
+}
+
+#footer_main {
+    width: 1190px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#footer-left,
+#footer-center,
+#footer-right {
+    width: 330px;
+    height: 100px;
+    float: left;
+    margin: 15px 30px 5px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+#footer-center {
+    position: relative;
+}
+
+#footer-center-pic {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 120px;
+    background: url(../images/erweima.jpg);
+    background-size: 100% 100%;
+}
+
+#footer-bottom {
+    width: 1190px;
+    height: 25px;
+    float: left;
+    text-align: center;
+}
+
+#footer a,
+#footer span {
+    font-size: 15px;
+    color: #ccc;
+    margin-left: 40px;
+}
+
+.goodsTitle {
+    display: block;
+}
+
+.height {
+    height: 716px;
+}

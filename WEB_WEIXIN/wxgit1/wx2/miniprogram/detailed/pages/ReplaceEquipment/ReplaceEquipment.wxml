@@ -1,0 +1,47 @@
+<view class="subject">
+
+  <view class="container" wx:if="{{!readOnly}}">
+    <view class="titleTips">当前门店</view>
+    <view bindtap="onSwitch" class="ScanCodeContainer">
+      <image src="../../images/switch.png" alt="" class="switch_img"></image>
+      <text>{{optionsData.ShopName}}</text>
+    </view>
+  </view>
+
+  <view class="contentMargin">
+    <view class="titleTips">当前设备</view>
+    <block wx:for="{{EquipmentNumber}}" wx:key="index">
+      <view class="euipementBetail">
+        <view class="euipementBetail_Son">{{item.EquipmentName}}:</view>
+        <view class="euipementBetail_Son">{{item.EquipmentCode}}</view>
+        <view class="euipementBetail_Son">
+          <view data-number="{{item.EquipmentCode}}" bindtap="displayHide">更换设备</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <van-empty class="custom-image" image="/images/icon/EmptyState.png" description="暂无设备"
+    wx:if="{{EquipmentNumber.length==0}}" />
+
+  <van-transition show="{{ show }}" custom-class="block">
+    <view bindtap="Hide">当前设备：{{currentNumber}}
+      <van-icon name="arrow-up" class="icon" />
+    </view>
+    <view>
+      <van-cell-group border="{{ false }}">
+        <van-field model:value="{{ newNumber }}" type="text" label="更新设备：" placeholder="请输入设备编号" border="{{ false }}"
+          error-message="{{equipmentPromptInformation}}" bind:change="onEquipmenChange" />
+      </van-cell-group>
+    </view>
+    <view bindtap="scanCode">
+      <image src="../../../images/icon/ScanCode2.png" class="ScanCode"></image>
+    </view>
+    <view class="button_Center">
+      <van-button type="primary" round color="#1989fa" size="large" bindtap="whetherConfirm">
+        保存
+      </van-button>
+    </view>
+  </van-transition>
+</view>
+
+<van-dialog id="van-dialog" bind:confirm="ReplacementEquipment" confirm-button-color="#40A9FF" />

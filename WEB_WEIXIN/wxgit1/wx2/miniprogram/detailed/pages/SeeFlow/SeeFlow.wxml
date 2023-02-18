@@ -1,0 +1,59 @@
+<view class="subject">
+
+  <!-- <view class="query_top" wx:if="{{!readOnly}}">
+    <view class="query_title">流量查询</view>
+    <van-search model:value="{{ ShopCode }}" placeholder="请输入门店编号" use-left-icon-slot="false" use-action-slot
+      bind:search="onQuery" bind:clear="onQueryClear">
+      <van-button type="info" size="small" slot="action" custom-class="queryButton" bind:tap="onQuery">搜索</van-button>
+    </van-search>
+  </view> -->
+  <view class="container_title" wx:if="{{!readOnly}}">
+    <view class="titleTips">当前门店</view>
+    <view bindtap="onSwitch" class="ScanCodeContainer">
+      <image src="../../images/switch.png" alt="" class="switch_img"></image>
+      <text>{{optionsData.ShopName}}</text>
+    </view>
+  </view>
+
+  <view class="Top">
+
+    <view wx:if="{{flowData.length!=0}}">
+
+      <view>
+        <view class="titleTips {{surplusFlow<0?'Statistics_goBeyond':''}}">本月已使用流量
+          <image src="../../images/switchFlow.png" class="switchFlow" bindtap="onSwitchFlow"></image>
+        </view>
+        <view class="Used_Value num">
+          {{Used}}
+          <text class="Used_Value_MB" decode="{{true}}">&nbsp;{{SwitchFlow?'G':'MB'}}</text>
+        </view>
+      </view>
+
+      <view class="titleTips">日用量趋势统计图</view>
+
+      <view class="container">
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+      </view>
+
+
+      <!-- <view class="Tips">左右滑动查看更多</view> -->
+      <view class="Statistics">
+        <view class="Statistics_dayAverage">
+          <view class="Statistics_tit">日均已用</view>
+          <view>{{dayAverage}}MB</view>
+        </view>
+        <view class="Statistics_surplus {{surplusFlow<0?'Statistics_goBeyond':''}}">
+          <view class="Statistics_tit">剩余流量</view>
+          <view>{{surplusFlow}}MB</view>
+        </view>
+      </view>
+
+
+
+    </view>
+
+    <view wx:if="{{flowData.length==0}}">
+      <van-empty image="/images/icon/EmptyState.png" description="暂无流量信息" />
+    </view>
+  </view>
+</view>

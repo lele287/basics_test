@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人注册</title>
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- 引入我们初始化样式文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.js"></script>
+    <script src="js/register.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="d1">
+        <form action="" class="form">
+            <p class="tip"></p>
+            <input type="text" class="form-control in1 name" placeholder="请输入用户名" value="" id="userName" name="userName" onblur="checkName()">
+            <input type="password" class="form-control in1 m" placeholder="请输入密码" value="" id="userPwd" name="userPwd" >
+            <input type="password" class="form-control in1 a" placeholder="请确认密码" value="" id="ruserPwd" name="ruserPwd">
+            <input type="button" class="dian" value="立即注册" onclick="register()">
+        </form>
+    </div>
+</body>
+
+</html>

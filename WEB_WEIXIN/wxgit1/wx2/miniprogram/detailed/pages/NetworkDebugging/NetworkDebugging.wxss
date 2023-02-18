@@ -1,0 +1,13 @@
+.van-button{
+  height: 70rpx!important;
+}
+.textTips{
+  padding: 40rpx 30rpx;
+  margin: 30rpx 0;
+  border: 1px solid #40a9ff;
+  border-radius: 10rpx;
+}
+.textTips>view{
+  height: 60rpx;
+  line-height: 60rpx;
+}

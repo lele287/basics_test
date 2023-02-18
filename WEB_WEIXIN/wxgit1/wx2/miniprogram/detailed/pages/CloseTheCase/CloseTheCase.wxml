@@ -1,0 +1,82 @@
+<view class="subject">
+  <view>
+    <view class="ProFinishedTime">
+      <view>
+        SLA规则:全家便利店-4G设备
+      </view>
+      <view>
+        预计完成：{{ProFinishedTime}}
+      </view>
+    </view>
+    <view class="circle">
+      <view class="checkedTest" style="color:{{color}}">{{SurplusTest}}</view>
+      <van-progress color="{{color}}" percentage="{{circleNumber}}" />
+    </view>
+  </view>
+  <!-- 是否暂缓 -->
+  <view class="Postponement">
+    <view>是否暂缓</view>
+    <van-switch checked="{{ checked }}" size="24px" bind:change="onPostponement" />
+  </view>
+  <view wx:if="{{!checked}}">
+    <!-- 故障分类 -->
+    <!-- 弹出层 -->
+    <van-cell bind:click="onFaultClassShow" is-link title="故障分类" value="{{FaultClassVal}}" />
+    <van-dialog show="{{ FaultClassState }}" title="请选择故障分类" use-slot show-cancel-button bind:close="onFaultClassHide"
+      bind:confirm="FaultClassYes" confirm-button-color="#40A9FF">
+      <van-picker columns="{{ FaultClassData }}" bind:change="onFaultClass" />
+    </van-dialog>
+
+    <!-- 故障细项 -->
+    <!-- 弹出层 -->
+    <van-cell bind:click="onDetailShow" is-link title="故障细项" value="{{DetailVal}}" />
+    <van-dialog show="{{ DetailState }}" title="请选择故障细项" use-slot show-cancel-button bind:close="onDetailHide"
+      bind:confirm="DetailYes" confirm-button-color="#40A9FF">
+      <van-picker columns="{{ DetailData }}" bind:change="onDetail" />
+    </van-dialog>
+
+    <!-- 权责划分 -->
+    <view class="myResponsibility">
+      <view>权责划分:</view>
+      <van-radio-group value="{{ radio }}" bind:change="onResponsibility" class="myResponsibility_Tab">
+        <van-radio name="自责">自责</van-radio>
+        <van-radio name="他责">他责</van-radio>
+      </van-radio-group>
+    </view>
+
+    <!-- 故障原因 -->
+    <van-cell-group>
+      <van-field model:value="{{ failuRereason }}" label="故障原因" type="textarea" placeholder="请描述故障原因" autosize
+        border="{{ false }}" />
+    </van-cell-group>
+
+    <!-- 解决办法 -->
+    <van-cell-group>
+      <van-field model:value="{{ solveWay }}" label="解决办法" type="textarea" placeholder="请输入具体解决办法" autosize
+        border="{{ false }}" />
+    </van-cell-group>
+  </view>
+  <view wx:else>
+
+    <!-- 截止日期 -->
+    <van-cell bind:click="onDisplay" is-link title="截至日期" value="{{date}}" />
+    <van-calendar show="{{ show }}" bind:close="onClose" color="#1890ff" bind:confirm="onConfirm" />
+
+    <!-- 暂缓原因 -->
+    <van-cell-group>
+      <van-field model:value="{{ PostponementReason }}" label="暂缓原因" type="textarea" placeholder="请输入暂缓原因" autosize
+        border="{{ false }}" />
+    </van-cell-group>
+
+  </view>
+
+  <view class="button_Center">
+    <van-button type="primary" round color="#1989fa" size="large" bindtap="onSubmit">
+      提交
+    </van-button>
+  </view>
+
+</view>
+
+
+<van-dialog id="van-dialog" bind:confirm="ReplacementEquipment" confirm-button-color="#40A9FF" />

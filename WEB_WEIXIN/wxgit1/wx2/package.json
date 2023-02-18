@@ -1,0 +1,17 @@
+{
+  "name": "wx2",
+  "version": "1.0.0",
+  "description": "这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.6.2",
+    "miniprogram-table-component": "^1.1.0",
+    "vant-weapp": "^0.5.28"
+  },
+  "devDependencies": {}
+}

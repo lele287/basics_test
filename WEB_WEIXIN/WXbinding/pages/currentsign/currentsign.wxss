@@ -1,0 +1,27 @@
+/* pages/currentsign/currentsign.wxss */
+page{
+  background-color: #fff;
+}
+.step{
+  height:80vh;
+  width:90%;
+  margin: 10rpx auto;
+  border:1rpx solid skyblue;
+  border-radius: 20rpx;
+}
+/*按钮*/
+.loginBtnView {
+  margin: 0 auto;
+  width: 90%;
+  background-color: #f2f2f2;
+  margin-top: 50rpx;
+  margin-bottom: 8rpx;
+}
+.loginBtn{
+  width: 100%;
+  font-size:14px;
+  background-color: #2d68f4!important;
+  color: #fff;
+  border: 0;
+  margin-top: 35px;
+}

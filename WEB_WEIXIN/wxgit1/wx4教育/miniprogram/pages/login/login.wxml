@@ -1,0 +1,39 @@
+<view class="subjects">
+  <!-- 提示占位符 -->
+  <van-notify id="van-notify" />
+  <van-toast id="van-toast" />
+
+  <view class="subject">
+    <view class="help">
+      <text>帮助</text>
+    </view>
+    <view class="trademarkView">
+      <image src="../../images/144174933331120806.png" class="trademark"></image>
+    </view>
+    <view class="InputBox">
+      <van-cell-group>
+        <van-field value="{{ UserName }}" bind:input="onChangeUserName" label="用户名" placeholder="请输入用户名"
+          border="{{ false }}" error-message='{{TipsVal}}' autosize='false' />
+      </van-cell-group>
+      <van-cell-group>
+        <van-field value="{{ password }}" type="password" bind:change="onChangePwd" label="密码" placeholder="请输入密码"
+          border="{{ false }}" error-message='{{TipsPwd}}' />
+      </van-cell-group>
+    </view>
+
+    <view class="btnPad">
+      <van-button type="info" round color="#1989fa" size="large" bindtap="tapName">
+        <van-icon name="contact" class="dlico" color="#fff" />
+        点击登录
+      </van-button>
+    </view>
+    <view class="tail">
+      <view>
+        <text>NeTOP ©2020 Implement By</text>
+      </view>
+      <view>
+        <text>苏州群睿信息有限公司 电话：400-999-1761</text>
+      </view>
+    </view>
+  </view>
+</view>

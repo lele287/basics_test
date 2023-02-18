@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详细页面</title>
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <!-- 引入我们初始化样式文件 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header_nav.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/products_details.css">
+    <!-- <link rel="stylesheet" href="../css/footer.css"> -->
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/products_detail.js"></script>
+    <script src="../js/judge.js"></script>
+
+</head>
+
+<body style="background-color: #f4f4f4;">
+    <header>
+        <div class="header-nav">
+            <ul class="left">
+                <li><a href="#">欢迎来到康乐窝窝！</a></li>
+                <li><a href='../index.html'>首页</a></li>
+                <div class="wdl">
+                    <li><a href='../login.html'>请登录</a></li>
+                    <li><a href='../register.html'>免费注册</a></li>
+                </div>
+                <div class="ydl">
+                    <li><a href=""></a></li>
+                    <li><a href="">退出登录</a></li>
+                </div>
+            </ul>
+            <ul class="right">
+                <li><a href="">手机版</a></li>
+                <li>
+                    <img class="header-nav-img" src="../images/gwc.png" alt="">
+                    <a href='../shopping.html'>购物车</a>
+                </li>
+                <li><a href='personalData.html'>我的窝窝</a></li>
+
+            </ul>
+        </div>
+    </header>
+    <article>
+        <div class="article-top">
+            <a href="../index.html"> <img src="../images/logo2.jpg" alt=""></a>
+            <div class="search">
+                <input style="color: #555;" type="search" id="txtsearch" placeholder="搜索本店商品">
+                <input type="button" id="btnsearch" value="搜索" onclick="query() ">
+            </div>
+            <div class="article-shopping">
+                <img src="../images/gwc.png" alt="">
+                <span class="article-shopping-span">购物车</span>
+
+            </div>
+            <div class="erweima">
+                <span>手机窝窝</span>
+                <img src="../images/ewm.png" alt="">
+                <i class="erweima-btn">×</i>
+            </div>
+        </div>
+    </article>
+    <main style="background-color: #f4f4f4;">
+
+        <div id="products_navT">
+            <ul>
+
+                <li>所有商品分类</li>
+                <li><a href="../index.html">药房首页</a></li>
+                
+            </ul>
+        </div>
+        <div class="line"></div>
+        <div class="p_details">
+
+        </div>
+
+        <div class="products_split">
+            <ul>
+                <li class="split_listy">
+                    商品信息
+                    <i></i>
+                </li>
+                <li>说明书<i></i></li>
+                <li>售后服务<i></i></li>
+            </ul>
+        </div>
+        <div class="products_main">
+            <div class="products_mains" style="display: block;">
+                商品名称：美克的欣 三合钙咀嚼片<br>
+                商品编码：112040012<br>
+                品牌名称：其他<br>
+                通用名称：三合钙咀嚼片<br>
+                主要成分：本品为复方制剂，每片含乳酸钙，葡萄糖酸钙，磷酸氢钙各50毫 克（相当与钙含量22.6毫克）辅料：甘露醇，淀粉，糖粉，枸橼酸，桔子香精，鲜奶香精， 柠檬黄，硬脂酸美。<br>
+                保健功能：用于预防和治疗钙缺乏症，如骨质疏松、手足抽搐症、骨发育不全、佝偻病以及妊娠和哺乳期妇女、绝经期妇女钙的补充。<br>
+                用法用量：嚼服或含服。一次2-4片，一日3次。<br>
+                副 作 用：详见说明书<br>
+
+            </div>
+            <div class="products_mains" >
+                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="main_tab">
+                    <tr>
+                        <td class="mains_left">商品名称：</td>
+                        <td>美克的欣 三合钙咀嚼片</td>
+                    </tr>
+                    <tr>
+                        <td class="mains_left">品　　牌：</td>
+                        <td>其他</td>
+                    </tr>
+                    <tr>
+                        <td class="mains_left">通 用 名：</td>
+                        <td>三合钙咀嚼片</td>
+                    </tr>
+                    <tr>
+                        <td class="mains_left">生产厂家：</td>
+                        <td>江西仁齐制药有限公司</td>
+                    </tr>
+                    <tr>
+                        <td class="mains_left">产品类型： </td>
+                        <td>营养保健</td>
+                    </tr>
+                    <tr>
+                        <td class="mains_left">成　　份： </td>
+                        <td>本品为复方制剂，每片含乳酸钙，葡萄糖酸钙，磷酸氢钙各50毫 克（相当与钙含量22.6毫克）辅料：甘露醇，淀粉，糖粉，枸橼酸，桔子香精，鲜奶香精， 柠檬黄，硬脂酸美。</td>
+                    </tr>
+                    <tr>
+                        <td class="mains_left">适 应 症： </td>
+                        <td>用于预防和治疗钙缺乏症，如骨质疏松、手足抽搐症、骨发育不全、佝偻病以及妊娠和哺乳期妇女、绝经期妇女钙的补充。</td>
+                    </tr>
+                    <tr>
+                        <td class="mains_left">用法用量： </td>
+                        <td>嚼服或含服。一次2-4片，一日3次。</td>
+                    </tr>
+                    <tr>
+                        <td class="mains_left">注意事项： </td>
+                        <td>1.慢性肾功能不全、心功能不全、慢性腹泻或胃肠道吸收障碍患者慎用。 2.如服用过量或出现严重不良反应，应立即就医。 3.对本品过敏者禁用，过敏体质者慎用。
+                            4.本品性状发生改变时禁止使用。 5.请将本品放在儿童不能接触的地方。 6.儿童必须在成人监护下使用。 7.如正在使用其他药品，使用本品前请咨询医师或药师。 </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="products_mains">
+                <div class="mains_h2">
+                    <h2>退货说明</h2>
+                    <p>
+                        1、如因商品质量问题造成不便的，您可选择整单退货，配上费及邮寄费将连通货款一并退还。<br>
+                        2、如订单中部分金额采用了优惠劵支付，在办理退款时，此部分款项按相等劵额退回（查看优惠劵说明）<br>
+                        3、送货上门、网上支付的订单办理退货时，商品先行由快递配送员取回，货款根据您的支付方式原路退回你的支付账号。<br>
+                        4、如由于办理退款的周期导致您的优惠劵过期的，由康之家根据您的使用时间作有效期的更新。
+                    </p>
+                </div>
+                <div class="mains_h2">
+                    <h2>物流配送</h2>
+                    <p>
+                        默认随机选择快递方式：正常情况根据物流可达趋于随机选择物流配送包裹，如有特殊要求请在订单备注里说明。<br>
+
+                        配送时间一般不超过3~6天，如遇特殊情况（天气、双11等不可抗拒因素）而造成延迟的敬请谅解。<br>
+
+                        康乐窝窝网上药店的包装流程完全按照专业的电子商务运营标准来制定：<br>
+
+                        1、备货：由专业的工作人员进行备货<br>
+                        2、配送：核对电子订单进行药品的集中配货。<br>
+                        3、复核：根据订单，再次审核药品名称、规格、数量、批货、配送地址并开具发票。<br>
+                        4、包装：使用防震防压材料，确保商品不会再运输过程中被损坏。单据及发票（可选）随货同行。<br>
+                        5、发货：整理完毕，有快递公司专人负责将商品运送、送达客户手中。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="middle">
+        <div id="div2">
+            <div class="middle_top">
+                <img src="../images/kftx.png" alt="">
+                <h2>窝窝客服</h2>
+                <p>| 专门为您解决各类账户、订单、支付等问题，快速响应</p>
+                <i class="close">×</i>
+            </div>
+            <div class="ddd">
+                <div id="information">
+                    <dev class="leftPost ee">欢迎来到康乐窝窝!( •͈ᴗ⁃͈)ᓂ- - -♡﻿</dev>
+                </div>
+            </div>
+            <img id="portrait" src="../images/kefutx.png" alt="">
+            <input id="text1" type="text" onkeydown="myFunction(event)">
+            <input id="btn1" type="button" value="发送">
+        </div>
+    </div>
+    <footer>
+        <div class="content-bx">
+            <div class="content-top">
+                <div class="content-top-left">
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd>品牌真品防伪码</dd>
+                        <dd>正品保证</dd>
+                        <dd>专属客服服务</dd>
+                    </dl>
+                    <dl>
+                        <dt>支付方式</dt>
+                        <dd>货到付款</dd>
+                        <dd>在线支付</dd>
+                        <dd>余额支付</dd>
+                        <dd>现金券支付</dd>
+                    </dl>
+                    <dl>
+                        <dt>配送方式</dt>
+                        <dd>包邮政策</dd>
+                        <dd>配送说明</dd>
+                        <dd>运费说明</dd>
+                        <dd>验货签收</dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <dd>正品承诺</dd>
+                        <dd>售后咨询</dd>
+                        <dd>退货政策</dd>
+                        <dd>退货办理</dd>
+                    </dl>
+                    <dl>
+                        <dt>关注我们</dt>
+                        <dd class="ddimg">
+                            <img src="../images/erweima1.png" alt="" id="wbs">
+                            <span class="wbs">微信二维码</span>
+                            <img src="../images/erweima2.jpg" alt="" id="wb">
+                            <span class="wb">微博二维码</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="content-bx1">
+            <div class="content-middle">
+                <div class="content-middle-left">
+                    <img src="../images/rx.png" alt="">
+                    <p>服务热线</p>
+                    <p>400 - 038 - 5580</p>
+                </div>
+                <div class="content-middle-right">
+                    <img src="../images/wx.png" alt="">
+                    <img src="../images/wb.png" alt="">
+                    <img src="../images/dy.png" alt="">
+                    <img src="../images/qq.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <p> ©2018-2020 驰星教育 版权所有 ICP证: 沪ICP备18024971号-1</p>
+            <p><a style="color: rgb(0, 0, 0);"
+                    href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402004802"
+                    target="_blank">沪公网安备 31010402004802号</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

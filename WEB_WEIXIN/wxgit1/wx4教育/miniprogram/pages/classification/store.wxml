@@ -1,0 +1,30 @@
+<view class="sidebar">
+  <view class="left">
+    <van-sidebar active-key="{{ store }}" bind:change="onStore">
+      <van-sidebar-item wx:for="{{itemData}}" wx:key="index" title="{{item}}" />
+    </van-sidebar>
+  </view>
+  <view wx:if="{{store==0}}" class="rigth">
+    <!-- <view class="DeviceInformation" wx:for="{{dataSource}}" wx:key="index">
+      <view class="ico" data-item="{{item}}" bindtap="detailsStore">
+        <image wx:if="{{item.ShopType=='营运中'}}" src="../../images/store.png" class="storeImg"></image>
+        <image wx:if="{{item.ShopType=='闭店'}}" src="../../images/store1.png" class="storeImg"></image>
+      </view>
+      <view class="briefIntroduction">
+        <view>
+          <text class="largeFsize">{{item.ShopName}}_{{item.ShopCode}}</text>
+        </view>
+        <view>
+          <text>状态：{{item.ShopType}}</text>
+        </view>
+        <view>
+          <van-icon name="phone-circle-o" />
+          <text>{{item.ShopPhone==''?'---':item.ShopPhone}}</text>
+        </view>
+        <view class="fsize">
+          <text>{{item.ShopAddress}}</text>
+        </view>
+      </view>
+    </view> -->
+  </view>
+</view>

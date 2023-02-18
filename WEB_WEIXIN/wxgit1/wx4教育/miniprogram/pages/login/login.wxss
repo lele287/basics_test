@@ -1,0 +1,58 @@
+/* pages/login/login.wxss */
+.subjects{
+  height: 1000rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.subject{
+  flex: 1;
+}
+.btnPad{
+  padding: 60rpx 0;
+}
+.dlico{
+  font-size: 40rpx;
+  position: relative;
+  top: 8rpx;
+}
+.van-button{
+  height: 80rpx!important;
+}
+.field-index--van-field{
+  /* height: 100rpx!important; */
+  padding-top: 35rpx!important;
+}
+.tail{
+  width: 100%;
+  text-align:center;
+  position: absolute;
+  bottom: 24rpx;
+}
+.tail text{
+  font-size: 26rpx;
+  color: #a6a6a6;
+}
+.help{
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.trademarkView{
+  width: 100%;
+  height: 160rpx;
+}
+.trademark{
+  width: 160rpx;
+  height: 160rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -80rpx;
+  border: 1px solid #eee;
+  border-radius: 50%;
+}
+.InputBox{
+  margin-top: 50rpx;
+}

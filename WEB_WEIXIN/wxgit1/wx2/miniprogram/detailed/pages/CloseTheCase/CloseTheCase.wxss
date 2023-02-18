@@ -1,0 +1,44 @@
+.Postponement {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30rpx;
+}
+
+/* 环形进度条 */
+.van-circle__text {
+  white-space: pre-line !important;
+}
+
+.circle {
+  margin-top: 30rpx;
+  margin-bottom: 60rpx;
+}
+
+.checkedImg {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.checkedTest {
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+
+.myResponsibility {
+  display: flex;
+  padding: 24rpx 30rpx;
+}
+
+.myResponsibility_Tab {
+  display: flex;
+  margin-left: 50rpx;
+}
+
+.van-radio {
+  margin-left: 30rpx;
+}
+
+.ProFinishedTime {
+  text-align: center;
+  line-height: 50rpx;
+}

@@ -1,0 +1,149 @@
+#main {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.navbar {
+    border: none;
+    margin-bottom: 0px;
+    background-color: #333;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #333;
+}
+
+.navbar li:hover {
+    background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li:hover>a {
+    color: #333;
+}
+
+.top_Message {
+    margin-bottom: 20px;
+}
+
+.wantLable {
+    margin: 50px auto;
+    width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 212px;
+    padding: 15px;
+}
+
+.userName {
+    font-size: 1.1em;
+}
+
+.userSchool,
+.setTime {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-left: 15px;
+}
+
+.want_title span {
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.want_Message {
+    margin-top: 10px;
+}
+
+.detailed_information {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.user_Phone {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.wantLable:hover {
+    cursor: default;
+    transition: 0.2s ease-out;
+    box-shadow: 0px 3px 7px 1px #ccc;
+    transform: translate(0, -1px);
+}
+
+#footer {
+    height: 150px;
+    margin-top: 150px;
+    bottom: 0;
+    background-color: #333;
+    color: #ccc;
+}
+
+#footer_main {
+    width: 1190px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#footer-left,
+#footer-center,
+#footer-right {
+    width: 330px;
+    height: 100px;
+    float: left;
+    margin: 15px 30px 5px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+#footer-center {
+    position: relative;
+}
+
+#footer-center-pic {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 120px;
+    background: url(../images/erweima.jpg);
+    background-size: 100% 100%;
+}
+
+#footer-bottom {
+    width: 1190px;
+    height: 25px;
+    float: left;
+    text-align: center;
+}
+
+#footer a,
+#footer span {
+    font-size: 15px;
+    color: #ccc;
+    margin-left: 40px;
+}
+
+a {
+    font-size: 18px;
+}
+
+a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: green;
+    text-decoration: none;
+}

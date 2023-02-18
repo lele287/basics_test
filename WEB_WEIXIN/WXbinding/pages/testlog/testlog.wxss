@@ -1,0 +1,15 @@
+/* pages/testlog/testlog.wxss */
+.line{
+  height:2rpx;
+  width:100%;
+  background-color:#ccc;
+}
+.content{
+  width:95%;
+  border:0rpx solid #ccc;
+  margin:5rpx auto;
+  overflow: hidden;
+}
+.title{
+  margin-left: 3%;
+}

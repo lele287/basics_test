@@ -1,0 +1,13 @@
+<view class="subject">
+  <van-cell-group>
+    <van-field model:value="{{ message }}" label="退单原因" type="textarea" placeholder="请输入退单原因" autosize border="{{ false }}" />
+  </van-cell-group>
+  <view class="button_Center">
+    <van-button type="primary" round color="#1989fa" size="large" bindtap="ChargebackTips">
+      退单
+    </van-button>
+  </view>
+</view>
+
+
+<van-dialog id="van-dialog" bind:confirm="ReplacementEquipment" confirm-button-color="#40A9FF" />

@@ -1,0 +1,128 @@
+<view class="subject">
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}">
+    <van-collapse-item title="基本信息" name="基本信息" border="{{false}}">
+      <view class="InformationBorder">
+        <view class="row">
+          <view class="tit">报修单号</view>
+          <view class="Val">{{DetailsData.RepairListNo}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">维修单号</view>
+          <view class="Val">{{DetailsData.MaintainListNo}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">报修类型</view>
+          <view class="Val">{{DetailsData.RepairType}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">客户名称</view>
+          <view class="Val">{{DetailsData.ClientName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">站点区域</view>
+          <view class="Val">{{DetailsData.ShopArea}}</view>
+        </view>
+
+        <view class="row">
+          <view class="tit">站点讯息</view>
+          <view class="Val">{{DetailsData.ShopCode}}_{{DetailsData.ShopName}}</view>
+        </view>
+        <!-- <view class="row">
+          <view class="tit">站点名称</view>
+          <view class="Val">{{DetailsData.ShopName}}</view>
+        </view> -->
+
+
+        <view class="row">
+          <view class="tit">设备型号</view>
+          <view class="Val">{{DetailsData.EquipmentModelName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">故障类型</view>
+          <view class="Val">{{DetailsData.ExceptionClassName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">维修状态</view>
+          <view class="Val">{{DetailsData.ListStatus}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">报修时间</view>
+          <view class="Val">{{DetailsData.LastRepairTime}}</view>
+        </view>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}">
+    <van-collapse-item title="详细信息" name="详细信息" border="{{false}}">
+      <view class="InformationBorder">
+        <view class="row">
+          <view class="tit">当前工程师</view>
+          <view class="Val">{{DetailsData.EngineerName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">当前服务商</view>
+          <view class="Val">{{DetailsData.MaintainerName}}</view>
+        </view>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+
+
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}">
+    <van-collapse-item title="维修信息" name="维修信息" border="{{false}}">
+      <view class="InformationBorder InformationPadding">
+        <view class="container">
+          <view class="time">
+            <view wx:for="{{OperateTime}}" wx:key="index">
+              <view>{{item.yearMonthDay}}</view>
+              <view>{{item.TimeBranchSecond}}</view>
+            </view>
+          </view>
+          <view>
+            <van-steps steps="{{ steps }}" active="{{ steps.length }}" direction="vertical" active-color="#1296db" />
+          </view>
+        </view>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+
+  <!-- wx:if="{{DetailsData.EngineerID===LoginInformation.EngineerId}}" -->
+  <view wx:if="{{DetailsData.EngineerID===LoginInformation.EngineerId || LoginInformation.UserName==='admin'}}">
+    <block wx:if="{{DetailsData.ListStatus==='待接单'}}">
+
+      <view class="AddOperation">
+        <van-button type="primary" round color="#1989fa" size="normal" bindtap="ReceivingOrdersTips"
+          custom-class="containerButton">
+          接单
+        </van-button>
+        <van-button type="primary" round color="#FA8072" size="normal" bindtap="ChargebackTips"
+          custom-class="containerButton">
+          退单
+        </van-button>
+      </view>
+    </block>
+    <block wx:if="{{ DetailsData.ListStatus==='维修中'}}">
+      <view class="button_Center" wx:if="{{!SwitchSignIn}}">
+        <van-button type="primary" round color="#1989fa" size="large" bindtap="onSignIn">
+          到店签到
+        </van-button>
+      </view>
+      <view class="button_Center" wx:else>
+        <van-button type="primary" round color="#1989fa" size="large" bindtap="CloseTheCase">
+          结案处理
+        </van-button>
+      </view>
+      <!-- <view class="button_Center">
+        <van-button type="primary" round color="#1989fa" size="large" bindtap="CloseTheCase">
+          结案处理
+        </van-button>
+      </view> -->
+    </block>
+  </view>
+
+
+</view>
+
+
+<van-dialog id="van-dialog" bind:confirm="ReplacementEquipment" confirm-button-color="#40A9FF" />

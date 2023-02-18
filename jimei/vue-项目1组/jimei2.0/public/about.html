@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <!-- <script src="js/index.js"></script> -->
+    <title>关于我们</title>
+    <script>
+         //滚动事件
+    $(window).scroll(function() {
+        let distance = $(document).scrollTop();
+        if (distance > 50) {
+            $(".top_head").attr('class', 'fixed')
+           $('.JiMei').css('opacity','0')
+        } else {
+            //取消固定定位  不脱标
+            $(".fixed").attr('class', 'top_head')
+            $('.JiMei').css('opacity', '1')
+        }
+    })
+    $(function(){
+              //获取用户名
+            var userinfo = sessionStorage["users"];
+            if (userinfo == null) {
+                $("#userName").html("未登录");
+                $("#login").html("登录/注册");
+            } else {
+                var user = JSON.parse(sessionStorage["users"]);
+                $("#userName").html(user[0].Name);
+                $("#login").html("退出登录");
+            }
+        })
+        function out() {
+            sessionStorage.clear();
+            if ($("#login").html() == "退出登录") {
+                location.href = "index.html";
+            } else {
+                location.href = "login.html";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    
+
+    <div id="main">
+        <div id="img">
+            <img src="images/about.png" alt="">
+        <div class="top_head">
+
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                            <div class="navbar-brand" style="width: 70px;height: 50px; background:url(images/logo.png) no-repeat;background-size:100% 100%;"></div>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="about.html">关于我们</a></li>
+                                <li><a href="want.html">求购</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发布<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="release.html">发布商品</a></li>
+                                        <li><a href="releaseWant.html">发布求购</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="personalCenter.html">个人中心</a></li>
+                                <li><a href="shoppingCart.html">购物车</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">欢迎您<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" id="userName">未登录</a></li>
+                                        <li><a href="#" onclick="out()" id="login">登录/注册</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        </div><div id="JiMei"><span class="JiMei">JiMei</span></div>
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="contain">
+            <span class="about">关于JiMei</span>
+            <span class="about_2"><b style="font-size: 25px;">集美(JiMei),</b>创立于2020年8月。该项目的成员分别是江苏科技大学的武友国、常熟理工学院的江文韬、大庆师范学院的谢竺影以及大庆师范学院的张琪。</span>
+            <span class="about_2">与其他校园二手平台不同，集美专注于做电商，以买家即卖家的独特形式让用户拥有更多的自主权。在界面设计上也有着独特的创新，风格简约大方。</span>
+        </div>
+    </div>
+</div>
+    
+    <div id="footer">
+        <div id="footer_main">
+            <div id="footer-left">
+                联系我们：<br>
+                <span>QQ：1454581268</span> <br>
+                <span>地址：苏州工业园区独墅湖创客汇</span>
+            </div>
+            <div id="footer-center">
+                &nbsp;&nbsp;&nbsp;&nbsp;二维码：
+                <div id="footer-center-pic"></div>
+            </div>
+            <div id="footer-right">
+                二手指南：<br>
+                <a href="help.html">购买流程</a><br>
+                <a href="strategy.html">优质二手</a><br>
+            </div>
+            <div id="footer-bottom">
+                Copyright © 2020 JiMei 版权所有
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

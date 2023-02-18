@@ -1,0 +1,111 @@
+<!-- <view class="subject"> -->
+<van-sticky>
+  <view class="head_container">
+    <view class="radio_spacing">
+      <van-radio-group value="{{ radio }}" bind:change="onChange" class="radio">
+        <van-radio name="全部" class="radioList">全部</van-radio>
+        <van-radio name="上月" class="radioList">上月</van-radio>
+        <van-radio name="近七日" class="radioList">近七日</van-radio>
+      </van-radio-group>
+      <view>
+        <van-button type="default" size="small" slot="action" custom-class="ip_total">
+          共{{Total}}单
+        </van-button>
+      </view>
+
+    </view>
+    <view class="head_dropDown">
+      <view>
+        <block wx:if="{{StatisticsType==='客户'}}">
+          <van-button type="info" size="small" slot="action" custom-class="" bind:tap="onCompanyShow">
+            选择{{StatisticsType=="工程师"?"服务商":"客户"}}
+          </van-button>
+        </block>
+        <block wx:if="{{StatisticsType==='工程师'}}">
+          <van-button type="info" size="small" slot="action" custom-class="" bind:tap="onServiceProviderShow">
+            选择{{StatisticsType=="工程师"?"服务商":"客户"}}
+          </van-button>
+        </block>
+      </view>
+      <view class="button_spacing">
+        <view>
+          <van-button type="info" size="small" slot="action" custom-class="" bind:tap="onQuery">查询
+          </van-button>
+        </view>
+        <view>
+          <van-button type="info" size="small" slot="action" custom-class="" bind:tap="onReset">重置
+          </van-button>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <block wx:if="{{StatisticsType==='客户'}}">
+    <view class="TrCustomer bg-w">
+      <view class="ThCustomer">客户名称</view>
+      <view class="ThCustomer">故障分类</view>
+      <view class="ThCustomer">次数</view>
+    </view>
+  </block>
+  <block wx:if="{{StatisticsType==='工程师'}}">
+    <view class="TrEngineer bg-w">
+      <view class="ThEngineer">服务厂商</view>
+      <view class="ThEngineer">运维人员</view>
+      <view class="ThEngineer">状态</view>
+      <view class="ThEngineer">笔数/单</view>
+      <view class="ThEngineer">时长/m</view>
+    </view>
+  </block>
+
+</van-sticky>
+
+<view wx:if="{{listData.length>0}}">
+  <block wx:if="{{StatisticsType==='客户'}}">
+    <block wx:for="{{listData}}" wx:key="index">
+      <view class="TrCustomer blue">
+        <view class="TdCustomer">{{item.ClientName}}</view>
+        <view class="TdCustomer">{{item.ExceptionClassName}}</view>
+        <view class="TdCustomer">{{item.Total}}</view>
+      </view>
+    </block>
+  </block>
+  <block wx:if="{{StatisticsType==='工程师'}}">
+    <block wx:for="{{listData}}" wx:key="index">
+      <view class="TrEngineer blue">
+        <view class="TdEngineer">{{item.MaintainerName}}</view>
+        <view class="TdEngineer">{{item.EngineerName}}</view>
+        <view class="TdEngineer">{{item.ListStatus}}</view>
+        <view class="TdEngineer">{{item.Total}}</view>
+        <view class="TdEngineer">{{item.StageTime}}</view>
+      </view>
+    </block>
+  </block>
+  <!-- 加载中 -->
+  <van-transition show="{{ Loading }}" name="fade-down">
+    <view class="Loading" wx:if="{{Loading}}">
+      <van-loading type="spinner" color="#1989fa" size="40rpx">加载中...</van-loading>
+    </view>
+  </van-transition>
+</view>
+<view wx:else class="EmptyState">
+  <van-empty class="custom-image" image="/images/icon/EmptyState.png" description="暂无数据" />
+</view>
+
+<!-- 客户 -->
+<van-dialog show="{{ CompanyState }}" title="请选择公司" use-slot show-cancel-button bind:cancel="onCompanyHide"
+  bind:confirm="CompanyYes" confirm-button-color="#40A9FF">
+  <van-picker columns="{{ CompanyData }}" bind:change="onCompany" />
+</van-dialog>
+
+<!-- 工程师 -->
+<van-dialog show="{{ EngineerState }}" title="请选择工程师" use-slot show-cancel-button bind:cancel="onEngineerHide"
+  bind:confirm="EngineerYes" confirm-button-color="#40A9FF">
+  <van-picker columns="{{ EngineerData }}" bind:change="onEngineer" />
+</van-dialog>
+
+<!-- 服务商 -->
+<van-dialog show="{{ ServiceProviderState }}" title="请选择服务商" use-slot show-cancel-button bind:cancel="onServiceProviderHide"
+  bind:confirm="ServiceProviderYes" confirm-button-color="#40A9FF">
+  <van-picker columns="{{ ServiceProviderData }}" bind:change="onServiceProvider" />
+</van-dialog>

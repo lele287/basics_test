@@ -1,0 +1,12 @@
+[
+    {"courseName":"印度","score":4800},
+    {"courseName":"美国","score":4100},
+    {"courseName":"西班牙","score":2300},
+    {"courseName":"巴西","score":2300},
+    {"courseName":"哥伦比亚","score":800},
+    {"courseName":"秘鲁","score":600},
+    {"courseName":"尔罗斯","score":500},
+    {"courseName":"菲尔宾","score":500},
+    {"courseName":"阿根廷","score":500},
+    {"courseName":"墨西哥","score":300}
+]

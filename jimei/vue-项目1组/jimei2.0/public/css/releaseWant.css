@@ -1,0 +1,178 @@
+a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+a:link {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: green;
+}
+
+.navbar {
+    border: none;
+    margin-bottom: 0px;
+    background-color: #333;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #333;
+}
+
+.navbar li:hover {
+    background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li:hover>a {
+    color: #333;
+}
+
+main {
+    margin: 10px auto;
+    width: 1190px;
+    box-shadow: 2px 2px 5px rgb(133, 138, 136);
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 24px;
+}
+
+table {
+    width: 860px;
+    margin: 0px auto;
+    font-size: 16px;
+}
+
+main table tr {
+    height: 70px;
+}
+
+table tr td:nth-child(1) {
+    width: 130px;
+    padding: 0 20px;
+    text-align: right;
+}
+
+input[type='text'] {
+    width: 700px;
+    height: 45px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 0px transparent;
+    font-size: 16px;
+}
+
+.alignTop {
+    position: relative;
+    top: -35px;
+}
+
+.tel input {
+    font-size: 16px;
+}
+
+textarea {
+    max-width: 698px;
+    min-width: 698px;
+    min-height: 77px;
+    max-height: 200px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 10px 0;
+    font-size: 16px;
+    /* resize: none; */
+}
+
+.submit{
+    display: block;
+    border: 0;
+    width: 90px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px auto;
+    background-color: rgb(72, 212, 166);
+    font-size: 18px;
+    color: #fff;
+}
+
+.ad {
+    width: 1190px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+.ad img {
+    width: 1190px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#footer {
+    height: 150px;
+    margin-top: 150px;
+    bottom: 0;
+    background-color: #333;
+    color: #ccc;
+}
+
+#footer_main {
+    width: 1190px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#footer-left,
+#footer-center,
+#footer-right {
+    width: 330px;
+    height: 100px;
+    float: left;
+    margin: 15px 30px 5px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+#footer-center {
+    position: relative;
+}
+
+#footer-center-pic {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 120px;
+    background: url(../images/erweima.jpg);
+    background-size: 100% 100%;
+}
+
+#footer-bottom {
+    width: 1190px;
+    height: 25px;
+    float: left;
+    text-align: center;
+}
+
+#footer a,
+#footer span {
+    font-size: 15px;
+    color: #ccc;
+    margin-left: 40px;
+}

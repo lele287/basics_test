@@ -1,0 +1,53 @@
+/* pages/singleCard/singleCard.wxss */
+page{
+  background-color:#fff;
+}
+.step{
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size:3rem;
+}
+.content{ 
+  height:800rpx;
+  width:90%;
+  margin: 30rpx auto; 
+  border:1rpx solid #2d68f4;
+  border-radius: 20rpx;
+}
+.content-font{
+  margin-left:50rpx;
+  margin-top:50rpx;
+}
+/*按钮*/
+.loginBtnView {
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  background-color: #f2f2f2;
+  margin-top: 50rpx;
+  margin-bottom: 8rpx;
+}
+.hint{
+  text-align: left;
+  width:80%;
+  margin:20rpx auto;
+}
+/*修改*/
+.loginBtnView {
+  width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
+  margin-top: 0px auto;
+  padding-bottom: 0px;
+}
+.loginBtn {
+  width: 90%;
+  font-size:14px;
+  background-color: #2d68f4!important;
+  color: #fff;
+  border: 0;
+}
+.zan-steps--vsteps .zan-steps__step--done{
+  color: #000000!important;
+}

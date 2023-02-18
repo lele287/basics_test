@@ -1,0 +1,48 @@
+/* header */
+header{
+    width: 100%;
+    background-color: #f0f0f0;
+}
+.header-nav{
+    width: 1190px;
+    height: 30px;
+    margin: 0 auto;
+}
+.header-nav .left li{
+    float: left;
+}
+.header-nav .left li a,
+.header-nav .right li a{
+    display:inline-block;
+    font-size: 12px;
+    color: #6c6c6c;
+    line-height: 30px;
+    margin: 0 20px;
+}
+.header-nav .wdl{
+    display: block;
+}
+.header-nav .ydl{
+    display: none;
+}
+.header-nav .left a:hover,
+.header-nav .right a:hover{
+    color: #06A860;
+}
+.header-nav .left li a:nth-child(1){
+    margin-left: 5px;
+}
+.header-nav .right li{
+    float: right; 
+}
+.header-nav-img{
+    width: 25px;
+    height: 20px;
+    margin-top: -3px;
+    margin-right: -20px;
+}
+/* main */
+main{
+    width: 1190px;
+    margin: 0 auto;
+}

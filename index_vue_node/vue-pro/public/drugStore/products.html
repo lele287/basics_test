@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>药品分类页面</title>
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <!-- 引入我们初始化样式文件 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header_nav.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <!-- <link rel="stylesheet" href="../css/footer.css"> -->
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/user_name.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-nav">
+            <ul class="left">
+                <li><a href="#">欢迎来到康乐窝窝！</a></li>
+                <li><a href='../index.html'>首页</a></li>
+                <div class="wdl">
+                    <li><a href='../login.html'>请登录</a></li>
+                    <li><a href='../register.html'>免费注册</a></li>
+                </div>
+                <div class="ydl">
+                    <li><a href=""></a></li>
+                    <li><a href="">退出登录</a></li>
+                </div>
+            </ul>
+            <ul class="right">
+                <li><a href="">手机版</a></li>
+                <li>
+                    <img class="header-nav-img" src="../images/gwc.png" alt="">
+                    <a href='../shopping.html'>购物车</a>
+                </li>
+                <li><a href='personalData.html'>我的窝窝</a></li>
+
+            </ul>
+        </div>
+    </header>
+    <main>
+        <article>
+            <div class="article-top">
+                <a href="../index.html"> <img src="../images/logo2.jpg" alt=""></a>
+                <div class="search">
+                        <input style="color: #555;" type="search" id="txtsearch" placeholder="搜索本店商品" name="name" value="">
+                        <input type="button" id="btnsearch" value="搜索" name="sou" onclick="query()">
+                </div>
+                <div class="article-shopping">
+                    <img src="../images/gwc.png" alt="">
+                    <span class="article-shopping-span">购物车</span>
+
+                </div>
+                <div class="erweima">
+                    <span>手机窝窝</span>
+                    <img src="../images/ewm.png" alt="">
+                    <i class="erweima-btn">×</i>
+                </div>
+            </div>
+        </article>
+        <div id="products_navT">
+            <ul>
+                <li class="Types">
+                </li>
+                <li><a href="../index.html">商品首页</a></li>
+            </ul>
+        </div>
+        <div class="level">
+            <ul class="two-level">
+                <li class="two-level-li1">药品分类
+                    <ul>
+                        <li class="two-level-li">中西药品</li>
+                        <li class="two-level-li">美护母婴</li>
+                        <li class="two-level-li">食品滋补</li>
+                        <li class="two-level-li">营养保健</li>
+                        <li class="two-level-li">进口淘淘</li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="line"></div>
+        <div class="products_select">
+            <div class="brand">
+                <ul>
+                    <li>分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类：</li>
+                    <li>感冒发烧</li>
+                    <li>消化系统</li>
+                    <li>儿童用药</li>
+                    <li>抗生素</li>
+                    <li>妇科用药</li>
+                    <li>清热凉血</li>
+                </ul>
+            </div>
+            <div class="brand">
+                <ul>
+                    <li>适应人群：</li>
+                    <li>中老年</li>
+                    <li>通用</li>
+                    <li>男士</li>
+                    <li>女士</li>
+                    <li>儿童</li>
+                </ul>
+            </div>
+        </div>
+        <div class="products_content">
+            <ul class="products_txt">
+
+            </ul>
+            <!-- <ul class="products_txts">
+                
+            </ul> -->
+            <ul class="products_txt1">
+                <li>未搜索到相关信息</li>
+            </ul>
+        </div>
+        <div id="pages">
+            <input type="button" value="第一页" id="first" onclick="firstPage()" disabled=true>
+            <input type="button" value="上一页" id="preve" onclick="prevePage()" disabled=true>
+            <span class="pageNow"></span>
+            <input type="button" value="下一页" id="next" onclick="nextPage()">
+            <input type="button" value="最后一页" id="last" onclick="lastPage()">
+        </div>
+
+    </main>
+    <footer>
+        <div class="content-bx">
+            <div class="content-top">
+                <div class="content-top-left">
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd>品牌真品防伪码</dd>
+                        <dd>正品保证</dd>
+                        <dd>专属客服服务</dd>
+                    </dl>
+                    <dl>
+                        <dt>支付方式</dt>
+                        <dd>货到付款</dd>
+                        <dd>在线支付</dd>
+                        <dd>余额支付</dd>
+                        <dd>现金券支付</dd>
+                    </dl>
+                    <dl>
+                        <dt>配送方式</dt>
+                        <dd>包邮政策</dd>
+                        <dd>配送说明</dd>
+                        <dd>运费说明</dd>
+                        <dd>验货签收</dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <dd>正品承诺</dd>
+                        <dd>售后咨询</dd>
+                        <dd>退货政策</dd>
+                        <dd>退货办理</dd>
+                    </dl>
+                    <dl>
+                        <dt>关注我们</dt>
+                        <dd class="ddimg">
+                            <img src="../images/erweima1.png" alt=""
+                            id="wbs">
+                            <span class="wbs">微信二维码</span>
+                            <img src="../images/erweima2.jpg" alt="" id="wb">
+                            <span class="wb">微博二维码</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+         <div class="content-bx1">
+             <div class="content-middle">
+                 <div class="content-middle-left">
+                     <img src="../images/rx.png" alt="">
+                     <p>服务热线</p>
+                     <p>400  -  038  -  5580</p>
+                 </div>
+                 <div class="content-middle-right">
+                     <img src="../images/wx.png" alt="">
+                     <img src="../images/wb.png" alt="">
+                     <img src="../images/dy.png" alt="">
+                     <img src="../images/qq.png" alt="">
+                 </div>
+             </div>
+         </div>
+         <div class="content">
+             <p> ©2018-2020 驰星教育 版权所有 ICP证: 沪ICP备18024971号-1</p>
+             <p><a style="color: rgb(0, 0, 0);"
+                     href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402004802"
+                     target="_blank">沪公网安备 31010402004802号</a></p>
+         </div>
+     </footer>
+</body>
+
+</html>

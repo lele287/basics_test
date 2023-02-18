@@ -1,0 +1,23 @@
+/* pages/CommonFunctionControl/CommonFunctionControl.wxss */
+.CommonSettings{
+  /* text-align: center; */
+  display: flex;
+  align-items:flex-end;
+  font-size: 28rpx;
+  text-indent: 1em;
+  height: 70rpx;
+  line-height: 40rpx;
+  color: #b1b3c0;
+  background-color: #f4f5f9;
+}
+.fs{
+  font-size: 34rpx!important ;
+}
+.van-cell__left-icon-wrap{
+  font-size: 50rpx!important;
+}
+.van-cell__title,.van-cell__value {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 34rpx;
+}

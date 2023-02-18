@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/strategy.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/strategy.js"></script>
+    <title>优质二手</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <div class="navbar-brand" style="width: 70px;height: 50px; background:url(images/logo.png) no-repeat;background-size:100% 100%;"></div>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="want.html">求购</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发布<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="release.html">发布商品</a></li>
+                            <li><a href="releaseWant.html">发布求购</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="personalCenter.html">个人中心</a></li>
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">欢迎您<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" id="userName">未登录</a></li>
+                            <li><a href="#" onclick="out()" id="login">登录/注册</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="lineLeft"><img src="images/help.png" alt=""></div>
+            <span class="helpThings">优 质 二 手</span>
+            <div class="lineRight"><img src="images/help.png" alt=""></div>
+            <div class="goods">
+                <h3>出售二手的好处</h3>
+                <span class="goods1">环保。放在家里不用也是浪费，何必制造那么多垃圾呢？</span>
+                <span class="goods1">赚零花钱。能赚多少主要看你的东西价值。</span></div>
+            <div class="sellingInstructions">
+                <h3>出售须知</h3>
+                <span class="Instructions">不是所有东西都值得去卖二手。</span>
+                <span class="Instructions"> 卖二手很难作为赚钱之道。</span></div>
+            <div class="details">
+                <h3>省心卖二手</h3> <span class="details1">无需丰富的图片信息，只要仔细对着物品各个面拍，能看清文字信息更佳。</span>
+                <span class="details1">说明瑕疵程度，避免争议。</span>
+                <span class="details1">写清楚线上还是线下交易。</span>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer_main">
+            <div id="footer-left">
+                联系我们：<br>
+                <span>QQ：1454581268</span> <br>
+                <span>地址：苏州工业园区独墅湖创客汇</span>
+            </div>
+            <div id="footer-center">
+                &nbsp;&nbsp;&nbsp;&nbsp;二维码：
+                <div id="footer-center-pic"></div>
+            </div>
+            <div id="footer-right">
+                二手指南：<br>
+                <a href="help.html">购买流程</a><br>
+                <a href="strategy.html">优质二手</a><br>
+            </div>
+            <div id="footer-bottom">
+                Copyright © 2020 JiMei 版权所有
+            </div>
+        </div>
+    </div>
+    <script src="js/bc.js" color="240,230,140" opacity="1" count="100" zindex="-1">
+    </script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

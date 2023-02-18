@@ -1,0 +1,9 @@
+<view class="container">
+  <block wx:if="{{flowData.length>0}}">
+    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </block>
+
+  <view wx:if="{{flowData.length==0}}">
+    <van-empty image="/images/icon/EmptyState.png" description="暂无排行信息" />
+  </view>
+</view>

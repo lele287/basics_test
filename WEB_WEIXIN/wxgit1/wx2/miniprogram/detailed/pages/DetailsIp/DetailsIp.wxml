@@ -1,0 +1,80 @@
+<view class="subject">
+
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}">
+    <van-collapse-item title="基本信息" name="基本信息" border="{{false}}">
+      <view class="InformationBorder">
+        <block wx:if="{{DetailsData.queryType==='IP'}}">
+          <view class="row">
+            <view class="tit">站点讯息</view>
+            <view class="Val">{{DetailsData.ShopCode}}_{{DetailsData.ShopName}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">站点区域</view>
+            <view class="Val">{{DetailsData.ShopArea}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">IP地址</view>
+            <view class="Val">{{DetailsData.ScIp}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">监控地址</view>
+            <view class="Val">{{DetailsData.CctvIp}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">类型</view>
+            <view class="Val">{{DetailsData.NetType}}</view>
+          </view>
+        </block>
+
+        <block wx:if="{{DetailsData.queryType==='AP'}}">
+          <view class="row">
+            <view class="tit">站点讯息</view>
+            <view class="Val">{{DetailsData.ShopCode}}_{{DetailsData.ShopName}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">站点区域</view>
+            <view class="Val">{{DetailsData.ShopAreaName}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">设备ID</view>
+            <view class="Val">{{DetailsData.DeviceId}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">设备名称</view>
+            <view class="Val">{{DetailsData.EquipmentName}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">设备MAC</view>
+            <view class="Val">{{DetailsData.EquipmentMac}}</view>
+          </view>
+        </block>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+
+
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}" wx:if="{{equipment.length>0}}">
+    <van-collapse-item title="设备信息" name="设备信息" border="{{false}}">
+      <view class="InformationBorder">
+        <view wx:for="{{equipment}}" wx:key="index">
+          <view class="row {{index!=0?'equipmentRow':''}}">
+            <view class="tit">设备讯息</view>
+            <view class="Val">{{item.EquipmentCode}}_{{item.EquipmentName}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">设备型号</view>
+            <view class="Val">{{item.EquipmentModelName}}</view>
+          </view>
+          <view class="row">
+            <view class="tit">安装时间</view>
+            <view class="Val">{{item.InstallDate}}</view>
+          </view>
+        </view>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+  <view wx:if="{{equipment.length==0}}">
+    <van-empty image="/images/icon/EmptyState.png" description="暂无设备信息" />
+  </view>
+
+</view>

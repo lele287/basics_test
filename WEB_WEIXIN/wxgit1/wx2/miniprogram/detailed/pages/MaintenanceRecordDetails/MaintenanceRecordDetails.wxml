@@ -1,0 +1,72 @@
+<view class="subject">
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}">
+    <van-collapse-item title="维修详情" name="维修详情" border="{{false}}">
+      <view class="InformationBorder">
+        <view class="row">
+          <view class="tit">报修单号</view>
+          <view class="Val">{{RepairDetails.RepairListNo}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">站点区域</view>
+          <view class="Val">{{RepairDetails.ShopArea}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">站点讯息</view>
+          <view class="Val">{{RepairDetails.ShopCode}}_{{RepairDetails.ShopName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">设备型号</view>
+          <view class="Val">{{RepairDetails.EquipmentModelName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">故障分类</view>
+          <view class="Val">{{RepairDetails.ExceptionClassName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">紧急程度</view>
+          <view class="Val">{{RepairDetails.RepairLevel}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">报修人</view>
+          <view class="Val">{{RepairDetails.OperatorName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">工程师</view>
+          <view class="Val">{{RepairDetails.EngineerName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">维修状态</view>
+          <view class="Val">{{RepairDetails.ListStatus}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">服务商</view>
+          <view class="Val">{{RepairDetails.MaintainerName}}</view>
+        </view>
+        <view class="row">
+          <view class="tit">报修时间</view>
+          <view class="Val">{{RepairDetails.CreatedAt}}</view>
+        </view>
+
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+
+
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}">
+    <van-collapse-item title="维修信息" name="维修信息" border="{{false}}">
+      <view class="InformationBorder InformationPadding">
+        <view class="container">
+          <view class="time">
+            <view wx:for="{{OperateTime}}" wx:key="index">
+              <view>{{item.yearMonthDay}}</view>
+              <view>{{item.TimeBranchSecond}}</view>
+            </view>
+          </view>
+          <view>
+            <van-steps steps="{{ steps }}" active="{{ steps.length }}" direction="vertical" active-color="#1296db" />
+          </view>
+        </view>
+      </view>
+    </van-collapse-item>
+  </van-collapse>
+</view>

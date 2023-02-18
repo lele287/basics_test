@@ -1,0 +1,5 @@
+<!--pages/testlog/testlog.wxml-->
+<view class="content" wx:for="{{testData}}" wx:key="index">
+<zan-cell title="{{item.testDate}}" label="{{item.isTest==1?'测试记录':'巡检记录'}}" value="{{item.tester}}" isLink="true" bindtap="jumpDetail" data-index="{{index}}"></zan-cell>
+</view>
+

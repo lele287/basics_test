@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 兼容性 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>康乐窝窝-线上线下一体的医药健康服务网站</title>
+    <!-- 网站说明 -->
+    <meta name="description"
+        content="旗下运营的云医院平台、康乐窝窝APP、药品电子监管体系为用户提供即时、便捷的医药、医疗、健康管理等方面专业服务！天猫在线医药业务和云医院业务的融合，将打造一个一站式的医药健康领域。目前已有数万家经过严格资质审核的药店、医疗机构入驻平台。让天下没有难看的病，让假药无处遁行，开启全民健康管理新理念！">
+    <!-- 关键字 -->
+    <meta name="keywords" content="医疗搜索,送药上门,用药咨询,在线问医,名医挂号,心理咨询,健康体验,健康管理,健康商城,医疗美容" />
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- 引入我们初始化样式文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/user_name.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-nav">
+            <ul class="left">
+                <li><a href="#">欢迎来到康乐窝窝！</a></li>
+                <li><a href="index.html">首页</a></li>
+                <div class="wdl">
+                    <li><a href="login.html">请登录</a></li>
+                    <li><a href="register.html">免费注册</a></li>
+                </div>
+                <div class="ydl">
+                    <li><a href=""></a></li>
+                    <li><a href="">退出登录</a></li>
+                </div>
+            </ul>
+            <ul class="right">
+                <li><a href="">手机版</a></li>
+                <li>
+                    <img class="header-nav-img" src="images/gwc.png" alt="">
+                    <a href="shopping.html">购物车</a>
+                </li>
+                <li><a href="drugStore/personalData.html">我的窝窝</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <article>
+        <div class="article-top">
+            <a href="index.html"> <img src="images/logo2.jpg" alt=""></a>
+            <div class="search">
+                <input style="color: #555;" type="search" id="txtsearch" placeholder="搜索本店商品" name="name" value="">
+                <input type="button" id="btnsearch" value="搜索" name="sou" onclick="query()">
+            </div>
+            <div class="article-shopping">
+                <img src="images/gwc.png" alt="">
+                <span class="article-shopping-span">购物车</span>
+
+            </div>
+            <div class="erweima">
+                <span>手机窝窝</span>
+                <img src="images/ewm.png" alt="">
+                <i class="erweima-btn">×</i>
+            </div>
+        </div>
+        
+        <div class="article-tops">
+            <a href="index.html"> <img src="images/logo2.jpg" alt=""></a>
+            <div class="search">
+                <input style="color: #555;" type="search" id="txtsearch" placeholder="搜索本店商品" name="name" value="">
+                <input type="button" id="btnsearch" value="搜索" name="sou" onclick="query()">
+            </div>
+        </div>
+    </article>
+    <nav>
+        <div class="navs">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="consult.html">健康咨询</a></li>
+                <li><a href="virus.html">疫情实况</a></li>
+                <li><a href="knowledge.html">医学常识</a></li>
+                <li><a href="aboutUs.html">关于我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <div class="section-nav-lunbo">
+                <div class="section-nav">
+                    <ul class="styles_product">
+                        <li>全部商品分类</li>
+                        <li>
+                            <img src="http://img.alicdn.com/tps/i4/TB1725GSpXXXXcbaXXXwu0bFXXX.png" alt="">
+                            <span class="yao">常备用药</span>
+                        </li>
+                        <li>
+                            <img src="//img.alicdn.com/tps/i4/TB1I6uUSpXXXXaYXVXXwu0bFXXX.png" alt="">
+                            <span class="yao">专科用药</span>
+                        </li>
+                        <li>
+                            <img src="//img.alicdn.com/tps/i4/TB1a6PGSpXXXXaIXpXXwu0bFXXX.png" alt="">
+                            <span class="yao">肝病肿瘤</span>
+                        </li>
+                        <li>
+                            <img src="//img.alicdn.com/tps/i4/TB1515SSpXXXXbRXVXXwu0bFXXX.png" alt="">
+                            <span class="yao">营养保健</span>
+                        </li>
+                        <li>
+                            <img src="images/jk.png" alt="">
+                            <span class="yao">进口淘淘</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section-lunbo">
+                    <div class="focus">
+                        <!-- 左侧按钮 -->
+                        <a href="javascript:;" class="arrow-l">&lt;</a>
+                        <!-- 右侧按钮 -->
+                        <a href="javascript:;" class="arrow-r">&gt;</a>
+                        <!-- 核心的滚动区域 -->
+                        <ul class="lunbotu">
+                            <li>
+                                <a href="#"><img src="images/focus1.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/focus2.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/focus3.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                        <!-- 小圆圈 -->
+                        <ol class="circle">
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="div_relative">
+                <div style="display: none;" class="div_absolute">
+                    <ul>
+                        <li class="current1">常备药品</li>
+                        <li>男性专场</li>
+                        <li>女性专场</li>
+                        <li>孝敬父母</li>
+                        <li>母婴孕童</li>
+                        <li>海淘洋货</li>
+                        <li class="li7">
+                            <img src="images/sjjt.png" alt="">
+                            顶部
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="floor">
+                <div class="commodityClass1 floors">
+                    <h2>——&nbsp; &nbsp;常备药品&nbsp; &nbsp;——</h2>
+                </div>
+                <div class="commodityClass1zt">
+                    <div class="coyclass1-left coyclassgg-left">
+                        <h4>感冒时递上一杯</h4>
+                        <p>暖暖的很贴心</p>
+                        <img class="background-img" src="images/splb1-1.png" alt="">
+                    </div>
+                    <div class="coyclassgg-right" name="常备用药">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="commodityClass2 floors">
+                    <h2>——&nbsp; &nbsp;魅力男人&nbsp; &nbsp;——</h2>
+                </div>
+                <div class="commodityClass2zt">
+                    <div class="coyclass2-left coyclassgg-left">
+                        <h4>硬汉真道理</h4>
+                        <p>她好我也好</p>
+                        <img class="background-img" src="images/splb2-1.png" alt="">
+                    </div>
+                    <div class="coyclassgg-right" name="魅力男人">
+                        <ul></ul>
+                    </div>
+                </div>
+                <div class="commodityClass3 floors">
+                    <h2>——&nbsp; &nbsp;美丽女人&nbsp; &nbsp;——</h2>
+                </div>
+                <div class="commodityClass3zt">
+                    <div class="coyclass3-left coyclassgg-left">
+                        <h4>女人好气色</h4>
+                        <p>阿胶来传承</p>
+                        <img class="background-img" src="images/splb3-1.png" alt="">
+                    </div>
+                    <div class="coyclassgg-right" name="美丽女人">
+                        <ul></ul>
+                    </div>
+                </div>
+                <div class="commodityClass4 floors">
+                    <h2>——&nbsp; &nbsp;关爱老人&nbsp; &nbsp;——</h2>
+                </div>
+                <div class="commodityClass4zt">
+                    <div class="coyclass4-left coyclassgg-left">
+                        <h4>国货大牌精品</h4>
+                        <p>居家常备</p>
+                        <img class="background-img" src="images/splb4-1.png" alt="">
+                    </div>
+                    <div class="coyclassgg-right" name="关爱老人">
+                        <ul></ul>
+                    </div>
+                </div>
+                <div class="commodityClass5 floors">
+                    <h2>——&nbsp; &nbsp;健康儿童&nbsp; &nbsp;——</h2>
+                </div>
+                <div class="commodityClass5zt">
+                    <div class="coyclass5-left coyclassgg-left">
+                        <h4>妈咪与宝贝</h4>
+                        <p>关爱宝贝成长</p>
+                        <img class="background-img" src="images/splb5-1.png" alt="">
+                    </div>
+                    <div class="coyclassgg-right" name="健康儿童">
+                        <ul></ul>
+                    </div>
+                </div>
+                <div class="commodityClass6 floors">
+                    <h2>——&nbsp; &nbsp;进口淘淘&nbsp; &nbsp;——</h2>
+                </div>
+                <div class="commodityClass6zt">
+                    <div class="coyclass6-left coyclassgg-left">
+                        <h4>国际尖货</h4>
+                        <p>健康自营 品质保障</p>
+                        <img class="background-img" src="images/splb6-1.png" alt="">
+                    </div>
+                    <div class="coyclassgg-right" name="进口淘淘">
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="foot"></div>
+    <footer>
+        <div class="content-bx">
+            <div class="content-top">
+                <div class="content-top-left">
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd>品牌真品防伪码</dd>
+                        <dd>正品保证</dd>
+                        <dd>专属客服服务</dd>
+                    </dl>
+                    <dl>
+                        <dt>支付方式</dt>
+                        <dd>货到付款</dd>
+                        <dd>在线支付</dd>
+                        <dd>余额支付</dd>
+                        <dd>现金券支付</dd>
+                    </dl>
+                    <dl>
+                        <dt>配送方式</dt>
+                        <dd>包邮政策</dd>
+                        <dd>配送说明</dd>
+                        <dd>运费说明</dd>
+                        <dd>验货签收</dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <dd>正品承诺</dd>
+                        <dd>售后咨询</dd>
+                        <dd>退货政策</dd>
+                        <dd>退货办理</dd>
+                    </dl>
+                    <dl>
+                        <dt>关注我们</dt>
+                        <dd class="ddimg">
+                            <img src="images/erweima1.png" alt=""
+                            id="wbs">
+                            <span class="wbs">微信二维码</span>
+                            <img src="images/erweima2.jpg" alt="" id="wb">
+                            <span class="wb">微博二维码</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="content-bx1">
+            <div class="content-middle">
+                <div class="content-middle-left">
+                    <img src="images/rx.png" alt="">
+                    <p>服务热线</p>
+                    <p>400 - 038 - 5580</p>
+                </div>
+                <div class="content-middle-right">
+                    <img src="images/wx.png" alt="">
+                    <img src="images/wb.png" alt="">
+                    <img src="images/dy.png" alt="">
+                    <img src="images/qq.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <p> ©2018-2020 驰星教育 版权所有 ICP证: 沪ICP备18024971号-1</p>
+            <p><a style="color: rgb(0, 0, 0);"
+                    href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402004802"
+                    target="_blank">沪公网安备 31010402004802号</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

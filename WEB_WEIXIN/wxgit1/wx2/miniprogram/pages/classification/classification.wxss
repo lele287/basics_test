@@ -1,0 +1,346 @@
+/* pages/classification/classification.wxss */
+.subject {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  display: flex;
+  /* margin-top: 30rpx; */
+  color: #242424;
+  /* border-top: 2rpx solid  #eee; */
+}
+.van-sidebar-item--selected,.van-sidebar-item--selected{
+  border-color: #fff!important;
+} 
+
+.van-tabs__wrap,
+.van-tabs__wrap,
+.scroll-view,
+.van-tabs__nav,
+.van-tab {
+  /* width: 500rpx!important; */
+  height: 90rpx!important;
+  padding-bottom: 10rpx!important;
+}
+.van-sidebar-item,.van-sidebar-item{
+  background-color: #f6f6f6!important;
+} 
+.van-sidebar-item--selected,.van-sidebar-item--selected{
+  background-color: #fff!important;
+}
+.left{
+  width: 164rpx;
+  /* height: 100%; */
+  /* position: fixed; */
+  /* overflow: hidden;
+  overflow-y: scroll; */
+  /* overflow: auto; */
+  background-color: #f6f6f6;
+  position: absolute;
+  z-index: 200;
+}
+
+
+
+.left_Side{
+  position: relative;
+}
+.left_badge{
+  position: absolute;
+  top: 0;
+  right: 8rpx;
+  padding: 0 10rpx;
+  font-size: 20rpx;
+  background-color: #ccc;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+.rigth{
+  /* padding-left: 164rpx; */
+  margin-left: 164rpx;
+  position: relative;
+  /* left: 164rpx; */
+  z-index: 100;
+}
+
+.van-sidebar-item{
+  width: 164rpx;
+  height: 100%;
+  line-height: 40rpx!important;
+  font-size: 30rpx!important;
+  /* text-align: center; */
+}
+.van-ellipsis{
+  background-repeat:no-repeat;
+  background-size: contain;
+  background-position:center;
+  /* border: 1px solid #ccc;
+  border-radius: 80%; */
+}
+/* .van-ellipsis:nth-child(2){
+  background-image: url(https://tenfei04.cfp.cn/creative/vcg/veer/800water/veer-107987698.jpg) !important;
+}
+.van-ellipsis:nth-child(3){
+  background-image: url(https://tenfei01.cfp.cn/creative/vcg/veer/800water/veer-150464135.jpg) !important;
+}
+.van-ellipsis:nth-child(4){
+  background-image: url(https://tenfei04.cfp.cn/creative/vcg/veer/800water/veer-133226808.jpg) !important;
+}
+.van-ellipsis:nth-child(5){
+  background-image: url(https://tenfei05.cfp.cn/creative/vcg/veer/800water/veer-304777039.jpg) !important;
+} */
+.DeviceInformation{
+  position: relative;
+  display: flex;
+  /* margin: 20rpx; */
+  padding: 10rpx;
+  border-bottom: 1px solid #f9f9f9;
+}
+.ico{
+  width: 150rpx;
+  height: 150rpx;
+  /* flex: 1; */
+  /* margin: 25rpx; */
+}
+.companyImg{
+  width: 150rpx;
+  height: 150rpx;
+}
+.companySelectImg{
+  width: 114rpx;
+  height: 114rpx;
+}
+.briefIntroduction{
+  width: 360rpx;
+  height: 100%;
+  /* width: 100%;
+  height: 100rpx; */
+  /* flex: 3; */
+  margin-left: 24rpx;
+  line-height: 30rpx;
+  flex-basis: auto;
+  font-size: 24rpx;
+}
+.briefIntroductions{
+  /* width: 360rpx;
+  height: 100%; */
+  /* width: 100%;
+  height: 100rpx; */
+  /* flex: 3; */
+  margin-left: 24rpx;
+  line-height: 30rpx;
+  flex-basis: auto;
+  font-size: 24rpx;
+}
+.companyName,.companyType,.companyAttribute,.companyAddress{
+  display: block;
+  padding: 4rpx 0;
+  color: #666666;
+}
+.companyName{
+  /* font-size: 20px; */
+  font-size: 26rpx;
+  color: #0066ff;
+  /* color: #000; */
+  font-weight: 700;
+}
+.companyType,.companyAttribute{
+  font-size: 24rpx;
+}
+.companyAddress{
+  font-size: 22rpx;
+}
+.storeImg{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/* .CloseShop{
+  color: #999999;
+} */
+.largeFsize{
+  color: #0066ff;
+  font-size: 26rpx;
+  font-weight: 700;
+}
+.fsize{
+  font-size: 22rpx;
+}
+
+
+.top {
+  display: flex;
+  /* border: 1px solid ; */
+  height: 140rpx;
+  background-color: #fff;
+  border-bottom: 2rpx solid  #eee;
+}
+.topImg{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.TabImg{
+  /* width: 84rpx;
+  height: 84rpx; */
+  width: 64rpx;
+  height: 64rpx;
+  padding: 10rpx;
+  /* padding: 0 15rpx; */
+  /* margin: 0 40rpx; */
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+.topText{
+  width: 100rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  text-align: center;
+  font-size: 24rpx;
+  position: absolute;
+  /* top: 210rpx; */
+  bottom: 16rpx;
+  /* top: 104px; */
+  border: 1px solid transparent;
+  border-radius: 10rpx;
+}
+.Select{
+  border-color: #1296db;
+}
+.SelectText{
+  color: #fff;
+  background-color: #1296db;
+}
+.EmptyState{
+  margin-left: 120rpx;
+  display: flex;
+  justify-content: center;
+}
+/* .custom-image{
+  margin: 0 auto;
+} */
+.menu{
+  width: 1000rpx;
+}
+.titClass{
+  position: relative;
+  left: -60rpx;
+}
+.SelectImg{
+  position: absolute;
+  right: 20rpx;
+}
+.SelectImg>image{
+  width: 40rpx;
+  height: 40rpx;
+}
+/* 历史搜索记录 */
+.History{
+  color: #b5b6b7;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20rpx;
+}
+.HistoryList{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20rpx;
+}
+.HistoryList_Text{
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  margin: 10rpx 10rpx;
+  border: 1px solid transparent;
+  border-radius: 10rpx;
+  background-color: #f6f6f6;
+}
+
+
+.dropDown{
+  width: 100%;
+  height: 240rpx;
+  position: fixed;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0px 8px 10px rgba(0,17,41,0.1);
+}
+.SelectedItems{
+  width: 570rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  position: absolute;
+  left: 170rpx; 
+  /* top: 120rpx;
+  left: 170rpx; */
+  /* position: fixed;
+  z-index: 1; */
+  background-color: #fff;
+  border-top-color: transparent;
+  border: 1px solid #eee;
+  display: flex;
+  /* margin-left: 170rpx; */
+  justify-content: space-between;
+  /* padding: 0 40rpx; */
+  /* margin-top: -50rpx; */
+}
+.SelectedItems>view:nth-child(2){
+  font-weight: bold;
+}
+.wholeTop>view:nth-child(2){
+  padding-top: 60rpx;
+}
+/* .wholeTop:nth-child(1){
+  margin-top: 50rpx;
+} */
+
+.CloseShop{
+  display: flex;
+}
+
+.CloseShop_test{
+  font-size: 20rpx;
+  font-weight: 100;
+  margin-right: 20rpx;
+}
+
+.CloseShop_switch{
+  margin-top: 6rpx;
+}
+
+/* .seeButton{
+  padding: 10rpx;
+  font-size: 28rpx;
+  position: absolute;
+  right: 10rpx;
+  bottom: 24rpx;
+  border: 1px solid #0099ff;
+  border-radius: 10rpx;
+  background-color: #09f;
+  color: #fff;
+} */
+
+.van-sidebar-item{
+  position: relative;
+}
+.van-info{
+  left: 40rpx;
+  width: calc(110%);
+  background-color: var(--info-background-color,#ccc)!important;
+}
+
+.UperPullContainer{
+  width: 164rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.UperPull{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* van-sidebar-item--selected */

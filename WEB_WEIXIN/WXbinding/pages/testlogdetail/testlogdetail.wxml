@@ -1,0 +1,64 @@
+<!--pages/testlogdetail/testlogdetail.wxml-->
+<view class="shop_title">
+  {{testRecord.isTest == 1?'测 试 记 录' : '巡 检 记 录'}}
+</view>
+<view class="shop">
+
+<view class="section" wx:if="{{testRecord.isTest == 1}}">
+    <view class="section__title">移动:</view>
+    {{testRecord.moveCode}}
+    </view>
+  <view class="section" wx:if="{{testRecord.isTest == 1}}">
+    <view class="section__title">联通:</view>
+    {{testRecord.unicornCode}}
+  </view>
+  <view class="section" wx:if="{{testRecord.isTest == 1}}">
+    <view class="section__title">电信:</view>
+    {{testRecord.telecomCode}}
+  </view>
+ 
+  <view class="section">
+    <view class="section__title">移动信号:</view>
+    {{testRecord.mSignal}} {{testRecord.mNettype}}
+  </view>
+
+  <view class="section">
+    <view class="section__title">联通信号:</view>
+    {{testRecord.uSignal}} {{testRecord.uNettype}}
+  </view>
+
+  <view class="section">
+    <view class="section__title">电信信号:</view>
+    {{testRecord.tSignal}} {{testRecord.tNettype}}
+  </view>
+
+  <view class="section">
+    <view class="section__title">{{testRecord.isTest == 1?'推荐主卡':'当前主卡'}}:</view>
+    {{testRecord.mCode==null?'无':testRecord.mCode}}
+  </view> 
+
+  <view class="section">
+    <view class="section__title">{{testRecord.isTest == 1?'推荐副卡':'当前副卡'}}:</view>
+    {{testRecord.bCode==null?'无':testRecord.bCode}}
+  </view> 
+  <view class="section">
+    <view class="section__title">{{testRecord.isTest == 1?'正式卡1':testRecord.mCode}}:</view>
+    {{testRecord.formalCard1}}
+  </view>
+  
+  <view class="section">
+    <view class="section__title">{{testRecord.isTest == 1?'正式卡2':testRecord.bCode}}:</view>
+    {{testRecord.formalCard2}}
+  </view>
+
+  <view class="section">
+    <view class="section__title">{{testRecord.isTest == 1?'测试人':'巡检人'}}:</view>
+    {{testRecord.tester}}
+  </view>
+
+  <view class="section">
+    <view class="section__title">{{testRecord.isTest == 1?'测试日期':'巡检日期'}}:</view>
+    {{testRecord.testDate}}
+  </view>  
+
+</view>

@@ -1,0 +1,19 @@
+
+
+.query_top {
+  margin-top: 70rpx;
+}
+.query_title{
+  font-size: 36rpx;
+  text-align: center;
+  color: #2396ff;
+  margin: 20rpx 0;
+}
+.queryButton{
+margin-top: -8rpx;
+}
+
+.Loading{
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,189 @@
+<view class="subject">
+  <view class="top">
+    <view class="topImg">
+      <image data-index="0" data-tempparam="test" bindtap="tabChange" src="../../../images/icon/test.png"
+        class="TabImg {{currentIndex==0?'Select':''}}"></image>
+      <view class="topText {{currentIndex==0?'SelectText':''}}">
+        <text>测试日志</text>
+      </view>
+    </view>
+    <view class="topImg">
+      <image data-index="1" data-tempparam="dismantle" bindtap="tabChange" src="../../../images/icon/dismantle.png"
+        class="TabImg {{currentIndex==1?'Select':''}}">
+      </image>
+      <view class="topText {{currentIndex==1?'SelectText':''}}">
+        <text>拆机日志</text>
+      </view>
+    </view>
+    <view class="topImg">
+      <image data-index="2" data-tempparam="change" bindtap="tabChange" src="../../../images/icon/replace.png"
+        class="TabImg {{currentIndex==2?'Select':''}}"></image>
+      <view class="topText {{currentIndex==2?'SelectText':''}}">
+        <text>换机日志</text>
+      </view>
+    </view>
+    <view class="topImg">
+      <image data-index="3" data-tempparam="install" bindtap="tabChange" src="../../../images/icon/install.png"
+        class="TabImg {{currentIndex==3?'Select':''}}"></image>
+      <view class="topText {{currentIndex==3?'SelectText':''}}">
+        <text>装机日志</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="containerSwitch" wx:if="{{!readOnly}}">
+    <view class="titleTips">当前门店</view>
+    <view bindtap="onSwitch" class="ScanCodeContainer">
+      <image src="../../images/switch.png" alt="" class="switch_img"></image>
+      <text>{{optionsData.ShopName}}</text>
+    </view>
+  </view>
+
+  <view>
+    <!-- 测试 -->
+    <block wx:if="{{currentIndex==0}}">
+      <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}" wx:if="{{TestData.length>0}}">
+        <van-collapse-item wx:for="{{TestData}}" wx:key="index" title="{{item.OperateTime}}" name="{{index}}"
+          border="{{false}}">
+          <view class="InformationBorder">
+            <view>
+
+              <block wx:for="{{item.CurrentCardRecords}}" wx:key="index" wx:for-item="items" wx:for-index="indexs">
+                <view class="row {{indexs!=0?'equipmentRow':''}}">
+                  <view class="tit">名称</view>
+                  <view class="Val">{{items.CardName}}</view>
+                </view>
+                <view class="row">
+                  <view class="tit">卡号</view>
+                  <view class="Val">{{items.CardCode}}</view>
+                </view>
+                <view class="row">
+                  <view class="tit">类型</view>
+                  <view class="Val">{{items.NetType}}</view>
+                </view>
+                <view class="row">
+                  <view class="tit">信号</view>
+                  <view class="Val">{{items.Single}}</view>
+                </view>
+              </block>
+            </view>
+          </view>
+
+        </van-collapse-item>
+      </van-collapse>
+      <view wx:if="{{TestData.length==0}}">
+        <van-empty image="/images/icon/EmptyState.png" description="暂无设备信息" />
+      </view>
+    </block>
+    <!-- 拆机 -->
+    <block wx:if="{{currentIndex==1}}">
+      <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}"
+        wx:if="{{DismantleData.length>0}}">
+        <van-collapse-item wx:for="{{DismantleData}}" wx:key="index" title="{{item.OperateTime}}" name="{{index}}"
+          border="{{false}}">
+          <view class="InformationBorder">
+            <view>
+              <!-- <view class="row {{index!=0?'equipmentRow':''}}">
+                <view class="tit">操作类型</view>
+                <view class="Val">{{item.OperateName}}</view>
+              </view> -->
+              <!-- <view class="row">
+                <view class="tit">站点讯息</view>
+                <view class="Val">{{item.ShopCode}}_{{item.ShopName}}</view>
+              </view> -->
+              <view class="row">
+                <view class="tit">设备讯息</view>
+                <view class="Val">{{item.EquipmentCode}}_{{item.EquipmentTypeName}}</view>
+              </view>
+              <view class="row">
+                <view class="tit">服务商</view>
+                <view class="Val">{{item.PartnerName}}</view>
+              </view>
+
+            </view>
+          </view>
+
+        </van-collapse-item>
+      </van-collapse>
+
+      <view wx:if="{{DismantleData.length==0}}">
+        <van-empty image="/images/icon/EmptyState.png" description="暂无设备信息" />
+      </view>
+    </block>
+    <!-- 换机 -->
+    <block wx:if="{{currentIndex==2}}">
+      <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}"
+        wx:if="{{ChangeData.length>0}}">
+        <van-collapse-item wx:for="{{ChangeData}}" wx:key="index" title="{{item.OperateTime}}" name="{{index}}"
+          border="{{false}}">
+          <view class="InformationBorder">
+            <view>
+
+              <view class="row">
+                <view class="tit">设备讯息</view>
+                <view class="Val">{{item.EquipmentCode}}_{{item.EquipmentTypeName}}</view>
+              </view>
+              <view class="row">
+                <view class="tit">服务商</view>
+                <view class="Val">{{item.PartnerName}}</view>
+              </view>
+
+            </view>
+          </view>
+
+        </van-collapse-item>
+      </van-collapse>
+
+      <view wx:if="{{ChangeData.length==0}}">
+        <van-empty image="/images/icon/EmptyState.png" description="暂无设备信息" />
+      </view>
+    </block>
+    <!-- 装机 -->
+    <block wx:if="{{currentIndex==3}}">
+      <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}"
+        wx:for="{{InstallData}}" wx:key="index">
+        <van-collapse-item title="{{item.OperateTime}}" name="{{index}}"
+          border="{{false}}">
+          <view class="InformationBorder">
+            <view>
+
+              <view class="row">
+                <view class="tit">设备讯息</view>
+                <view class="Val">{{item.EquipmentCode}}_{{item.EquipmentTypeName}}</view>
+              </view>
+              <view class="row">
+                <view class="tit">服务商</view>
+                <view class="Val">{{item.PartnerName}}</view>
+              </view>
+
+            </view>
+          </view>
+
+        </van-collapse-item>
+      </van-collapse>
+
+      <view wx:if="{{InstallData.length==0}}">
+        <van-empty image="/images/icon/EmptyState.png" description="暂无设备信息" />
+      </view>
+    </block>
+
+  </view>
+</view>
+
+
+
+<!-- <view class="subject">
+  <view class="container">
+    <view class="time">
+      <view>2020-1-1</view>
+      <view>2020-2-1</view>
+      <view>2020-3-1</view>
+      <view>2020-4-1</view>
+    </view>
+    <view>
+      <van-steps steps="{{ steps }}" active="{{ steps.length }}" direction="vertical" active-color="#1296db" />
+    </view>
+  </view>
+
+
+</view> -->

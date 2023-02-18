@@ -1,0 +1,126 @@
+{
+    "pages": [
+        "pages/login/login",
+        "pages/index/index",
+        "pages/PersonalCenter/PersonalCenter",
+        "pages/holdAll/holdAll",
+        "pages/classification/classification"
+    ],
+    "subpackages": [
+        {
+            "root": "detailed",
+            "name": "detailed",
+            "pages": [
+                "pages/detailsCompany/detailsCompany",
+                "pages/NewSite/NewSite",
+                "pages/detailsStore/detailsStore",
+                "pages/EquipmentData/EquipmentData",
+                "pages/NewInstall/NewInstall",
+                "pages/DismantleMachine/DismantleMachine",
+                "pages/ReplaceEquipment/ReplaceEquipment",
+                "pages/customerShopChoice/customerShopChoice",
+                "pages/Signal/Signal",
+                "pages/NetworkDebugging/NetworkDebugging",
+                "pages/Journal/Journal",
+                "pages/SingleCardDebugging/SingleCardDebugging",
+                "pages/detailsEquipment/detailsEquipment",
+                "pages/CommonFunctionControl/CommonFunctionControl",
+                "pages/ContinueOrSignout/ContinueOrSignout",
+                "pages/BigScreenDetails/BigScreenDetails",
+                "pages/SeeFlow/SeeFlow",
+                "pages/FamilyMartIp/FamilyMartIp",
+                "pages/OffLineAP/OffLineAP",
+                "pages/DetailsIp/DetailsIp",
+                "pages/flowRanking/flowRanking",
+                "pages/MaintenanceRecord/MaintenanceRecord",
+                "pages/MaintenanceRecordDetails/MaintenanceRecordDetails",
+                "pages/Chargeback/Chargeback",
+                "pages/CloseTheCase/CloseTheCase",
+                "pages/repairStatistics/repairStatistics"
+            ],
+            "independent":false
+        }
+    ],
+    "tabBar": {
+        "color": "#000",
+        "selectedColor": "#1989fa",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "./images/icon/平台.png",
+                "selectedIconPath": "./images/icon/平台1.png"
+            },
+            {
+                "pagePath": "pages/classification/classification",
+                "text": "分类",
+                "iconPath": "./images/icon/分类.png",
+                "selectedIconPath": "./images/icon/分类1.png"
+            },
+            {
+                "pagePath": "pages/holdAll/holdAll",
+                "text": "工具箱",
+                "iconPath": "./images/icon/工具箱.png",
+                "selectedIconPath": "./images/icon/工具箱1.png"
+            },
+            {
+                "pagePath": "pages/PersonalCenter/PersonalCenter",
+                "text": "个人中心",
+                "iconPath": "./images/icon/4.png",
+                "selectedIconPath": "./images/icon/4-4.png"
+            }
+        ]
+    },
+    "window": {
+        "backgroundColor": "#f4f4f4",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "NoTOP",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh":false
+    },
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "van-button": "@vant/weapp/button/index",
+        "van-card": "@vant/weapp/card/index",
+        "van-field": "@vant/weapp/field/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "van-dialog": "@vant/weapp/dialog/index",
+        "van-toast": "@vant/weapp/toast/index",
+        "van-popup": "@vant/weapp/popup/index",
+        "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-picker": "@vant/weapp/picker/index",
+        "van-search": "@vant/weapp/search/index",
+        "van-notify": "@vant/weapp/notify/index",
+        "van-tabbar": "@vant/weapp/tabbar/index",
+        "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+        "van-grid": "@vant/weapp/grid/index",
+        "van-grid-item": "@vant/weapp/grid-item/index",
+        "van-action-sheet": "@vant/weapp/action-sheet/index",
+        "van-checkbox": "@vant/weapp/checkbox/index",
+        "van-area": "@vant/weapp/area/index",
+        "van-sidebar": "@vant/weapp/sidebar/index",
+        "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+        "van-transition": "@vant/weapp/transition/index",
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+        "van-sticky": "@vant/weapp/sticky/index",
+        "van-switch": "@vant/weapp/switch/index",
+        "van-empty": "@vant/weapp/empty/index",
+        "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+        "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+        "van-collapse": "@vant/weapp/collapse/index",
+        "van-collapse-item": "@vant/weapp/collapse-item/index",
+        "van-overlay": "@vant/weapp/overlay/index",
+        "van-steps": "@vant/weapp/steps/index",
+        "van-loading": "@vant/weapp/loading/index",
+        "van-circle": "@vant/weapp/circle/index",
+        "van-radio": "@vant/weapp/radio/index",
+        "van-radio-group": "@vant/weapp/radio-group/index",
+        "van-progress": "@vant/weapp/progress/index",
+        "van-calendar": "@vant/weapp/calendar/index"
+    }
+}

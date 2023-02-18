@@ -1,0 +1,15 @@
+<view class="subject">
+  <view>
+  <van-steps steps="{{ steps }}" active="{{ active }}" active-color="#40a9ff" />
+  </view>
+  <view class="textTips">
+    <view>1.关闭电源</view>
+    <view>1.插入刘两张测试卡</view>
+    <view>1.请开启电源，重启设备</view>
+  </view>
+  <view>
+    <van-button type="primary" round color="#1989fa" size="large" bindtap="onChangeActive">
+      下一步
+    </van-button>
+  </view>
+</view>

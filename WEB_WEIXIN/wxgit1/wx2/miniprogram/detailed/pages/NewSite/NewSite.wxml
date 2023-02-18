@@ -1,0 +1,98 @@
+<!-- 公司名称、站点名称、安装地点、安装时间 -->
+<view class="subject">
+  <van-cell-group border="{{ false }}">
+    <!--客户 弹出层 -->
+    <view>
+      <text class="Marked {{Marked[1]?'':'MarkedHidden'}}">*</text>
+      <van-cell bind:click="onCustomerDisplay" is-link title="客户" value="{{customerVal}}" />
+      <!-- 弹出层 -->
+      <van-dialog show="{{ customerState }}" title="请选择客户" use-slot show-cancel-button bind:close="onCustomerBlank"
+        bind:confirm="customerYes" bind:cancel="customerNo" confirm-button-color="#40A9FF">
+        <van-picker columns="{{ customerData }}" bind:change="onCustomer" />
+      </van-dialog>
+    </view>
+    <!--站点类型 弹出层 -->
+    <view>
+      <text class="Marked {{Marked[0]?'':'MarkedHidden'}}">*</text>
+      <van-cell bind:click="DropDown" is-link title="站点类型" value="{{defaults}}" />
+      <!-- 弹出层 -->
+      <van-dialog show="{{ DropDownToSelect }}" title="请选择站点类型" use-slot show-cancel-button bind:close="onCloseBut"
+        bind:confirm="corporateNameYes" bind:cancel="corporateNameNo" confirm-button-color="#40A9FF">
+        <van-picker columns="{{ columns }}" bind:change="onChange" />
+      </van-dialog>
+
+    </view>
+
+    <!--站点状态 弹出层 -->
+    <view>
+      <text class="Marked {{Marked[2]?'':'MarkedHidden'}}">*</text>
+      <van-cell bind:click="onSiteStatusDisplay" is-link title="站点状态" value="{{SiteStatusVal}}" />
+      <!-- 弹出层 -->
+      <van-dialog show="{{ SiteStatusState }}" title="请选择站点状态" use-slot show-cancel-button
+        bind:close="onSiteStatusBlank" bind:confirm="SiteStatusYes" bind:cancel="SiteStatusNo" confirm-button-color="#40A9FF">
+        <van-picker columns="{{ SiteStatusData }}" bind:change="onSiteStatus" />
+      </van-dialog>
+
+    </view>
+
+    <!--站点区域 弹出层 -->
+    <view>
+      <text class="Marked {{Marked[3]?'':'MarkedHidden'}}">*</text>
+      <van-cell bind:click="onSiteAreaDisplay" is-link title="站点区域" value="{{SiteAreaVal}}" />
+      <!-- 弹出层 -->
+      <van-dialog show="{{ SiteAreaState }}" title="请选择站点区域" use-slot show-cancel-button bind:close="onSiteAreaBlank"
+        bind:confirm="SiteAreaYes" bind:cancel="SiteAreaNo" confirm-button-color="#40A9FF">
+        <van-picker columns="{{ SiteAreaData }}" bind:change="onSiteArea" />
+      </van-dialog>
+    </view>
+    <!-- 站点名称 -->
+    <text class="Marked {{Marked[7]?'':'MarkedHidden'}}">*</text>
+    <van-field value="{{ SiteName }}" type="text" label="站点名称" placeholder="请输入站点名称" bind:input="onSite" />
+    <!-- 站点编号 -->
+    <text class="Marked {{Marked[8]?'':'MarkedHidden'}}">*</text>
+    <van-field value="{{ SiteNumberVal }}" type="text" label="站点编号" placeholder="请输入站点编号" bind:input="onSiteNumber" />
+
+    <!--安装日期-->
+    <view>
+      <text class="Marked {{Marked[4]?'':'MarkedHidden'}}">*</text>
+      <van-cell bind:click="showPopup" is-link title="安装日期" value="{{currentDateYes}}" />
+      <!-- 弹出层 -->
+      <van-dialog show="{{ showbut }}" title="请选择安装时间" use-slot show-cancel-button bind:close="onCloseButDate"
+        bind:confirm="TimeSelectionYes" bind:cancel="TimeSelectionNo" confirm-button-color="#40A9FF">
+        <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}"
+          max-date="{{ maxDate }}" formatter="{{ formatter }}" />
+      </van-dialog>
+
+    </view>
+
+    <!-- 省市区结联 -->
+    <view>
+      <text class="Marked {{Marked[5]?'':'MarkedHidden'}}">*</text>
+      <van-cell bind:click="onProvinceAndCityDisplay" is-link title="省市区" value="{{ProvinceAndCityVal}}" />
+      <!-- 弹出 -->
+      <van-dialog show="{{ ProvinceAndCityState }}" title="请选择省市区" use-slot show-cancel-button
+        bind:close="onProvinceAndCityBlank" bind:confirm="ProvinceAndCityDialogYes" bind:cancel="ProvinceAndCityNo" confirm-button-color="#40A9FF">
+        <van-area area-list="{{ areaList }}" confirm-button-text='' cancel-button-text=''
+          bind:change="onProvinceAndCity" />
+      </van-dialog>
+    </view>
+    <!-- 详细地址 -->
+    <text class="Marked {{Marked[6]?'':'MarkedHidden'}}">*</text>
+    <van-field value="{{ InstallationSite }}" type="text" label="详细地址" placeholder="请输入详细地址" autosize bind:input="onInstall" />
+  </van-cell-group>
+
+  <view class="button_Center">
+    <!-- <van-button type="info" size="large" bindtap="tan">提交</van-button> -->
+    <van-button type="primary" size="large" round color="#1989fa" bindtap="tan">
+      <van-icon name="completed" class="dlico" color="#fff" />提交</van-button>
+  </view>
+
+  <!-- 确定提示框 -->
+  <van-dialog use-slot title="提示信息" show="{{ show }}" show-cancel-button confirm-button-open-type="getUserInfo"
+    bind:close="onClose" bind:getuserinfo="getUserInfo" confirm-button-color="#40A9FF">
+    <view class="Tipss">
+      您确定提交信息吗？
+    </view>
+  </van-dialog>
+
+</view>

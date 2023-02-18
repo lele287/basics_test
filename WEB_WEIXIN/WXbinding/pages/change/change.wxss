@@ -1,0 +1,87 @@
+/* pages/change/change.wxss */
+page{
+  background-color:#fff;
+}
+.goodbutton {
+  /*right:0;*/
+  /*left:0;*/
+  /*bottom: 3%;*/
+  /*width: 500rpx;*/
+  /*height:100rpx;*/
+  /*line-height: 100rpx;*/
+  /*margin-bottom:2%;*/
+  /*background-color: rgb(49, 158, 49);*/
+  /*color: black;*/
+  /*border-radius: 98rpx;*/
+  /*background: bg_red;*/
+  /*position: relative;*/
+  /*margin-top:30%;*/
+  width: 90%;
+  font-size:14px;
+  background-color: #2d68f4!important;
+  color: #fff;
+  border: 0;
+  margin: 50rpx auto 30rpx;
+}
+ 
+/* 按下变颜色 */
+.hover {
+  background:  rgb(236, 179, 156);
+}
+.display{
+  display: flex;
+  flex-direction:row;
+  margin-top: 30rpx;
+  line-height: 25px;
+  margin-bottom:20rpx;
+  font-size: 16px;
+  position: relative;
+}
+
+.euipementBetail{
+  font-size:1rem;
+  border:1rpx solid #ccc;
+  width:90%;
+  border-radius:2%;
+  margin:30rpx auto;
+
+}
+.lable{
+  margin:0 0 0 15px;
+  color:#b3b3b3;
+  width:80px;
+  font-size:32rpx;
+}
+.changeNum{
+  border: 1px solid #cccccc;
+  border-radius:4px;
+  font-size:12px;
+  color: #000;
+  padding:0 5px;
+  height:24px;
+  margin-left: 10px;
+}
+ .inputText{
+   display: block;
+   font-size:32rpx;
+ }
+ .somBt{
+   width:200rpx;
+   height:170rpx;
+   margin: 0 auto;
+ }
+ .somBt image{
+   width:100%;
+   height:100%;
+ }
+ .closeBt{
+   position:absolute;
+   width:55rpx;
+   height:55rpx;
+   right:10rpx;
+   top:-15rpx;
+ }
+ .closeBt image{
+   width: 100%;
+   height: 100%;
+ }

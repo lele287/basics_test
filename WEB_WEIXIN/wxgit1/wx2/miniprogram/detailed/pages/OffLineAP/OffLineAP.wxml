@@ -1,0 +1,73 @@
+<!-- <view class="subject"> -->
+  <van-sticky>
+  <view class="search_container">
+    <view>
+      <van-search model:value="{{ Keyword }}" placeholder="请输查询条件" use-left-icon-slot="false" use-action-slot
+        bind:search="onQuery" bind:clear="onQueryClear">
+        <van-button type="info" size="small" slot="action" custom-class="queryButton" bind:tap="onQuery">查询
+        </van-button>
+      </van-search>
+    </view>
+    <view>
+      <van-button type="default" size="small" slot="action" custom-class="ip_total">
+        离线数: {{OfflineCount}}</van-button>
+    </view>
+  </view>
+
+  <view class="head">
+    <view>
+      <view bindtap="onDropDown" class="dropDown">
+        选择地区
+        <image src="../../images/icon/lower.png" class="dropDownIcon" wx:if="{{dropDown}}"></image>
+        <image src="../../images/icon/upper.png" class="dropDownIcon" wx:if="{{!dropDown}}"></image>
+      </view>
+    </view>
+    <view class="ResetBtn">
+      <van-button type="default" size="small" slot="action" bind:tap="onQueryClear">重置
+      </van-button>
+    </view>
+  </view>
+
+
+  <view class="Exhibition" wx:if="{{dropDown}}">
+    <view class="Exhibition_container">
+      <view wx:for="{{regionData}}" wx:key="index" class="Exhibition_margin">
+        <van-checkbox value="{{ item.state }}" shape="square" data-index="{{index}}" bindtap="onChangeSelect">
+          {{item.value}}
+        </van-checkbox>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="tr bg-w">
+    <view class="th">店号</view>
+    <view class="th">店名</view>
+    <view class="th ">设备MAC</view>
+    <view class="th ">区域</view>
+  </view>
+
+</van-sticky>
+
+<view>
+  <block wx:for="{{listData}}" wx:key="index">
+    <view class="tr red" data-item="{{item}}" bindtap="onDetailsIp">
+      <view class="td">{{item.ShopCode}}</view>
+      <view class="td">{{item.ShopNames}}</view>
+      <view class="td">{{item.EquipmentMac}}</view>
+      <view class="td">{{item.ShopAreaName}}</view>
+    </view>
+  </block>
+  <!-- 加载中 -->
+  <van-transition show="{{ Loading }}" name="fade-down">
+    <view class="Loading" wx:if="{{Loading}}">
+      <van-loading type="spinner" color="#1989fa" size="40rpx">加载中...</van-loading>
+    </view>
+  </van-transition>
+</view>
+
+
+<van-dialog show="{{ CompanyState }}" title="请选择公司" use-slot show-cancel-button bind:cancel="onCompanyHide"
+  bind:confirm="CompanyYes" confirm-button-color="#40A9FF">
+  <van-picker columns="{{ CompanyData }}" bind:change="onCompany" />
+</van-dialog>

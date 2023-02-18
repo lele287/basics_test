@@ -1,0 +1,88 @@
+/* pages/detailsStore/detailsStore.wxss */
+.subject {
+  margin-bottom: 110rpx;
+}
+
+.row {
+  /* border: 1px solid #eee; */
+  /* border-bottom-color: #fff; */
+  /* height: 80rpx; */
+  line-height: 30rpx;
+  padding: 10rpx 0;
+  display: flex;
+}
+
+/* .row:nth-last-child(1){
+  border-bottom-color: #eee;
+} */
+.tit {
+  flex: 1;
+  color: #ababab;
+  text-indent: 40rpx;
+}
+
+.Val {
+  flex: 2;
+  color: #3a3a3a;
+}
+
+.TipsTit {
+  margin: 30rpx 0;
+}
+
+.InformationBorder {
+  border: 1px solid #eee;
+  font-size: 24rpx;
+}
+
+.FunctionBar {
+  border: 1px solid #f8f9fa;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  height: 100rpx;
+}
+
+.SinglePage {
+  display: flex;
+}
+
+.FunctionIcon {
+  flex: 1;
+  height: 100rpx;
+  text-align: center;
+  border-right: 1px solid #f8f9fa;
+}
+
+.FunctionIcon van-icon {
+  margin: 20rpx 0;
+  font-size: 46rpx;
+}
+
+/* .ico{
+  margin: 20rpx 0;
+ font-size: 60rpx;
+} */
+
+
+.imageIcon {
+  transform: scale(0.3);
+  position: absolute;
+  top: -120rpx;
+}
+
+/* 课程 */
+.trademarkImg{
+  width: 100%;
+  height: 350rpx;
+}
+.CarouselImg{
+  width: 100%;
+  height: 100%;
+}
+.video{
+  width: 100%;
+  height: 100%;
+}

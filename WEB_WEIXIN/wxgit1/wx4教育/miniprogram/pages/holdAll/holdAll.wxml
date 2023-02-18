@@ -1,0 +1,6 @@
+<view class="subject">
+  <van-cell-group>
+    <van-cell title="课程" value="内容" />
+    <van-cell title="科目" value="内容" label="描述信息" border="{{ false }}" />
+  </van-cell-group>
+</view>

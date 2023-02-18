@@ -1,0 +1,131 @@
+<view class="sidebar">
+  <van-sticky offset-top="{{textareaHeight}}">
+    <view class="left" style="{{leftHeight}}">
+      <van-sidebar active-key="{{ shopSidebarIndex }}" bind:change="shopSidebarChange">
+        <block wx:if="{{shopSidebarOptions.length<=8}}">
+          <view wx:for="{{shopSidebarOptionsOne}}" wx:key="index" class="left_Side">
+            <van-sidebar-item title="{{item.name}}" />
+            <view class="left_badge">{{item.total}}</view>
+          </view>
+        </block>
+        <block wx:if="{{shopSidebarOptions.length>8}}">
+          <block wx:if="{{PULL}}">
+            <view class="UperPullContainer">
+              <image src="../../images/icon/upper.png" class="UperPull" bindtap="onPULL"></image>
+            </view>
+          </block>
+          <view wx:for="{{shopSidebarOptionsOne}}" wx:key="index" class="left_Side">
+            <block wx:if="{{!PULL}}">
+              <van-sidebar-item title="{{item.name}}" />
+              <view class="left_badge">{{item.total}}</view>
+            </block>
+          </view>
+          <view wx:for="{{shopSidebarOptionsTwo}}" wx:key="index" class="left_Side">
+            <block wx:if="{{PULL}}">
+              <van-sidebar-item title="{{item.name}}" />
+              <view class="left_badge">{{item.total}}</view>
+            </block>
+          </view>
+          <block wx:if="{{!PULL}}">
+            <view class="UperPullContainer">
+              <image src="../../images/icon/pull.png" class="UperPull" bindtap="onPULL"></image>
+            </view>
+          </block>
+        </block>
+
+      </van-sidebar>
+    </view>
+  </van-sticky>
+
+  <view class="leftSeizeSeat"></view>
+  <view wx:for="{{shopSidebarOptions}}" wx:for-index="sidebarIndex" wx:for-item="items" wx:key="sidebarIndex">
+    <!-- 判断右侧显示内容 -->
+    <view wx:if="{{shopSidebarIndex==sidebarIndex}}" class="rigth">
+      <!-- 加载中 -->
+      <van-transition show="{{ shopLoading }}" name="slide-down" duration="{{ { enter: 200, leave: 140 } }}">
+        <view class="Loading" wx:if="{{shopLoading}}">
+          <van-loading type="spinner" color="#1989fa" />
+        </view>
+      </van-transition>
+      <!-- 判断数据源是否为空 -->
+      <view wx:if="{{shopData.length>=1}}">
+        <view class="DeviceInformation" wx:for="{{shopData}}" wx:key="index">
+          <view class="briefIntroductions" data-item="{{item}}" bindtap="detailsStore">
+            <view>
+              <text class="companyName">{{item.ShopCode}}_{{item.ShopName}}</text>
+            </view>
+            <view>
+              <text class="companyAttribute">网络类型：{{item.NetType}}</text>
+            </view>
+            <view>
+              <!-- <van-icon name="phone-circle-o" />: -->
+              <text class="companyType">{{item.ChargeName}}{{item.ChargePhone}}</text>
+            </view>
+            <view class="fsize">
+              <text class="companyAddress">{{item.ShopAddress}}</text>
+            </view>
+          </view>
+        </view>
+
+        <!-- 加载中 -->
+        <!-- <van-transition show="{{ shopLoading }}" name="fade-down">
+          <view class="Loading" wx:if="{{shopLoading}}">
+            <van-loading type="spinner" color="#1989fa" size="40rpx">加载中...</van-loading>
+          </view>
+        </van-transition> -->
+      </view>
+
+
+      <view wx:else class="EmptyState">
+        <van-empty class="custom-image" image="/images/icon/EmptyState.png" description="暂无数据" />
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class="menu">
+      <van-dropdown-menu active-color="#1989fa">
+        <van-dropdown-item value="{{ SelectVal }}" options="{{ option1 }}" popup-style="margin-left: 160rpx;" title-class="titClass" bind:change="replace"/>
+      </van-dropdown-menu>
+    </view> -->
+
+<!-- <view class="sidebar">
+  <view class="left">
+    <van-sidebar active-key="{{ Store }}" bind:change="onCompany">
+      <van-sidebar-item wx:for="{{StoreData}}" wx:key="index" title="{{item}}" />
+    </van-sidebar>
+  </view>
+  <view wx:for="{{StoreData}}" wx:for-index="in" wx:for-item="items" wx:key="in">
+    <view wx:if="{{Store==in}}" class="rigth">
+      <view wx:if="{{shopData!=''}}">
+        <view wx:if="{{Store!=0}}">
+          <view class="DeviceInformation" wx:for="{{shopData}}" wx:key="index">
+            <view class="ico" data-item="{{item}}" bindtap="detailsCompany">
+              <image
+                src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1673740581,4097200966&fm=26&gp=0.jpg"
+                class="companyImg"></image>
+            </view>
+            <view class="briefIntroduction">
+              <view>
+                <text class="largeFsize">{{item.ShopName}}_{{item.ShopCode}}</text>
+              </view>
+              <view>
+                <text>状态：{{item.ShopType}}</text>
+              </view>
+              <view>
+                <van-icon name="phone-circle-o" />
+                <text>{{item.ShopPhone==''?'---':item.ShopPhone}}</text>
+              </view>
+              <view class="fsize">
+                <text>{{item.ShopAddress}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else="{{shopData==''}}" class="EmptyState">
+        <van-empty class="custom-image" image="/images/icon/EmptyState.png" description="暂无数据" />
+      </view>
+    </view>
+  </view>
+</view> -->

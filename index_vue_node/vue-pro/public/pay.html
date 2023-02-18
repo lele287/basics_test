@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/pay.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/pay.js"></script>   
+</head>
+<body>
+    <header>
+        <div class="header-nav">
+            <ul class="left">
+                <li><a href="#">欢迎来到康乐窝窝！</a></li>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="login.html">请登录</a></li>
+                <li><a href="register.html">免费注册</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="">手机版</a></li>
+                <li>
+                    <img class="header-nav-img" src="images/gwc.png" alt="">
+                    <a href="shopping.html">购物车</a>
+                </li>   
+                <li><a href="drugStore/personalData.html">我的窝窝</a></li>
+
+            </ul>
+        </div>
+    </header>
+    <article>
+        <div class="article-top">
+            <div class="article-top-bx">
+                <a href="index.html"> <img src="images/logo2.jpg" alt=""></a>
+                <!-- <img class="top-bx-img" src="images/yg.jpg" alt=""> -->
+                <div class="div1">
+                    <div class="dash"></div>
+                    <ul>
+                        <li>
+                            <div class="process">1</div>
+                            <span>选择商品</span>
+                        </li>
+                        <li>
+                            <div class="process">2</div>
+                            <span>填写订单信息</span>
+                        </li>
+                        <li>
+                            <div class="process">3</div>
+                            <span>订单提交成功</span>
+                        </li>
+                        <li>
+                            <div class="process" style="background-color: #d6d6d6;">4</div>
+                            <span>支付成功</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </article>
+    
+    <main>
+        <div class="message">
+            <p class="p1">订单提交成功，请您尽快付款！订单号：102020091700009</p>
+            <p class="p2">请您在提交订单后<span>24</span>小时内完成支付，否则订单会自动取消</p>
+            <p class="p3">待支付：<span class="span1">￥</span></p>
+        </div>
+        <div class="pay-platform">
+            <div class="platform">快捷支付等平台</div>
+            <div class="pay">
+                <div id="weixin" class="cost">
+                    <img src="images/weixin.png" alt="">
+                    <p class="txt">微信</p>
+                </div>
+                <div id="zhifubao" class="cost">
+                    <img src="images/zfb.png" alt="">
+                    <p class="txt">支付宝</p>
+                </div>
+            </div>
+        </div>
+        <div class="immediately">
+            <div class="immediately-pay">立即支付</div>
+        </div>
+    </main>
+</body>
+</html>

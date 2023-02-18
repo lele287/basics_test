@@ -1,0 +1,39 @@
+<view class="subject">
+
+  <view class="container" wx:if="{{!readOnly}}">
+    <view class="titleTips">当前门店</view>
+    <view bindtap="onSwitch" class="ScanCodeContainer">
+      <image src="../../images/switch.png" alt="" class="switch_img"></image>
+      <text>{{optionsData.ShopName}}</text>
+    </view>
+  </view>
+
+  <view class="information">
+    <view class="titleTips">当前设备</view>
+    <view class="inforem">
+      <van-empty class="custom-image" image="/images/icon/EmptyState.png" description="暂无设备"
+        wx:if="{{EquipmentNumber.length==0}}" />
+    </view>
+
+    <view wx:if="{{EquipmentNumber.length!=0}}">
+      <block wx:for="{{EquipmentNumber}}" wx:key="index">
+        <view class="euipementBetail">
+          <view class="euipementBetail_Son">{{item.EquipmentName}}:</view>
+          <view class="euipementBetail_Son">{{item.EquipmentCode}}</view>
+          <view class="euipementBetail_Son">
+            <van-icon name="delete" class="delete" data-code="{{item.EquipmentCode}}" data-index="{{index}}"
+              bindtap="whetherConfirm" />
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="button_Center" wx:if="{{EquipmentNumber.length!==0}}">
+    <van-button type="primary" round color="#1989fa" size="large" bindtap="WholeDismantle">
+      全部拆除
+    </van-button>
+  </view>
+</view>
+
+<van-dialog id="van-dialog" bind:confirm="ReplacementEquipment" confirm-button-color="#40A9FF" />

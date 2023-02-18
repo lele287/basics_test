@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情页面</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/good.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/Mock.js/1.0.1-beta3/mock-min.js"></script>
+    <script src="js/good.js"></script>
+
+</head>
+
+<body>
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">请登录</div>
+                <div class="modal-body">检测到用户暂未登录，请先登录</div>
+                <div class="modal-footer">
+                    <button class="goLogin" data-dismiss="modal">去登陆</button>
+                    <button data-dismiss="modal">再看看</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <div class="navbar-brand" style="width: 70px;height: 50px; background:url(images/logo.png) no-repeat;background-size:100% 100%;"></div>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="want.html">求购</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发布<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="release.html">发布商品</a></li>
+                            <li><a href="releaseWant.html">发布求购</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="personalCenter.html">个人中心</a></li>
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">欢迎您<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" id="userName">未登录</a></li>
+                            <li><a href="#" onclick="out()" id="login">登录/注册</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="main">
+        <div class="lj">
+            <a href="index.html">首页</a>>
+            <a href="good.html">商品详细</a>
+        </div>
+        <div class="good">
+            <div class="messageBoard">
+                <div class="goodPic">
+                    <div id="left">
+                    </div>
+                </div>
+                <div id="right">
+                </div>
+                <div class=".mainRight">
+                    <div class="goodMes">
+                        <span class="title"></span>
+                        <span></span>
+                        <span>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：￥<span class="price"></span></span>
+                        <span>出&nbsp;&nbsp;售&nbsp;&nbsp;人：<span class="shop"></span></span>
+                        <span>点&nbsp;&nbsp;击&nbsp;&nbsp;量：<i id="gHits"></i></span>
+                        <span>库&nbsp;&nbsp;存&nbsp;&nbsp;量：<i id="gNum"></i ></span>
+                        <span>可否小刀：<i id="gDiscount"></i></span>
+                        <span>详细描述：<span  class="goodMessage"></span></span>
+                        <span class="purchaseNum">购买数量：
+                            <img src="images/subtraction.png" alt="" class="subNum">
+                            <input type="text" value="1" class="inputNum">
+                            <img src="images/add.png" alt="" class="addNum" width="25px" height="25px">
+                        </span>
+                        <div class="button">
+                            <div class="add">
+                                <input type="button" value="加入购物车" class="setShoppingCart">
+                            </div>
+                            <div class="buy">
+                                <input type="button" value="立即购买" class="toSettlement">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="goods_other">
+            <div class="like">
+                <span class="likeproduct">类似商品</span>
+                <ul class="like_goods">
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="userEvaluation">
+                <span class="evalspan">用户评价</span>
+                <div class="noEvaluation">
+                    暂无人评价哦~
+                </div>
+                <ul class="evaluation">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer_main">
+            <div id="footer-left">
+                联系我们：<br>
+                <span>QQ：1454581268</span> <br>
+                <span>地址：苏州工业园区独墅湖创客汇</span>
+            </div>
+            <div id="footer-center">
+                &nbsp;&nbsp;&nbsp;&nbsp;二维码：
+                <div id="footer-center-pic"></div>
+            </div>
+            <div id="footer-right">
+                二手指南：<br>
+                <a href="help.html">购买流程</a><br>
+                <a href="strategy.html">优质二手</a><br>
+            </div>
+            <div id="footer-bottom">
+                Copyright © 2020 JiMei 版权所有
+            </div>
+        </div>
+    </div>
+    <script src="js/bc.js" color="72, 212, 100" opacity="1" count="40" zindex="-1">
+    </script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

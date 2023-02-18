@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="css/address.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/address.js"></script>
+    <title>收货地址</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand" style="width: 70px;height: 50px; background:url(images/logo.png) no-repeat;background-size:100% 100%;">
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="want.html">求购</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发布<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="release.html">发布商品</a></li>
+                            <li><a href="releaseWant.html">发布求购</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="personalCenter.html">个人中心</a></li>
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">欢迎您<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" id="userName">未登录</a></li>
+                            <li><a href="#" onclick="out()" id="login">登录/注册</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="body1">
+        <div id="body">
+            <dl style="background: #fff;">
+                <dd class="gn">全部功能</dd>
+                <dd>
+                    <a href="modifypersonalCenter.html">我的资料</a>
+                </dd>
+                <dd><a href="order.html">我的订单</a></dd>
+                <dd><a href="publish.html">我的发布</a></dd>
+                <dd><a href="mywant.html">我的求购</a></dd>
+            </dl>
+        </div>
+        <main>
+            <h2><b>新增地址</b></h2>
+            <hr>
+            <form action="">
+                <table>
+                    <tbody>
+                        <tr>
+                            <!-- <td>*收货地址：</td> -->
+                            <td>*收货人姓名:</td>
+                            <td><input type="text" name="sjName" id="sjName"></td>
+                        </tr>
+                        <tr>
+                            <td>*手机号:</td>
+                            <td><input type="text" name="phoneNumber" id="phoneNumber"></td>
+                        </tr>
+                        <tr>
+                            <td>*详细地址:</td>
+                            <td><textarea name="address" id="address" cols="10" rows="2"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <div class="btnAddress">
+                    <input type="checkbox" id="btn" value="设置默认地址">
+                    <span class="btnSpan">设置默认地址</span>
+                </div> -->
+                <input type="button" value="保存" class="button">
+            </form>
+
+        </main>
+        <div class="next-table">
+
+            <ul class="next-table-ul">
+                <li>收货人姓名</li>
+                <li>收货电话</li>
+                <li>收货地址</li>
+                <li>操作</li>
+                <!-- <li>收货人姓名</li> -->
+            </ul>
+            <ul class="addressContent">
+
+            </ul>
+        </div>
+
+    </div>
+    <div id="footer">
+        <div id="footer_main">
+            <div id="footer-left">
+                联系我们：<br>
+                <span>QQ：1454581268</span> <br>
+                <span>地址：苏州工业园区独墅湖创客汇</span>
+            </div>
+            <div id="footer-center">
+                &nbsp;&nbsp;&nbsp;&nbsp;二维码：
+                <div id="footer-center-pic"></div>
+            </div>
+            <div id="footer-right">
+                二手指南：<br>
+                <a href="help.html">购买流程</a><br>
+                <a href="strategy.html">优质二手</a><br>
+            </div>
+            <div id="footer-bottom">
+                Copyright © 2020 JiMei 版权所有
+            </div>
+        </div>
+    </div>
+    <script src="js/bc.js" color="72, 212, 100" opacity="1" count="40" zindex="-1"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+
+
+
+.Loading{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.result {
+  margin-bottom: 20rpx;
+  padding-left: 34rpx;
+  color: #9a9ea5;
+}
+.container{
+  margin: 50rpx 0;
+}
+.ScanCodeContainer {
+  margin: 30rpx 0;
+  display: flex;
+  justify-content: center;
+}
+.switch_img{
+  width: 40rpx;
+  height: 40rpx;
+}

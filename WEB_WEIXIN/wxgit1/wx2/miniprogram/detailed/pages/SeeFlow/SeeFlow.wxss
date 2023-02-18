@@ -1,0 +1,122 @@
+.subject{
+  padding: 10rpx;
+}
+.Top {
+  margin-top: 50rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  margin: 30rpx 0;
+  margin-left: 40rpx;
+}
+
+.query_top {
+  margin-top: 70rpx;
+}
+
+.query_title {
+  font-size: 36rpx;
+  text-align: center;
+  color: #2396ff;
+  margin: 20rpx 0;
+}
+
+.queryButton {
+  margin-top: -8rpx;
+}
+
+.Tips {
+  text-align: center;
+}
+
+.Statistics {
+  margin-top: 30rpx;
+  display: flex;
+}
+
+.Statistics>view:nth-child(1),
+.Statistics>view:nth-child(2) {
+  flex: 1;
+  text-align: center;
+}
+
+.Statistics_dayAverage {
+  border-right: 1px solid #fff;
+  background-color: #def5c7;
+  padding: 30rpx 0;
+}
+.Statistics_surplus{
+  background-color: #c7e8f5;
+  padding: 30rpx 0;
+}
+
+.Statistics_goBeyond{
+  background-color: #f5cfc7;
+}
+
+.Statistics_tit {
+  color: #497daf;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+
+.Used_Value{
+  width: 100%;
+  height: 180rpx;
+  line-height: 180rpx;
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: center;
+  font-size: 72rpx;
+  border: 1px solid #40a9ff;
+}
+
+.Used_Value_MB{
+  font-size: 30rpx;
+  padding-top: 18rpx;
+}
+
+/* .UsedFlex{
+  display:flex;
+} */
+
+.container {
+  width: 100%;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/**index.wxss**/
+ec-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -30rpx;
+}
+
+
+.container_title{
+  margin: 50rpx 0;
+}
+.ScanCodeContainer {
+  margin: 30rpx 0;
+  display: flex;
+  justify-content: center;
+}
+.switch_img{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.switchFlow{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  float: right;
+}

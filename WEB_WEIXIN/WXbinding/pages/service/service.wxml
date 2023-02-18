@@ -1,0 +1,111 @@
+<!--pages/service/service.wxml-->
+<!-- start门店信息 -->
+<view class="shop-info-title">
+    <view class="shop_title">
+      <text class="title-font">门 店 信 息</text>
+    </view>
+    <view class="shop">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section">
+        <view class="textMr">店号:</view>
+        {{shop.shopCode==null?'无':shop.shopCode}}
+      </view>
+      <view class="section">
+        <view class="textMr">店名:</view>
+        {{shop.shopName==null?'无':shop.shopName}}
+      </view>
+      <view class="section">
+        <view class="textMr">站点状态:</view>
+        {{shop.shopType==null?'无':shop.shopType}}
+      </view>
+      <view class="section">
+        <view class="textMr">预计安装时间:</view>
+        {{shop.preInstallTime==null?'无':shop.preInstallTime}}
+      </view>
+      <view class="section">
+        <view class="textMr">省/市/区:</view>
+        {{shop.provAndCities==null?'无':shop.provAndCities}}
+      </view>
+      <view class="section">
+        <view class="textMr">详细地址:</view>
+        {{shop.shopAddress==null?'无':shop.shopAddress}}
+      </view>
+      <view class="section">
+        <view class="textMr">担当人:</view>
+        {{shop.dutyChargeName==null?'无':shop.dutyChargeName}}
+      </view>
+      <view class="section">
+        <view class="textMr">手机号:</view>
+        {{shop.dutyChargePhone==null?'无':shop.dutyChargePhone}}
+      </view>
+      <view class="section">
+        <view class="textMr">SC_IP:</view>
+        {{shop.ip==null?'无':shop.ip}}
+      </view> 
+      <view class="section">
+        <view class="textMr">网络类型:</view>
+        {{shop.netType==null?'无':shop.netType}}
+      </view>  
+    </form>
+    </view>
+
+  <view wx:if="{{shop.equipments.length != 0}}">
+  <view class="shop_title">
+    <text class="title-font">设 备 信 息</text>
+  </view>
+
+  <view class="shop">
+      <block class="equipemntInfo" wx:for="{{shop.equipments}}" wx:key="{{index}}">
+        <view class="no-sn-time">
+          <text class="equipment-name">{{item.static_info}}:</text>
+          <text>{{item.info_code}} </text>
+          <text class="time-sn">{{item.equipment_sn}} {{item.info_time}}</text>
+        </view> 
+      </block >
+  </view>
+  </view>
+</view>
+<!-- end -->
+
+<view class="sercBt">
+    <view class="service-item" bindtap='jumpPage' data-index='install'>
+      <image  src="/images/an.png"></image>
+      <view class="font">安装</view>
+    </view>
+
+    <view class="service-item" bindtap='jumpPage' data-index='change' wx:if="{{shop.equipments.length != 0}}">
+        <image src="/images/jh.png"></image>
+      <view class="font">换机</view>
+    </view>
+
+    <view class="service-item" bindtap='jumpPage' data-index='delete' wx:if="{{shop.equipments.length != 0}}">
+        <image src="/images/chai.png"></image>
+      <view class="font">拆机</view>
+    </view>
+
+    <view class="service-item" bindtap='jumpPage' data-index='currentsign' wx:if="{{shop.equipments.length != 0}}">
+        <image src="/images/wf.png"></image>
+      <view class="font">当前信号</view>
+    </view>
+
+    <view class="service-item" bindtap='jumpPage' data-index='debug' wx:if="{{shop.equipments.length != 0}}">
+        <image src="/images/tz.png"></image>
+      <view class="font">三网调试</view>
+    </view>
+
+    <view class="service-item" bindtap='jumpPage' data-index='logs'>
+        <image src="/images/date.png"></image>
+      <view class="font">日志</view>
+    </view>
+
+     <view class="service-item" bindtap='jumpPage' data-index='singlecard' wx:if="{{shop.equipments.length != 0}}">
+        <image src="/images/singleCard.png"></image>
+      <view class="font">单卡调试</view>
+    </view>
+</view>
+
+
+
+
+
+

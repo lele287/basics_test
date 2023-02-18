@@ -1,0 +1,44 @@
+<view class="subject">
+
+  <view class="query_top" wx:if="{{!readOnly}}">
+    <view class="query_title">信号查询</view>
+    <van-search model:value="{{ equipmentCode }}" placeholder="请输入设备编号" use-left-icon-slot="false" use-action-slot
+      bind:search="onQuery" bind:clear="onQueryClear">
+      <van-button type="info" size="small" slot="action" custom-class="queryButton" bind:tap="onQuery">搜索</van-button>
+    </van-search>
+  </view>
+
+  <van-collapse value="{{ activeNames }}" bind:change="foldChange" border="{{false}}">
+    <!-- 加载中 -->
+    <van-transition show="{{ SignalLoading }}" name="fade-down">
+      <view class="Loading" wx:if="{{SignalLoading}}">
+        <van-loading type="spinner" color="#1989fa" />
+      </view>
+    </van-transition>
+    <block wx:if="{{signalData.length!=0}}">
+      <block wx:for="{{signalData}}" wx:key="index">
+        <van-collapse-item title="{{index==0?'主卡':''}}{{index==1?'副卡':''}}{{index==2?'三卡':''}}" name="{{index}}"
+          border="{{false}}" wx:if="{{item.iccid!==''}}">
+          <view class="InformationBorder">
+            <view class="row">
+              <view class="tit">卡号</view>
+              <view class="Val">{{item.iccid}}</view>
+            </view>
+            <view class="row">
+              <view class="tit">类型</view>
+              <view class="Val">{{item.nettype}}{{item.netType}}</view>
+            </view>
+            <view class="row">
+              <view class="tit">信号值</view>
+              <view class="Val">{{item.single}}{{item.signal}}</view>
+            </view>
+          </view>
+        </van-collapse-item>
+      </block>
+    </block>
+
+  </van-collapse>
+  <view wx:if="{{signalData.length==0}}">
+    <van-empty image="/images/icon/EmptyState.png" description="暂无信号信息" />
+  </view>
+</view>

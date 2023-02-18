@@ -1,0 +1,4 @@
+<!--pages/shoplog/shoplog.wxml-->
+<view class="content" wx:for="{{dismantleData}}" wx:key="index">
+<zan-cell title="{{item.dismantleTime}}" label="{{item.infoCode}}" value="{{item.user_name}}" bindtap="jumpDetail" data-index="{{index}}"></zan-cell>
+</view>

@@ -1,0 +1,40 @@
+<view class="subject">
+  <view class="Tips">添加成功,请选择是否继续添加！</view>
+  <view class="information">本次添加的信息结果为：</view>
+  <view class="block">
+    <view class="row">
+        <view class="tit">设备类名</view>
+        <view class="Val">{{currentEquipment.EquipmentClassName}}</view>
+      </view>
+      <view class="row">
+        <view class="tit">设备编码</view>
+        <view class="Val">{{currentEquipment.EquipmentCode}}</view>
+      </view>
+      <view class="row">
+        <view class="tit">设备名称</view>
+        <view class="Val">{{currentEquipment.EquipmentName}}</view>
+      </view>
+      <view class="row">
+        <view class="tit">设备状态</view>
+        <view class="Val">{{currentEquipment.EquipmentStatus}}</view>
+      </view>
+      <view class="row">
+        <view class="tit">设备类型</view>
+        <view class="Val">{{currentEquipment.EquipmentTypeName}}</view>
+      </view>
+      <view class="row">
+        <view class="tit">安装日期</view>
+        <view class="Val">{{currentEquipment.InstallDate}}</view>
+      </view>
+  </view>
+  <view class="button_Center">
+    <van-button type="primary" round  color="#1989fa" size="large" bindtap="onContinue">
+      继续添加
+    </van-button>
+  </view>
+  <view class="button_Center">
+    <van-button type="primary" round  color="#FA8072" size="large" bindtap="onEnd">
+      结束添加
+    </van-button>
+  </view>
+</view>

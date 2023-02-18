@@ -1,0 +1,149 @@
+
+
+.DeviceInformation{
+  position: relative;
+  display: flex;
+  /* margin: 20rpx; */
+  padding: 10rpx;
+  border-bottom: 1px solid #f9f9f9;
+}
+.ico{
+  width: 150rpx;
+  height: 114rpx;
+  /* flex: 1; */
+  /* flex: 1; */
+  /* margin: 25rpx; */
+}
+
+.companyImg{
+  width: 114rpx;
+  height: 114rpx;
+}
+.briefIntroduction{
+    /* margin-left: 24rpx; */
+    line-height: 30rpx;
+    flex-basis: auto;
+    font-size: 24rpx;
+    flex: 2;
+}
+/* .briefIntroductions{
+  margin-left: 24rpx;
+  line-height: 30rpx;
+  flex-basis: auto;
+  font-size: 24rpx;
+} */
+.companyName,.companyType,.companyAttribute,.companyAddress{
+  display: block;
+  padding: 4rpx 0;
+  color: #666666;
+}
+.companyName{
+  /* font-size: 20px; */
+  font-size: 28rpx;
+  color: #0066ff;
+  /* color: #000; */
+  font-weight: 700;
+}
+.companyType,.companyAttribute{
+  font-size: 24rpx;
+}
+.companyAddress{
+  font-size: 22rpx;
+}
+.storeImg{
+  width: 100rpx;
+  height: 100rpx;
+}
+.EmptyState{
+  /* margin-left: 120rpx; */
+  display: flex;
+  justify-content: center;
+}
+.QueryScope{
+  padding: 16rpx;
+  background-color: #f9f9f9;
+  margin: 0 20rpx;
+}
+.Exhibition{
+  display: flex;
+}
+.Exhibition:nth-child(1){
+  margin-bottom: 14rpx;
+}
+.Exhibition>view:nth-child(1){
+  flex: 1;
+}
+.Exhibition>view:nth-child(2){
+  flex: 2;
+}
+.rigth{
+  /* padding-left: 164rpx; */
+  margin-left: 164rpx;
+}
+.left{
+  width: 164rpx;
+  /* height: 100%; */
+  /* position: fixed;
+  overflow-y: scroll; */
+  position: absolute;
+  background-color: #f6f6f6;
+}
+
+
+
+.van-sidebar-item--selected,.van-sidebar-item--selected{
+  border-color: #fff!important;
+} 
+.van-sidebar-item{
+  width: 164rpx;
+  height: 100%;
+  line-height: 40rpx!important;
+  font-size: 30rpx!important;
+}
+
+
+/* 搜索 */
+.dropDown{
+  width: 100%;
+  height: 240rpx;
+  position: fixed;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0px 8px 10px rgba(0,17,41,0.1);
+}
+/* 历史搜索记录 */
+.History{
+  color: #b5b6b7;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20rpx;
+}
+.HistoryList{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20rpx;
+}
+.HistoryList_Text{
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  margin: 10rpx 10rpx;
+  border: 1px solid transparent;
+  border-radius: 10rpx;
+  background-color: #f6f6f6;
+}
+
+.switch_img{
+  width: 40rpx;
+  height: 40rpx;
+}
+.Loading{
+  display: flex;
+  justify-content: center;
+}
+
+
+#textarea{
+  background-color: #fff;
+  position: relative;
+  top: -1rpx;
+}

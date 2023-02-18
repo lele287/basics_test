@@ -1,0 +1,239 @@
+/* pages/classification/classification.wxss */
+.subject {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  display: flex;
+  margin-top: 30rpx;
+  color: #242424;
+  border-top: 2rpx solid  #eee;
+}
+.van-sidebar-item--selected,.van-sidebar-item--selected{
+  border-color: #fff!important;
+} 
+/* .io{
+  width: 60rpx;
+  height: 60rpx;
+  position: fixed;
+  top: 130rpx;
+  left: 80rpx;
+  z-index: 1000;
+} */
+.van-tabs__wrap,
+.van-tabs__wrap,
+.scroll-view,
+.van-tabs__nav,
+.van-tab {
+  /* width: 500rpx!important; */
+  height: 90rpx!important;
+  padding-bottom: 10rpx!important;
+}
+.van-sidebar-item,.van-sidebar-item{
+  background-color: #f6f6f6!important;
+} 
+.van-sidebar-item--selected,.van-sidebar-item--selected{
+  background-color: #fff!important;
+}
+.left{
+  background-color: #f6f6f6;
+}
+/* .rigth{
+  font-family: Microsoft Yahei;
+} */
+/* .van-ellipsi,.van-ellipsi,.van-tab,.van-tab{
+  border: 1px solid #ccc;
+  border-radius: 50% 50%;
+} */
+/* .van-tab--active,.van-tab--active{
+59,183,158
+} */
+.van-ellipsis{
+  background-repeat:no-repeat;
+  background-size: contain;
+  background-position:center;
+  /* border: 1px solid #ccc;
+  border-radius: 80%; */
+}
+.van-ellipsis:nth-child(2){
+  background-image: url(https://tenfei04.cfp.cn/creative/vcg/veer/800water/veer-107987698.jpg) !important;
+}
+.van-ellipsis:nth-child(3){
+  background-image: url(https://alifei01.cfp.cn/creative/vcg/veer/800water/veer-309773630.jpg) !important;
+}
+.van-ellipsis:nth-child(4){
+  background-image: url(https://tenfei04.cfp.cn/creative/vcg/veer/800water/veer-133226808.jpg) !important;
+}
+.van-ellipsis:nth-child(5){
+  background-image: url(https://tenfei05.cfp.cn/creative/vcg/veer/800water/veer-304777039.jpg) !important;
+}
+.DeviceInformation{
+  display: flex;
+  /* margin: 20rpx; */
+  padding: 25rpx;
+  border-bottom: 1px solid #f9f9f9;
+}
+.ico{
+  width: 100rpx;
+  height: 100rpx;
+  /* flex: 1; */
+  margin: 25rpx;
+}
+.briefIntroduction{
+  /* width: 100%;
+  height: 100rpx; */
+  /* flex: 3; */
+  line-height: 30rpx;
+  flex-basis: auto;
+  font-size: 24rpx;
+}
+.companyName{
+  font-size: 26rpx;
+}
+.companyType,.companyAttribute{
+  font-size: 24rpx;
+}
+.companyAddress{
+  font-size: 22rpx;
+}
+.storeImg{
+  width: 100rpx;
+  height: 100rpx;
+}
+.companyImg{
+  width: 114rpx;
+  height: 100rpx;
+}
+/* .CloseShop{
+  color: #999999;
+} */
+.largeFsize{
+  font-size: 26rpx;
+}
+.fsize{
+  font-size: 22rpx;
+}
+
+
+.swiperContent{
+  margin-top: 50rpx;
+}
+.top {
+  display: flex;
+}
+.topImg{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.TabImg{
+  width: 100rpx;
+  height: 100rpx;
+  /* padding: 0 15rpx; */
+  /* margin: 0 40rpx; */
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+.topText{
+  width: 100rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  text-align: center;
+  font-size: 24rpx;
+  position: absolute;
+  top: 225rpx;
+  border: 1px solid transparent;
+  border-radius: 10rpx;
+}
+.Select{
+  border-color: #1296db;
+}
+.SelectText{
+  color: #fff;
+  background-color: #1296db;
+}
+/* 课程 */
+.Carousel{
+  margin: 30rpx 0;
+}
+.CarouselImg{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #eee;
+  border-radius: 15rpx;
+}
+.specialColumn{
+  font-size: 34rpx;
+  font-weight: 700;
+  margin: 40rpx 0 -10rpx 0;
+}
+.column{
+  display: flex;
+  margin: 20rpx 0;
+  line-height: 40rpx;
+}
+.inform{
+  margin-left: 30rpx;
+}
+.inform>view{
+  margin: 0;
+  margin-bottom: 6rpx;
+}
+.informationImg{
+  width: 160rpx;
+  height: 220rpx;
+  border: 1px solid #eee;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+.informTrainer{
+  font-size: 22rpx;
+  display: flex;
+}
+.informTrainer_name,.informTrainer_position{
+  color: #bcbdbe;
+  height: 34rpx;
+  line-height: 34rpx;
+  padding: 0 8rpx;
+  background-color: #f7f8fa;
+  border: 1px solid #f7f8fa;
+  border-radius: 10rpx;
+}
+.informTrainer_position{
+  margin: 0 20rpx;
+}
+.informTit{
+  font-size: 32rpx;
+  font-weight: 800;
+  line-height: 50rpx;
+}
+.informText{
+  font-size: 24rpx;
+  margin-bottom: 4rpx;
+}
+
+.informCurriculum{
+  font-size: 26rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.informCurriculum_border{
+  color: #ff7453;
+  border: 1px solid #f3bdb0;
+  border-radius: 10rpx;
+  padding: 0 10rpx;
+}
+.informCurriculum_shelves{
+  color: #afafaf;
+  font-size: 20rpx;
+}
+.informCurriculum_remind{
+  padding: 4rpx 10rpx;
+  /* height: 50rpx;
+  line-height: 50rpx; */
+  /* font-weight: 600; */
+  background-color: #0fcbf8;
+  border: 1px solid #0fcbf8;
+  border-radius: 10rpx;
+}
