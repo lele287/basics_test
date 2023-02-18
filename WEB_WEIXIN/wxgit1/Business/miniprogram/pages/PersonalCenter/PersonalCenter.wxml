@@ -1,0 +1,31 @@
+<view class="subject">
+  <view class="sign">
+    <view class="trademarkImg">
+      <image src='../../images/logo.jpg' class="portraits"></image>
+    </view>
+    <view class="titContent">
+      <view>
+        <van-cell-group>
+          <van-cell title="所属公司" value="{{CompName}}" border="{{false}}" />
+          <van-cell title="当前用户名称：" value="{{name}}" border="{{false}}" />
+          <van-cell title="全名：" value="{{FullNameEn}}" border="{{false}}" />
+          <van-cell title="当前用户身份：" value="{{NickName}}" border="{{false}}" />
+        </van-cell-group>
+      </view>
+    </view>
+    <view class="button_Center">
+      <van-button type="primary" round color="#1989fa" size="large" bindtap="signOut">
+        退出登录
+      </van-button>
+
+    </view>
+    <view class="tail">
+      <view>
+        <text>NeTOP's ©2021 Implement By</text>
+      </view>
+      <view>
+        <text>苏州睿盛伟智能技术有限公司 电话：400-999-1761</text>
+      </view>
+    </view>
+  </view>
+</view>

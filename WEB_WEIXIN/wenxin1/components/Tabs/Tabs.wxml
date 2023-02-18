@@ -1,0 +1,5 @@
+<view class="aa">
+  <text style="display:" bindtap="SonToFather">我是父组件传来的数据：{{lele}}</text>
+  <text style="color:#f0f;">我是自定义组件</text>
+  <slot></slot>
+</view>

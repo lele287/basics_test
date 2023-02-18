@@ -1,0 +1,103 @@
+/**app.wxss**/
+@import "./iconfont.wxss";
+
+.subject {
+  padding: 0 30rpx;
+  font-family: sans-serif;
+  font-size: 28rpx;
+}
+
+.GonggeBorder {
+  width: 100%;
+  /* height: 154rpx; */
+  border: 1px solid #f8f9fa;
+}
+
+/* .van-grid-item{
+  height: 154rpx;
+} */
+.van-grid-item__icon {
+  font-size: var(--grid-item-icon-size, 56rpx) !important;
+}
+
+.van-grid-item__text {
+  margin-top: 16rpx !important;
+  font-size: var(--grid-item-text-font-size, 26rpx) !important;
+}
+
+.van-cell__title,
+.van-cell__value {
+  /* height: 40rpx; */
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+.van-collapse-item__content {
+  padding: 0 !important;
+}
+
+.collapse-item-index--van-cell {
+  padding: 30rpx 0 10rpx 0 !important;
+}
+
+.collapse-item-index--van-cell .van-cell__title {
+  font-size: var(--grid-item-text-font-size, 30rpx);
+}
+
+
+.van-button--round {
+  width: 400rpx !important;
+  height: 70rpx !important;
+  line-height: 140rpx !important;
+  font-size: 30rpx !important;
+}
+
+.button_Center {
+  width: 100%;
+  margin-top: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+
+/* 表格 */
+.row {
+  line-height: 30rpx;
+  padding: 10rpx 0;
+  display: flex;
+}
+
+.tit {
+  flex: 1;
+  color: #ababab;
+  text-indent: 40rpx;
+}
+
+.Val {
+  flex: 2;
+  color: #3a3a3a;
+}
+
+.InformationBorder {
+  border: 1px solid #eee;
+  font-size: 24rpx;
+}
+
+.equipmentRow {
+  margin-top: 10rpx;
+  border-top: 1px solid #f6f6f6;
+}
+
+/* title标题 */
+.titleTips {
+  font-size: 32rpx;
+  padding: 0 24rpx;
+  border-left: 3px solid #40a9ff;
+  margin: 20rpx 0;
+}
+
+/* 加载中 */
+.Loading{
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0;
+}

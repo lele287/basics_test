@@ -1,0 +1,12 @@
+<!--pages/new/new.wxml-->
+<view class="containers">
+  <view class="top">top</view>
+  <view class="content">
+    <scroll-view scroll-y="true">
+      <text>开头位置</text>
+      <view style="height:2000rpx;background-color:#f0f"></view>
+      <text>结束位置</text>
+    </scroll-view>
+  </view>
+  <view class="bottom">bottom</view>
+</view>

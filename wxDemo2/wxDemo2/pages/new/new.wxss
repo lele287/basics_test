@@ -1,0 +1,23 @@
+/* pages/new/new.wxss */
+.container{
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+}
+.top{
+  background-color: #f00;
+  height: 120rpx;
+}
+.content{
+  flex:1;     /*中间区域高度撑满（屏幕高度-top和bottom的高度和）*/
+  display:flex;
+  overflow: hidden; /*避免真机出现样式问题*/
+}
+.content scroll-view{
+  /*scroll-view组件高度撑满中间区域*/
+  height: 100%;   
+}
+.bottom{
+  background-color: #ff0;
+  height: 100rpx;
+}

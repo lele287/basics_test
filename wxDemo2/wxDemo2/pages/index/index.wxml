@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="top">
+   <!-- <button data-id="c" bindtap="showImg">C</button>
+   <button data-id="d" bindtap="showImg">D</button>
+   <button data-id="e" bindtap="showImg">E</button>
+   <button data-id="f" bindtap="showImg">F</button>
+   <button data-id="g" bindtap="showImg">G</button>
+   <button data-id="a" bindtap="showImg">A</button>
+   <button data-id="b" bindtap="showImg">B</button> -->
+   <button data-id='{{item}}' bindtap="showImg" 
+   wx:for="{{buttons}}" wx:key="index">{{item}}</button>
+</view>
+<image src='/images/{{imgPath}}'></image>

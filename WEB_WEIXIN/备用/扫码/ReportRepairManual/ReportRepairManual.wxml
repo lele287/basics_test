@@ -1,0 +1,57 @@
+<view class="subject">
+  <view>
+    <van-cell-group border="{{ false }}">
+      <view class="spacing">
+        <van-field model:value="{{ EquipmentNumber }}" label="设备编号：" placeholder="请输入设备编号" />
+      </view>
+      <view class="spacing">
+        <!-- <van-field model:value="{{ FaultClassification }}" label="故障分类:" placeholder="请输入故障分类" /> -->
+        <!--设备分类 弹出层 -->
+        <view>
+          <!-- <text class="Marked {{Marked[0]?'':'MarkedHidden'}}">*</text> -->
+          <van-cell bind:click="onFaultClassificationDisplay" is-link title="故障分类" model:value="{{FaultClassificationVal}}" />
+          <!-- 下拉选中 -->
+          <van-dialog show="{{ FaultClassificationState }}" title="请选择故障分类" use-slot show-cancel-button
+            bind:close="onFaultClassificationBlank" bind:confirm="FaultClassificationYes" bind:cancel="FaultClassificationNo">
+            <van-picker columns="{{ FaultClassificationData }}" bind:change="onFaultClassification" />
+          </van-dialog>
+        </view>
+      </view>
+      <view class="spacing">
+        <van-field model:value="{{ TroubleShooting }}" label="故障问题：" placeholder="请输入故障问题" />
+      </view>
+      <view class="spacing">
+        <van-field model:value="{{ Repairman }}" label="报修人：" placeholder="请输入报修人" />
+      </view>
+      <view class="spacing">
+        <van-field model:value="{{ describe }}" label="描述：" autosize placeholder="请输入描述" />
+      </view>
+      <view class="spacing">
+        <van-field model:value="{{ remarks }}" label="备注：" autosize placeholder="请输入备注" />
+      </view>
+    </van-cell-group>
+  </view>
+  <view>
+    <view>
+      <van-cell title="是否派工" center="true" size="large" border="{{false}}">
+        <van-switch checked="{{ DispatchNot }}" bind:change="onDispatch" size="50rpx" />
+      </van-cell>
+    </view>
+    <view wx:if="{{DispatchNot}}">
+      <van-cell-group border="{{ false }}">
+        <view class="spacing">
+          <van-field model:value="{{ ServiceProvider }}" label="服务商：" placeholder="请输入服务商" />
+        </view>
+        <view class="spacing">
+          <van-field model:value="{{ AssignEngineer }}" label="指派工程师：" placeholder="请输入指派工程师" />
+        </view>
+      </van-cell-group>
+    </view>
+  </view>
+  <view class="btnSubmit">
+    <van-button type="primary" size="large" round color="#1989fa" bindtap=""><van-icon name="completed"class="dlico" color="#fff" />提交</van-button>
+  </view>
+</view>
+
+<!-- 组件 -->
+<!-- <van-toast id="van-toast" /> -->

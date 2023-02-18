@@ -1,0 +1,13 @@
+<!--logs.wxml-->
+<view class="container myInfo">
+  <text>姓名：</text>
+  <input id="sum1" type="text" bindchange="changSum"/>
+  <text>性别：</text>
+  <view class='ra'>
+    <radio-group bindchange="radioChange" >
+       <radio color="#90b" value="女" checked="true">男</radio>
+       <radio color="#90b" value="男">女</radio>
+    </radio-group>
+  </view>
+</view>
+<text>专业技能：</text>

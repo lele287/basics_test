@@ -1,0 +1,63 @@
+.TipsTit{
+  margin: 30rpx 0;
+}
+.InformationBorder{
+  border: 1px solid #eee;
+  font-size: 24rpx;
+}
+.row{
+  /* border: 1px solid #eee; */
+  /* border-bottom-color: #fff; */
+  /* height: 80rpx; */
+  line-height: 30rpx;
+  padding: 10rpx 0;
+  display: flex;
+}
+.tit{
+  flex: 1;
+  color: #ababab;
+  text-indent: 40rpx;
+  /* text-align: center; */
+}
+.Val{
+  flex: 2;
+  color: #3a3a3a;
+}
+.trademarkImg{
+  width: 100%;
+  height: 200rpx;
+}
+.imageIcon{
+  transform: scale(0.3);
+  position: absolute;
+  top: -120rpx;
+}
+
+.detailedIpt{
+  border: 1px solid #eee;
+}
+
+.spacing{
+  margin: 20rpx 0;
+}
+.Marked{
+  color: #f00;
+  position: relative;
+  left: 15rpx;
+  top: 85rpx;
+  z-index: 1;
+}
+.btnSubmit{
+  margin-top: 30rpx
+}
+.dlico{
+  font-size: 40rpx;
+  position: relative;
+  top: 8rpx;
+}
+.van-button{
+  height: 80rpx!important;
+}
+.MarkedHidden{
+  visibility:hidden;
+}

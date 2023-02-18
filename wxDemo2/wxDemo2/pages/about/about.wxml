@@ -1,0 +1,16 @@
+<!--pages/about/about.wxml-->
+<view class="top">
+  <text class="{{index==0?'active':'default'}}">0</text>
+  <text class="{{index==1?'active':'default'}}">1</text>
+  <text class="{{index==2?'active':'default'}}">2</text>
+  <text class="{{index==3?'active':'default'}}">3</text>
+</view>
+<swiper bindchange="change" indicator-dots="true" circular="true" current="{{index}}">
+  <swiper-item style="background-color:#f00">
+    <include src="page1.wxml"></include>
+  </swiper-item>
+  <swiper-item style="background-color:#0f0">B</swiper-item>
+  <swiper-item style="background-color:#00f">C</swiper-item>
+  <swiper-item style="background-color:#0ff">D</swiper-item>
+</swiper> 
+<button bindtap="next">下一页</button>

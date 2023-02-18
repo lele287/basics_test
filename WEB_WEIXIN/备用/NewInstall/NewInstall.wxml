@@ -1,0 +1,104 @@
+<view class="subject">
+  <!--设备分类 弹出层 -->
+  <view>
+    <text class="Marked {{Marked[0]?'':'MarkedHidden'}}">*</text>
+    <van-cell bind:click="onclassificationDisplay" is-link title="设备分类" value="{{classificationVal}}" />
+    <!-- 下拉选中 -->
+    <van-dialog show="{{ classificationState }}" title="请选择设备分类" use-slot show-cancel-button
+      bind:close="onclassificationBlank" bind:confirm="classificationYes" bind:cancel="classificationNo">
+      <van-picker columns="{{ classificationData }}" bind:change="onclassification" />
+    </van-dialog>
+  </view>
+  <!--设备类型 弹出层 -->
+  <view>
+    <text class="Marked {{Marked[1]?'':'MarkedHidden'}}">*</text>
+    <van-cell bind:click="onSiteAreaDisplay" is-link title="设备类型" value="{{SiteAreaVal}}" />
+    <!-- 下拉选中 -->
+    <!-- <van-popup show="{{ SiteAreaState }}" round position="bottom" custom-style="height: 40%"
+      bind:close="onSiteAreaBlank">
+      <van-picker columns="{{ SiteAreaData }}" bind:change="onSiteArea" show-toolbar='true' bind:confirm="SiteAreaYes"
+        bind:cancel="SiteAreaNo" />
+    </van-popup> -->
+    <!-- 下拉选中 -->
+    <van-dialog show="{{ SiteAreaState }}" title="请选择设备类型" use-slot show-cancel-button bind:close="onSiteAreaBlank"
+      bind:confirm="SiteAreaYes" bind:cancel="SiteAreaNo">
+      <van-picker columns="{{ SiteAreaData }}" bind:change="onSiteArea" />
+    </van-dialog>
+  </view>
+  <!--设备名称 弹出层 -->
+  <view>
+    <text class="Marked {{Marked[2]?'':'MarkedHidden'}}">*</text>
+    <van-cell bind:click="onequipmentNameDisplay" is-link title="设备名称" value="{{equipmentNameVal}}" />
+    <!-- 下拉选中 -->
+    <!-- <van-popup show="{{ equipmentNameState }}" round position="bottom" custom-style="height: 40%"
+      bind:close="onequipmentNameBlank">
+      <van-picker columns="{{ equipmentNameData }}" bind:change="onequipmentName" show-toolbar='true'
+        bind:confirm="equipmentNameYes" bind:cancel="equipmentNameNo" />
+    </van-popup> -->
+    <!-- 下拉选中 -->
+    <van-dialog show="{{ equipmentNameState }}" title="请选择设备名称" use-slot show-cancel-button
+      bind:close="onequipmentNameBlank" bind:confirm="equipmentNameYes" bind:cancel="equipmentNameNo">
+      <van-picker columns="{{ equipmentNameData }}" bind:change="onequipmentName" />
+    </van-dialog>
+  </view>
+  <!--设备型号 弹出层 -->
+  <view>
+    <text class="Marked {{Marked[3]?'':'MarkedHidden'}}">*</text>
+    <van-cell bind:click="onequipmentModelDisplay" is-link title="设备型号" value="{{equipmentModelVal}}" />
+    <!-- 下拉选中 -->
+    <van-dialog show="{{ equipmentModelState }}" title="请选择设备型号" use-slot show-cancel-button
+      bind:close="onequipmentModelBlank" bind:confirm="equipmentModelYes" bind:cancel="equipmentModelNo">
+      <van-picker columns="{{ equipmentModelData }}" bind:change="onequipmentModel" />
+    </van-dialog>
+  </view>
+  <!--设备状态 弹出层 -->
+  <view>
+    <text class="Marked {{Marked[4]?'':'MarkedHidden'}}">*</text>
+    <van-cell bind:click="onDeviceStatusDisplay" is-link title="设备状态" value="{{DeviceStatusVal}}" />
+    <!-- 下拉选中 -->
+    <van-dialog show="{{ DeviceStatusState }}" title="请选择设备状态" use-slot show-cancel-button
+      bind:close="onDeviceStatusBlank" bind:confirm="DeviceStatusYes" bind:cancel="DeviceStatusNo">
+      <van-picker columns="{{ DeviceStatusData }}" bind:change="onDeviceStatus" />
+    </van-dialog>
+  </view>
+  <!--业务类型 弹出层 -->
+  <view>
+    <text class="Marked {{Marked[5]?'':'MarkedHidden'}}">*</text>
+    <van-cell bind:click="onBusinessTypeDisplay" is-link title="业务类型" value="{{BusinessTypeVal}}" />
+    <!-- 下拉选中 -->
+    <van-dialog show="{{ BusinessTypeState }}" title="请选择业务类型" use-slot show-cancel-button
+      bind:close="onBusinessTypeBlank" bind:confirm="BusinessTypeYes" bind:cancel="BusinessTypeNo">
+      <van-picker columns="{{ BusinessTypeData }}" bind:change="onBusinessType" />
+    </van-dialog>
+  </view>
+  <!--入库日期 弹出层 -->
+  <view>
+    <text class="Marked {{Marked[6]?'':'MarkedHidden'}}">*</text>
+    <van-cell bind:click="showPopup" is-link title="入库日期" value="{{currentDateYes}}" />
+    <!-- 下拉选中 -->
+    <van-dialog show="{{ showbut }}" title="请选择业务类型" use-slot show-cancel-button
+      bind:close="onCloseButDate" bind:confirm="TimeSelectionYes" bind:cancel="TimeSelectionNo">
+      <!-- 时间选择器 -->
+      <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}"
+        max-date="{{ maxDate }}" formatter="{{ formatter }}"  />
+    </van-dialog>
+    <!-- <van-popup show="{{ showbut }}" round position="bottom" custom-style="height: 40%" bind:close="onCloseButDate">
+      <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}"
+        max-date="{{ maxDate }}" formatter="{{ formatter }}" bind:confirm="TimeSelectionYes"
+        bind:cancel="TimeSelectionNo" />
+    </van-popup> -->
+  </view>
+  <view>
+    <van-cell-group>
+    <text class="Marked {{Marked[4]?'':'MarkedHidden'}}">*</text>
+      <van-field value="{{ message }}" label="备注" type="textarea" placeholder="请输入备注信息" autosize border="{{ false }}" />
+    </van-cell-group>
+  </view>
+  <view style="margin-top: 30rpx;">
+    <van-button type="primary" size="large" round color="#1989fa" bindtap=""><van-icon name="completed" class="dlico" color="#fff"/>提交</van-button>
+  </view>
+</view>
+
+
+<!-- 组件 -->
+<!-- <van-toast id="van-toast" /> -->

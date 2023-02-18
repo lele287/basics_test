@@ -1,0 +1,53 @@
+/* pages/new/new.wxss */
+.top {
+  display: flex;
+  /* height: 80rpx;
+  line-height: 80rpx; */
+}
+.swiperContent{
+  height: 1300rpx;
+}
+.active{
+  text-align: center;
+  align-items: center;
+  flex: 1;
+}
+.default{
+  text-align: center;
+  align-items: center;
+  flex: 1;
+  border-bottom: 2px solid #1989fa;
+}
+
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.td {
+    width:25%;
+    font-size: 25rpx;
+    justify-content: center;
+    text-align: center;
+    margin: 16rpx 0;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #ccc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  height: 90rpx;
+}

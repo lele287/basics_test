@@ -1,0 +1,244 @@
+
+.content{
+    width: 100%;
+    height: 1910px;   
+}
+.con-banner{
+    width: 100%;
+    height:250px;
+} 
+#ban-book{
+    width: 100%;
+    margin-top: 10px;
+    height: 190px;
+    overflow: hidden;
+}
+.con-main{
+    width:100%;
+    height: 1536px;
+    margin:20px auto;
+    /* background-color: sandybrown; */
+}
+.con-img,.row{
+    width: 100%;
+    margin: 0 auto;
+    position: relative; 
+} 
+.con-img{
+    height: 140px;
+}
+
+.w_right ul,#u {
+    list-style: none;
+}
+#u{
+    /* border: 1px dashed #ccc; */
+    width: 3680px;
+    height: 194px;
+   
+    background:url(../images/rank/bgbook.jpg);
+   /* 添加动画 */
+	animation-name:move;
+	/* 动画的耗时*/
+    animation-duration: 30s;  
+	/* 动画的速度 */
+	animation-timing-function:linear;
+	/* 无线循环播放 */
+    animation-iteration-count:infinite;
+}
+/* 创建动画 */
+@keyframes move{
+    form{
+        transform:translateX(0px);
+        }
+    to{
+        transform:translateX(-2320px);
+      }
+    }
+#u li{
+    float: left;
+    width: 150px;
+    height: 180px;
+    /* background-color: rgb(101, 186, 243); */
+    margin: 0 40px;
+    margin-top:4px;
+    border: 1px solid #ccc;
+    position: relative;
+    box-shadow: 4px 2px 15px 3px rgb(96, 108, 116);  
+}
+.mask{
+    width:100%; 
+    height:100%;             
+    background:rgba(255,255,255,0.4);
+    position:absolute; 
+    left:0;
+    top:0;
+    display:none;
+    z-index: 45;
+    cursor: pointer;
+}
+.display{
+    font-size: 14px;
+    font-weight: 700;
+    line-height:34px;
+    height: 34px;
+    width:130px;
+    text-align:center;                      
+    margin: 0 auto;
+    color:#ccc;
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 50%;
+}
+.display:hover{
+  color:white;
+    background-color:#8CC3D4;
+
+}
+#u li:hover .mask{
+    display:block;
+}
+#u img{
+    margin: 0;
+    width: 150px;
+    height: 180px; 
+    cursor: pointer; 
+    
+}
+.selected{
+    background-color:#8CC3D4;
+    color: white;
+  } 
+.whole{
+    width: 90%;
+    height: 1610px;
+}
+.whole img{
+    width: 100px;
+    height: 130px;
+    float: left;
+    margin: 10px 25px;
+    cursor: pointer;
+}
+
+.menu-con-right i{
+    visibility: visible;
+}
+i {
+    visibility: hidden;
+}
+.w_left{
+    width: 18%;
+    float: left;
+    border: 1px solid #ccc;
+}
+.w_left span{
+    width: 150px;
+    display:block;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 35px;
+}
+.w_left h2{
+    text-align: center;
+}
+.w_left span:hover{
+  font-weight: bold;
+}
+.blue{
+    position: relative;
+    top:-20px;
+    width: 100%;
+    height: 80px;
+    background:linear-gradient(90deg,rgb(101, 186, 243) 10%,rgb(69, 175, 247) 20%,rgb(156, 212, 245) 30%);
+}
+.w_right{
+    width: 80%;
+    float: right;
+    height: 1610px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+.w_right img:hover{
+    opacity: 0.7;
+    }
+    .w_right h4,.w_right span{
+        cursor: pointer;
+    }
+    .w_right h4:hover{
+        color: rgba(236, 86, 40, 0.925);
+    }
+  .w_right ul li {
+        height: 150px;
+    }
+.w_right h4{
+    height: 20px;
+    display: inline-block;
+    margin-top:14px;
+}
+.w_right span{
+    height: 10px;
+    display: inline-block;
+}
+li>span{
+    color: #999;
+    font-size: 12px;
+}
+
+
+
+
+.footer{
+    width: 1224px;
+    height: 213px;
+    margin: auto;
+    position: relative;
+    top: 30px;
+}
+.footer-in{
+    height: 213px;  
+}
+.footer-ul{
+    position: absolute;
+    list-style: none;
+    
+}
+.footer li{
+    float: left;
+    position: relative;
+    left: 100px;
+    width: 130px;
+    padding:0 15px;
+    border-left: 1px solid ;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+.footer li:nth-child(1){
+    border: none;
+}
+.footer li:hover{
+    color:rgb(101, 186, 243);
+}
+.footer-p{
+    color: #999;
+    position: absolute;
+    top: 50px;
+    left:270px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 28px;
+}
+.footer-img img{
+    width: 110px;
+    height: 40px;
+   
+}
+.footer-img{
+    position: absolute;
+    top:70px;
+    left: 50px;
+}

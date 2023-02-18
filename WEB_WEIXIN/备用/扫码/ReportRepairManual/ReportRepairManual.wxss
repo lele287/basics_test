@@ -1,0 +1,24 @@
+.spacing{
+  margin: 20rpx 0;
+}
+.Marked{
+  color: #f00;
+  position: relative;
+  left: 15rpx;
+  top: 85rpx;
+  z-index: 1;
+}
+.btnSubmit{
+  margin-top: 30rpx
+}
+.dlico{
+  font-size: 40rpx;
+  position: relative;
+  top: 8rpx;
+}
+.van-button{
+  height: 80rpx!important;
+}
+.MarkedHidden{
+  visibility:hidden;
+}

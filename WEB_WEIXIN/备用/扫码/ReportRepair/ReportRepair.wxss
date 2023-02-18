@@ -1,0 +1,25 @@
+.describe{
+  padding: 14rpx;
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 40rpx;
+  border: 1px solid #eee;
+}
+.ReportImg{
+  width: 100%;
+  height: 320rpx;
+}
+.Vbutton{
+  margin: 40rpx 0;
+}
+.btnPad{
+  margin: 30rpx 0;
+}
+.dlico{
+  font-size: 40rpx;
+  position: relative;
+  top: 8rpx;
+}
+.describe_text{
+  margin: 10rpx 0;
+}

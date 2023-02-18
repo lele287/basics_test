@@ -1,0 +1,3 @@
+<view>
+  <text class="page1txt">局部页面一{{name}}</text>
+</view>

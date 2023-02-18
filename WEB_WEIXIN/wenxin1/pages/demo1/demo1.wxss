@@ -1,0 +1,5 @@
+/* pages/demo1/demo1.wxss */
+.touxiang{
+  width: 100rpx;
+  height: 100rpx;
+}

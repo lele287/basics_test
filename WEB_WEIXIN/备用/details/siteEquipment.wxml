@@ -1,0 +1,17 @@
+  <!-- table表格 -->
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">设备类型</view>
+      <view class="th ">设备编号</view>
+      <view class="th">SN</view>
+      <view class="th ">安装日期</view>
+    </view>
+    <block wx:for="{{equipment}}" wx:key="index">
+      <view class="tr {{index % 2 == 0 ? 'bg-g':'' }}" >
+        <view class="td">{{item.EquipmentTypeName}}</view>
+        <view class="td">{{item.EquipmentCode}}</view>
+        <view class="td">{{item.EquipmentSn}}</view>
+        <view class="td">{{item.EquipmentInstall}}</view>
+      </view>
+    </block>
+  </view>

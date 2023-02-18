@@ -1,0 +1,7 @@
+.aa{
+  margin: 40rpx 0;
+}
+.aa text{
+  display: block;
+  background-color: #ff0;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎注册</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script src="js/register.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f4f4f4;">
+    <img src="images/login/login.jpg" alt="">
+    <div class="container">
+        <div class="switch">
+            <span class="aa"><a href="login.html">登录</a></span>
+            <span>/</span>
+            <span class="signup"><a href="register.html"></a>注册</span>
+        </div>
+        <form action="" class="form">
+            <div class="wrapper"><i class="fa fa-user-circle"></i> <input type="text" placeholder="&nbsp;&nbsp;请输入用户名" id="username"></div>
+            <div class="wrapper"><i class="fa fa-mobile"></i><input type="text" placeholder="&nbsp;&nbsp;请输入手机号" id="TelNum"></div>
+            <div class="wrapper"><i class="fa fa-lock"></i><input type="password" name="user" placeholder="&nbsp;&nbsp;请输入密码" id="password"></div>
+            <div class="wrapper"><i class="fa fa-lock"></i> <input type="password" name="pwd" placeholder="&nbsp;&nbsp;请再次输入密码" id="password2"></div>
+            <input type="button" value="注册" onclick="register()" id="Login">
+        </form>
+    </div>
+    </div>
+</body>
+</html>

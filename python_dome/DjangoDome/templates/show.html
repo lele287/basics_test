@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/student/show/" method="post">
+        {% csrf_token %}
+        <p>
+            <locator>用户名：</locator><input type="text" name="uname">
+        </p>
+        <p>
+            <locator>密码：</locator><input type="password" name="pwd">
+        </p>
+        <p>
+            <button>注册</button>
+        </p>
+    </form>
+</body>
+</html>

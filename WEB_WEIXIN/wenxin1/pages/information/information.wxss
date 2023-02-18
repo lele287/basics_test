@@ -1,0 +1,13 @@
+.container{
+  /* float: left; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+h1{
+  color: #f00;
+}
+input{
+  border-bottom: 1px solid #ccc;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的书架</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bookcase.css">
+    <script src="js/bookcase.js"></script>
+</head>
+
+<body style="background-color: #f4f4f4;">
+    <div class="container">
+        <div class="nav">
+            <div class="nav_center">
+                <img src="images/logo3.png" width="185" height="61" alt="">
+                <p>个人中心</p>
+                <div id="aa">
+                    <ul class="nav_a">
+                        <li><a href="user.html">我的首页</a> </li>
+                        <li style="color: #fff;font-weight: 800; font-size: 18px;"><a href="bookcase.html">我的书架</a></li>
+                        <li>消息中心</li>
+                        <li>游戏</li>
+                        <li><a href="index.html">小说首页</a> </li>
+                        <li>用户
+                            <ul class="nav_b">
+                                <li><a href="Recharge.html">充值</a></li>
+                                <li>设置</li>
+                                <li><a href="login.html">退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main_left">
+                <div class="main_left_a">
+                    <ul class="uull">
+                        <li>最近阅读</li>
+                        <li>默认分组</li>
+                        <li>自动订阅</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="right-border">
+                    <div class="table-msg">
+                        <h2 class="shelf-title">最近阅读</h2>(最多显示最近阅读的<strong class="dark">100</strong>本书)
+                    </div>
+                    <div class="table-size">
+                        <table id="shelfTable" class="ui-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;书名/最近更新章节</th>
+                                    <th scope="col" width="80">更新时间</th>
+                                    <th scope="col" width="90">作者</th>
+                                    <th scope="col" width="60">阅读进度</th>
+                                    <th scope="col" width="20">&nbsp;&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <div>
+                            <ul class="table-null-x">
+
+                            </ul>
+                        </div>
+                        <div class="ui-loading"><i class="ui-loading-icon"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-in">
+            <ul class="footer-ul">
+                <li>关于Dream</li>
+                <li>联系我们</li>
+                <li>我要举报</li>
+                <li>用户协议</li>
+                <li>隐私协议</li>
+                <li>版权声明</li>
+                <li>作品登载规则</li>
+                <li>我要当作家</li>
+            </ul>
+            <div class="footer-p">
+                <p>上海七猫文化传媒有限公司 © 2017 www.qimao.com All rights reserved 沪ICP备17012825号-6 沪公网安备 31011502010023号 </p>
+                <p>出版物经营许可证 新出发沪批字第Y7129号 沪网文 [2017] 4325-303号 沪ICP证：沪B2-20190085</p>
+                <div class="footer-img">
+                    <a href="#"><img src="images/about/company_pic1.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic2.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic3.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic4.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic6.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

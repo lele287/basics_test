@@ -1,0 +1,13 @@
+<!--pages/new/new.wxml-->
+<view class="top">
+  <text bindtap="rebo" class="{{index==0?'default':'active'}}">正在热播</text>
+  <text bindtap="shang" class="{{index==1?'default':'active'}}">即将上映</text>
+</view>
+<swiper current="{{index}}" class="iii" bindchange="change">
+  <swiper-item>
+    <include src="new1.wxml"></include>
+  </swiper-item>
+  <swiper-item>
+      <include src="new2.wxml"></include>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,4 @@
+<view>index</view>
+<view>
+  <text class="iconfont icon-xinhao">电话：{{shop.shop_tel}}</text>
+</view>

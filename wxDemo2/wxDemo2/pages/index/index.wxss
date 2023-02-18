@@ -1,0 +1,4 @@
+/**index.wxss**/
+.top{
+  display:flex;
+}

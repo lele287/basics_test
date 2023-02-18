@@ -1,0 +1,21 @@
+/* pages/about/about.wxss */
+.top{
+  display:flex;
+}
+.top text{
+  display:block;
+  text-align:center;
+  flex:1;
+}
+.active{
+  background-color: #f00;
+  color:#fff;
+}
+.default{
+  background-color: #fff;
+  color:#000;
+}
+.page1txt{
+  color:#fff;
+  font-weight: 700;
+}

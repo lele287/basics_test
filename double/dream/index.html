@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/TT.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/Mock.js/1.0.1-beta3/mock-min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>首页</title>
+</head>
+<body style="background-color: #f4f4f4;">
+    <div class="header">
+        <div class="header-con">
+            <div class="left-con">
+                <a href="index.html" class="a-logo">
+                    <img src="images/logo2.png" style="width: 185px;height: 61px;" alt="">
+                </a>
+            </div>
+            <div class="middle-con">
+                <div class="search">
+                    <span class="header-input">
+                        <input type="text" id="spec" placeholder="请输入书名/作者/主角">
+                        <span class="glyphicon glyphicon-search" id="spe" onclick="search()"></span>
+                    </span>
+                </div>
+                <p class="search-books">
+                    <a href="#" style="color: #8CC3D4;">剑来</a>
+                    <a href="#">双世宠妃</a>
+                    <a href="#">九星霸体诀</a>
+                    <a href="#">凰妃倾天下</a>
+                </p>
+            </div>
+            <ul class="visible-lg-inline-block">
+                <li><a href="login.html" id="user1">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-menu">
+        <div class="header-menu-con">
+            <div class="menu-con-left">
+                <a href="index.html" style="color: #8CC3D4;font-weight: 800; font-size: 18px;">首页</a>
+                <a href="ancient.html">古代小说</a>
+                <a href="modern.html">现代小说</a>
+                <a href="search.html">影视文学</a>
+                <a href="bookcase.html">我的书架</a>
+                <a href="rank.html">排行榜</a>
+                <a href="help.html">帮助</a>
+            </div>
+            <div class="menu-con-right visible-lg-inline-block">
+                <i class="glyphicon glyphicon-user"></i><a onclick="gouser()">我的首页</a>
+                <i class="glyphicon glyphicon-gift"></i><a href="Recharge.html">变身VIP</a>
+                <i class="glyphicon glyphicon-bell"></i><a href="about.html">关于我们</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content_left">
+            <img src="images/lb1.png" class="bb" alt="">
+            <ul>
+                <li class="tupian">1</li>
+                <li class="tupian">2</li>
+                <li class="tupian">3</li>
+                <li class="tupian">4</li>
+            </ul>
+        </div>
+        <div class="content_right">
+            <img src="https://cdn.qimao.com/bookimg/zww/backendstatic/images/other/15860154796072398.jpg" alt="">
+            <div class="content_right_right visible-lg-inline-block">
+                <ul>
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;动态</h3>
+                    <span class="time">
+                        <script>
+                            var date = new Date();
+                            document.write(date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日" + " 星期" + "日一二三四五六".charAt(date.getDay()));
+                        </script>
+                    </span>
+                    <div></div>
+                    <li><a href="#"><i>•</i>&nbsp;&nbsp;&nbsp;&nbsp;最新评书名单出炉！</a></li>
+                    <li><a href="#"><i>•</i>&nbsp;&nbsp;&nbsp;&nbsp;网编火热招募！</a></li>
+                    <li><a href="#"><i>•</i>&nbsp;&nbsp;&nbsp;&nbsp;举报抄袭处理中心！</a></li>
+                    <li><a href="#"><i>•</i>&nbsp;&nbsp;&nbsp;&nbsp;构建绿色阅读平台倡议书！</a></li>
+                    <li><a href="#"><i>•</i>&nbsp;&nbsp;&nbsp;&nbsp;系统升级通知！</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul id="fixNav">
+            <li>联系</br>作者</li>
+            <li><a href="javascript:window.scrollTo(0,0);" style="color:black">回到</br> 顶部</a></li>
+        </ul>
+    </div>
+    <div class="content2">
+        <div id="header">
+            <span class="con2_top1">限免&nbsp;&nbsp;</span><span class="con2_top2 glyphicon glyphicon-time"></span>
+            <ul class="con2_top3">
+                <li name="time">0</li>
+                <li name="time">0</li>
+                <li>天</li>
+                <li name="time">0</li>
+                <li name="time">0</li>
+                <li>时</li>
+                <li name="time">0</li>
+                <li name="time">0</li>
+                <li>分</li>  
+                <li name="time">0</li>
+                <li name="time">0</li>
+                <li>秒</li>
+            </ul>
+        </div>
+        <div class="content2_right">
+            <ul>
+                <li>
+                    <div class="content2_right_book">
+                        <img src="https://cdn.wtzw.com/bookimg/public/images/cover/5efad6c29090a_360x480.jpg" alt="">
+                        <p>爸比你不乖</p>
+                        <span>都市言情</span>
+                        <h6>15币/千字</h6>
+                        <a href="info.html">免费阅读</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="content2_right_book">
+                        <img src="http://static.zongheng.com/upload/cover/b2/6d/b26dfa5910ecd6ec87c8c0861185bf65.jpeg"
+                            alt="" id="topImg">
+                        <p>医妻归来擒夫忙</p>
+                        <span>都市言情</span>
+                        <h6>5币/千字</h6>
+                        </h6>
+                        <a href="">免费阅读</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="content2_right_book">
+                        <img src="http://static.zongheng.com/upload/cover/cc/66/cc66f01b8afdc17b9d6b0b51c7466942.jpeg"
+                            alt="">
+                        <p>如果多爱你一点</p>
+                        <span>都市言情</span>
+                        <h6>5币/千字</h6>
+                        <a href="">免费阅读</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="content2_right_book">
+                        <img src="http://static.zongheng.com/upload/cover/4f/aa/4faad1c27bc72937489d7e201c8999a8.jpeg"
+                            alt="">
+                        <p>娃娃亲对象</p>
+                        <span>都市言情</span>
+                        <h6>5币/千字</h6>
+                        <a href="">免费阅读</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="con visible-lg-block visible-md-block">
+        <h2 style="font-size: 22px;
+        font-weight: bold;">新书速递></h2>
+        <div class="con_new">
+            <ul class="con_new_img">
+            </ul>
+        </div>
+    </div>
+
+    <div class="content3">
+        <h1>推荐</h1>
+        <div class="whole">
+            <div class="menu">
+                <ul class="menu_txt">
+                </ul>
+            </div>
+        </div>
+        <div class="whole_right visible-lg-inline-block visible-md-inline-block">
+            <p style="font-size: 22px;
+            font-weight: bold;margin-top: -40px;">完本</p>
+            
+            <ol class="whole_right_ul">
+                <!-- 排行十本 -->
+            </ol>
+        </div>
+    </div>
+    <div class="content4 visible-lg-block visible-md-block">
+        <img src="images/rank/fgt.jpg" alt="">
+    </div>
+    <div class="content5">
+        <div class="con5_left">
+            <h2>&nbsp;大神作家</h2>
+            <hr>
+            <div class="con5_fir">
+                <div class="con5L_img">
+                    <img src="images/about/flag.png" alt="">
+                </div>
+                <div class="con5L_imgll">
+                    <img src="images/about/beautiful.jpg" alt="">
+                    <h2>云岌</h2>
+                    <span>阅读集团大神作家</span>
+                </div>
+                <div class="con5L_last">
+                    &nbsp; &nbsp;<span>代表作</span><br>
+                    &nbsp;&nbsp; <a href="#">藏珠&nbsp;|&nbsp;天芳</a> <br>
+                    &nbsp;&nbsp; <span>访谈内容</span><br>
+                    <p> &nbsp;&nbsp; 新书《藏珠》来袭，快来和大神</p>
+                    <p> &nbsp;&nbsp;&nbsp;作家云岌面对面！</p>
+                    <span id="con5_look">立即查看</span>
+                </div>
+            </div>
+            <div class="con5_sec">
+                <ul class="sec_ul">
+                    <li>&nbsp;&nbsp;&nbsp;<img src="images/about/bea02.jfif" alt="">
+                        <p>知知</p>
+                        <span>代表作</span>&nbsp;&nbsp;
+                        <a href="#">好事多磨&nbsp;|&nbsp;庶女攻略&nbsp;|&nbsp;九重紫</a><br>
+                        <span>简介</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        08年至今，吱吱创作多部作品。
+                    </li>
+                    <hr>
+                    <li>&nbsp;&nbsp;&nbsp;<img src="images/about/bea03.png" alt="">
+                        <p>寒武纪</p>
+                        <span>代表作</span>&nbsp;&nbsp;
+                        <a href="#">烟水寒&nbsp;|&nbsp;重生空间规则&nbsp;|&nbsp;与子偕行</a><br>
+                        <span>简介</span> &nbsp;&nbsp;&nbsp;
+                        阅文集团大神作家，行文精致，角色精灵古怪。
+                    </li>
+                    <hr>
+                    <li>&nbsp;&nbsp;&nbsp;<img src="images/about/bea02.jfif" alt="">
+                        <p>尤前</p>
+                        <span>代表作</span>&nbsp;&nbsp;
+                        <a href="#">我家徒弟又挂了&nbsp;|&nbsp;星际脱单指南&nbsp;|&nbsp;师傅又掉线了</a><br>
+                        <span>简介</span> &nbsp;&nbsp;&nbsp;
+                        尤前，作者专注于塑造精品.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="con5_right visible-lg-inline-block">
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签约新作家</h3>
+            <hr>
+            <div class="con5R_b">
+                <ul id="con5R_ul">
+                    <li>我是一只猫&nbsp;&nbsp;2020-9-13&nbsp;8：30入驻</li>
+                    <li>苗苗来了&nbsp;&nbsp;2020-9-13&nbsp;17：30入驻</li>
+                    <li>西红柿炒鸡蛋&nbsp;&nbsp;2020-9-13&nbsp;22：30入驻</li>
+                    <li>唐八公子&nbsp;&nbsp;2020-9-13&nbsp;8：23入驻</li>
+                    <li>叔叔吃糖&nbsp;&nbsp;2020-9-12&nbsp;13：35入驻</li>
+                    <li>糖吃多了&nbsp;&nbsp;2020-9-12&nbsp;14：10入驻</li>
+                    <li>默默吵吵&nbsp;&nbsp;2020-9-12&nbsp;17：31入驻</li>
+                    <li>冰冰冰冰凉&nbsp;&nbsp;2020-9-11&nbsp;8：44入驻</li>
+                    <li>不知道取啥&nbsp;&nbsp;2020-9-11&nbsp;9：33入驻</li>
+                    <li>上房揭瓦&nbsp;&nbsp;2020-9-11&nbsp;15：30入驻</li>
+                    <li>女侠晚晚&nbsp;&nbsp;2020-9-11&nbsp;15：38入驻</li>
+                    <li>唐僧洗头爱飘柔&nbsp;&nbsp;2020-9-10&nbsp;9：33入驻</li>
+                    <li>念经师傅&nbsp;&nbsp;2020-9-10&nbsp;14：56入驻</li>
+                    <li>红辣椒炒绿辣椒&nbsp;&nbsp;2020-9-10&nbsp;16：47入驻</li>
+                    <li>房屋上的猫&nbsp;&nbsp;2020-9-9&nbsp;9：55入驻</li>
+                    <li>牛奶咖啡&nbsp;&nbsp;2020-9-9&nbsp;16：40入驻</li>
+                    <li>码农就是我&nbsp;&nbsp;2020-9-9&nbsp;19：40入驻</li>
+                    <li>雪衣公子&nbsp;&nbsp;2020-9-9&nbsp;19：53入驻</li>
+                    <li>霜降小姐&nbsp;&nbsp;2020-9-9&nbsp;21：30入驻</li>
+                    <li>太阳嬷嬷&nbsp;&nbsp;2020-9-9&nbsp;23：30入驻</li>
+                    <li>我是一只猫&nbsp;&nbsp;2020-9-13&nbsp;8：30入驻</li>
+                    <li>苗苗来了&nbsp;&nbsp;2020-9-13&nbsp;17：30入驻</li>
+                    <li>西红柿炒鸡蛋&nbsp;&nbsp;2020-9-13&nbsp;22：30入驻</li>
+                    <li>唐八公子&nbsp;&nbsp;2020-9-13&nbsp;8：23入驻</li>
+                    <li>叔叔吃糖&nbsp;&nbsp;2020-9-12&nbsp;13：35入驻</li>
+                    <li>糖吃多了&nbsp;&nbsp;2020-9-12&nbsp;14：10入驻</li>
+                    <li>默默吵吵&nbsp;&nbsp;2020-9-12&nbsp;17：31入驻</li>
+                    <li>冰冰冰冰凉&nbsp;&nbsp;2020-9-11&nbsp;8：44入驻</li>
+                    <li>不知道取啥&nbsp;&nbsp;2020-9-11&nbsp;9：33入驻</li>
+                </ul>
+            </div>
+            <script>
+                var ull = document.getElementById("con5R_ul")
+                ull.onmouseover = function () {
+                    ull.style.animationPlayState = "paused";
+                };
+                ull.onmouseout = function () {
+                    ull.style.animationPlayState = "running";
+                };
+            </script>
+        </div>
+    </div>
+    <div class="content6">
+        <h2>最新VIP章节更新</h2>
+        <ul class="content6_ul">
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="footer-in">
+            <ul class="footer-ul">
+                <li>关于Dream</li>
+                <li>联系我们</li>
+                <li>我要举报</li>
+                <li>用户协议</li>
+                <li>隐私协议</li>
+                <li>版权声明</li>
+                <li>作品登载规则</li>
+                <li>我要当作家</li>
+            </ul>
+            <div class="footer-p">
+                <p>上海七猫文化传媒有限公司 © 2017 www.qimao.com All rights reserved 沪ICP备17012825号-6 沪公网安备 31011502010023号 </p>
+                <p>出版物经营许可证 新出发沪批字第Y7129号 沪网文 [2017] 4325-303号 沪ICP证：沪B2-20190085</p>
+                <div class="footer-img">
+                    <a href="#"><img src="images/about/company_pic1.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic2.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic3.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic4.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic6.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<view>
+  <van-cell-group>
+    <van-cell title="客户" value="{{detailsData.ClientName}}" />
+    <van-cell title="站点类型" value="{{detailsData.ShopClass}}" />
+    <van-cell title="站点状态" value="{{detailsData.ShopType}}" />
+    <van-cell title="站点区域" value="{{detailsData.ShopAreaName}}" />
+    <van-cell title="站点名称" value="{{detailsData.ShopName}}" />
+    <van-cell title="站点编号" value="{{detailsData.ShopCode}}" />
+    <van-cell title="安装时间" value="{{detailsData.InstallTime}}" />
+    <van-cell title="省市" value="{{detailsData.ProvAndCities}}" />
+    <van-cell title="区域" value="{{detailsData.District}}" />
+    <van-cell title="安装地点" value="{{detailsData.ShopAddress}}" />
+    <!-- <van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" /> -->
+  </van-cell-group>
+</view>

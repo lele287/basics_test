@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关于我们</title>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var datas = []
+        $(function () {
+            $.getJSON('json/about.json', function (response) {
+                var strLi = ''
+                for (var i = 0; i < response.length; i++) {
+                    var title = response[i].title
+                    strLi += `<li onclick="showContent(${i})">${title}</li>`
+                }
+                $('.row-ul').html(strLi)
+                datas = response
+            })
+        })
+        function showContent(index) {
+            $('.con').html(datas[index].content)
+            $('.right-tit').html(datas[index].top)
+        }  
+    </script>
+</head>
+
+<body style="background-color: #f4f4f4;">
+    <div class="header">
+
+    </div>
+    <div class="header-menu">
+        <div class="header-menu-con">
+            <div class="menu-con-left">
+                <a href="index.html">首页</a>
+                <a href="ancient.html">古代小说</a>
+                <a href="modern.html">现代小说</a>
+                <a href="search.html">影视文学</a>
+                <a href="bookcase.html">我的书架</a>
+                <a href="rank.html">排行榜</a>
+                <a href="help.html">帮助</a>
+            </div>
+            <div class="menu-con-right">
+                <i class="glyphicon glyphicon-user"></i><a href="user.html">个人中心</a>
+                <i class="glyphicon glyphicon-gift"></i><a href="Recharge.html">变身VIP</a>
+                <i class="glyphicon glyphicon-bell"></i><a href="about.html"
+                    style="color: #8CC3D4;font-weight: 800; font-size: 18px;">关于我们</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-in">
+            <div class="row">
+                <div id="rowLeft">
+                    <ul class="row-ul">
+
+                    </ul>
+                </div>
+                <div class="rowRight">
+                    <div class="right-tit">
+                        <h1>关于我们</h1>
+                    </div>
+                    <div class="con">
+                        <br>
+                        <br>
+                        <p>我们是一家深耕文化娱乐行业的互联网企业，公司坐落在张江高科技园区5A甲级写字楼——环科路515号绿地智创商务中心13层，办公面积2000余平，现有员工约250人。公司创始人及核心管理层均来自A股互联网上市公司，企业文化诚实踏实，团队有创业拼搏精神。目前，我们旗下拥有数字阅读平台“我们免费小说”，及原创文学平台“我们中文网”等产品。
+                        </p>
+                        <br>
+                        <p>我们免费小说App于2018年8月正式上线，是我们旗下拳头产品，上线以来专注为用户提供正版、免费、优质的网络文学内容阅读服务。根据2020年6月的第三方机构数据显示，我们免费小说月活跃用户已达5000万，规模位列数字阅读行业前列。
+                        </p>
+                        <br>
+                        <p>我们中文网（原名：梧桐中文网）于2017年5月正式上线，是我们旗下面向网络文学作者提供创作指导与版权运营等全方位一体化服务的优质内容孵化平台。经过几年积累，已经培养出了一支擅于选题、包装、运营，拥有广泛作者资源与编辑功底的优秀责编团队。现网站女频、男频均已上线，对外渠道全面铺开，已接入60多家知名网络文学平台渠道，并积极拓展有声、漫画改编及网文出海等版权衍生业务。2019年5月，我们中文网在海南三亚举办了第一届作者大会。我们原创业务正依托自身渠道优势蓬勃发展中，我们力求打造一个符合读者个性化需求的精品内容生产基地。希望携手广大优秀作者，合作共赢，共创具有影响力的原创网络文学品牌。
+                        </p>
+                        <br>
+                        <p>2019年7月，我们获得百度战略投资，公司发展迈上新的台阶。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-in">
+            <!-- <ul class="footer-ul">
+                <li>关于Dream</li>
+                <li>联系我们</li>
+                <li>我要举报</li>
+                <li>用户协议</li>
+                <li>隐私协议</li>
+                <li>版权声明</li>
+                <li>作品登载规则</li>
+                <li>我要当作家</li>
+            </ul> -->
+            <div class="footer-p">
+                <p>上海七猫文化传媒有限公司 © 2017 www.qimao.com All rights reserved 沪ICP备17012825号-6 沪公网安备 31011502010023号 </p>
+                <p>出版物经营许可证 新出发沪批字第Y7129号 沪网文 [2017] 4325-303号 沪ICP证：沪B2-20190085</p>
+                <div class="footer-img">
+                    <a href="#"><img src="images/about/company_pic1.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic2.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic3.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic4.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic6.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script>
+            window.onscroll = function () {
+                var top = document.documentElement.scrollTop
+                if (top >= 140) {
+                    rowLeft.className = 'fixed'
+                } else {
+                    rowLeft.className = 'static'
+                }
+            }
+        </script>
+</body>
+
+</html>

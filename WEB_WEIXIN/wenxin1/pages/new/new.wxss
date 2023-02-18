@@ -1,0 +1,18 @@
+/* pages/new/new.wxss */
+.top {
+  display: flex;
+}
+.iii{
+  height: 1000rpx;
+}
+.active{
+  text-align: center;
+  align-items: center;
+  flex: 1;
+}
+.default{
+  text-align: center;
+  align-items: center;
+  flex: 1;
+  border-bottom: 2px solid #f00;
+}

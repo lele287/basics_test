@@ -1,0 +1,17 @@
+<view class="subject">
+  <view>
+    <van-search  value="{{ inputVal }}" label="" placeholder="请输入搜索关键词" shape="round" focus="{{focus}}" bind:search="onSearch" bind:cancel="onCancel" bind:change="onChange" use-action-slot><view slot="action" bind:tap="onCancel">搜索</view></van-search>
+  </view>
+  <view>
+    <view class="History">
+      <view>历史搜索</view>
+      <view bindtap="historyDelFn">
+        <view>清空</view>
+        <van-icon name="delete-o" />
+      </view>
+    </view>
+    <view class="HistoryList">
+      <view class="HistoryList_Text" wx:for="{{searchRecord}}" wx:key="index" data-value="{{item.value}}" bindtap="ClickHistory">{{item.value}}</view>
+    </view>
+  </view>
+</view>

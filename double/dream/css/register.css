@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.wrapper { position: relative; }
+i.fa { position: absolute; top: 12px; right:316px;font-size: 18px; opacity: 0.5;}
+.wrapper input { text-indent: 30px;}
+body,html {
+    width:  100%;
+    height: 100%;
+    position: relative;
+}
+img {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+}
+.container {
+    width: 380px;
+    height: 380px;
+    padding: 10px;
+    background-color: #fff;
+    opacity:0.9;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
+
+
+
+#username,
+#TelNum,
+#password,
+#password2 {
+    outline: none;
+    width: 80%;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 40px;
+    display: block;
+    border: 1px solid #999;
+    border-radius: 10px;
+    
+}
+
+#Login {
+    margin: 75px;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    width: 60%;
+    height: 3.5rem;
+    border-radius: 3rem;
+    background: linear-gradient(90deg, rgb(181, 154, 254), rgb(245, 189, 253));
+    box-shadow: 0 0 8px rgb(181, 154, 254), rgb(245, 189, 253);
+    cursor: pointer;
+}
+
+.switch {
+    width: 220px;
+    
+    margin: auto;
+}
+
+.switch span {
+    color: #999;
+    font-size: 23px;
+    cursor: pointer;
+}
+.switch .aa{
+    font-size: .9rem;
+    color: #999;
+   
+    cursor: pointer;
+}
+.switch  .signup{
+    font-size: 30px;
+} 

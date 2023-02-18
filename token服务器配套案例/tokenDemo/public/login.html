@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎登录</title>
+    <script src="javascripts/jquery-3.5.1.js"></script>
+    <script>
+        function login(){
+            $.ajax({
+                url:'http://localhost:3000/login',
+                type:'post',
+                data:{
+                    userTel:$('#userTel').val(),
+                    userPwd:$('#userPwd').val()
+                },
+                dataType:'json',
+                success:function(results){
+                    if(results.data){
+                        //保存token到本地存储中
+                        localStorage.setItem('auth',results.data)
+                    }
+                }
+            })
+        }
+        function getAllUsers(){
+            $.ajax({
+                url:'http://localhost:3000/users/getAllusers',
+                //设置自定义请求头,可以访问有权限控制的接口或页面
+                headers:{Authorization:localStorage.getItem('auth')},
+                type:'get',
+                dataType:'json',
+                success:function(results){
+                   console.log(results)
+                }
+            })
+        }
+    </script>
+    <style>
+        input[type="text"]{
+            border:1px solid #f00 !important;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="userTel" id="userTel" autocomplete="false">
+        <input type="password" name="userPwd" id="userPwd">
+        <input type="button" id="btnLogin" value="登录" onclick="login()">
+        <input type="button" id="btnGetUsers" value="获取全部用户数据" onclick="getAllUsers()">
+        
+    </form>
+</body>
+</html>

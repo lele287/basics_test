@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排行榜</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/rank.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/Mock.js/1.0.1-beta3/mock-min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/rank.js"></script>
+</head>
+<body style="background-color: #f4f4f4;">
+    <div class="header">
+        <div class="header-con">
+            <div class="left-con">
+                <a href="#" class="a-logo">
+                    <img src="images/logo2.png" style="width: 185px;height: 61px;" alt="">
+                </a>
+            </div>
+            <div class="middle-con">
+                <div class="search">
+                    <span class="header-input">
+                        <input type="text" id="spec" placeholder="请输入书名/作者/主角">
+                        <span class="glyphicon glyphicon-search" id="spe" onclick="search()"></span>
+                    </span>
+                </div>
+                <p class="search-books">
+                    <a href="#" style="color: #8CC3D4;">剑来</a>
+                    <a href="#">双世宠妃</a>
+                    <a href="#">九星霸体诀</a>
+                    <a href="#">凰妃倾天下</a>
+                </p>
+            </div>
+            <ul>
+                <li><a href="login.html" id="user1">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-menu">
+        <div class="header-menu-con">
+            <div class="menu-con-left">
+                <a href="index.html"  >首页</a>
+                <a href="ancient.html">古代小说</a>
+                <a href="modern.html">现代小说</a>
+                <a href="search.html">影视文学</a>
+                <a href="bookcase.html">我的书架</a>
+                <a href="rank.html" style="color: #8CC3D4;font-weight: 800; font-size: 18px;">排行榜</a>
+                <a href="help.html">帮助</a>            
+            </div>
+            <div class="menu-con-right visible-lg-inline-block">
+                <i class="glyphicon glyphicon-user"></i><a href="user.html">个人中心</a>
+                <i class="glyphicon glyphicon-gift"></i><a href="Recharge.html">变身VIP</a>
+                <i class="glyphicon glyphicon-bell"></i><a href="about.html">关于我们</a>
+             </div>
+             
+        </div>
+    </div>
+    <div class="content">
+        <div class="con-banner">
+            <h2 style="color: #8CC3D4;text-shadow: 2px 2px 4px #000;">出版图书排行榜</h2>
+            <div id="ban-book">
+                <ul id="u">
+                    <!-- 页面滚动 -->
+                </ul>
+                <script>
+                var ull = document.getElementById("u")
+                ull.onmouseover = function () {
+                    ull.style.animationPlayState = "paused";        
+                };
+                ull.onmouseout = function () {
+                    ull.style.animationPlayState = "running";
+                };
+                </script>
+            </div>
+        </div>
+        <div class="con-main">
+            <div class="whole">
+                <div class="w_left">
+                    <h2 style="color: rgba(236, 86, 40, 0.925);margin: 15px;">作品榜单</h2>
+                    <hr>
+                    <span onclick="showInfo(0)" class="selected">推荐榜</span>
+                    <span onclick="showInfo(1)">新书榜</span>
+                    <span onclick="showInfo(2)">点击榜</span>
+                    <span onclick="showInfo(3)">完结榜</span>
+                    <h2 style="color: rgba(236, 86, 40, 0.925);margin: 15px;">用户榜单</h2>
+                    <hr>
+                    <span>读者消费榜</span>
+                    <span>读者在线活跃榜</span>
+                    <span>更多&lt;&lt;</span>
+                </div>
+                <div class="w_right">
+                    <div class="blue">
+                        <h2 style="padding-left:25px;-webkit-text-stroke:1px white;color: rgb(101, 186, 243);padding-top:20px;">作品榜单</h2>
+                    </div>
+                    <ul id="ul01">
+                    </ul>
+                    <ul id="ul02">
+                    </ul>
+                    <ul id="ul03"> 
+                        
+                    </ul>
+                    <ul id="ul04">   
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-in">
+            <ul class="footer-ul">
+                <li>关于Dream</li>
+                <li>联系我们</li>
+                <li>我要举报</li>
+                <li>用户协议</li>
+                <li>隐私协议</li>
+                <li>版权声明</li>
+                <li>作品登载规则</li>
+                <li>我要当作家</li>
+            </ul>
+            <div class="footer-p">
+                <p>上海七猫文化传媒有限公司 © 2017 www.qimao.com All rights reserved 沪ICP备17012825号-6 沪公网安备 31011502010023号 </p>
+                <p>出版物经营许可证 新出发沪批字第Y7129号 沪网文 [2017] 4325-303号 沪ICP证：沪B2-20190085</p>
+                <div class="footer-img">
+                    <a href="#"><img src="images/about/company_pic1.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic2.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic3.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic4.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic6.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $(".w_left span").click(function () {
+                $(this).addClass("selected").siblings().removeClass("selected");
+            });
+        });
+    </script>
+</body>
+</html>

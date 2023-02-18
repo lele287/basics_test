@@ -1,0 +1,148 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+input::-webkit-input-placeholder{
+    color:#ccc;
+}
+#spec{
+    outline: none;
+    float: left;
+    padding: 6px 16px;
+    font-size: 14px;
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 32px;
+    border: 1px solid #ccc;
+    width: 324px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+#spe{
+    float: left;
+    width:40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 700;
+    top:2px;
+    overflow: hidden;
+    background: #8CC3D4;
+    text-decoration:none;
+    color: white;
+    position: absolute;
+    right: 34px;
+    cursor: pointer;
+}
+.header{
+    width: 1224px;
+    height: 104px;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+.header-con,.header-menu-con{
+    width: 80%; 
+    margin: 0 auto;
+    position: relative;
+}
+.header-con{
+     height: 104px;
+}
+.left-con{
+    position: absolute;
+    top:50%;
+    margin-top: -22px;
+}
+.header .a-logo{
+    width: 200px;
+    height: 44px;
+    display: inline-block;
+    position: absolute;
+}
+.middle-con{
+    position: absolute;
+    width: 400px;
+    top: 24px;
+    left: 50%;
+    margin-left: -200px;
+}
+.header-input{
+    display: block;
+    height: 42px;
+    /* background: #8CC3D4; */
+    border-radius: 32px;
+    overflow: hidden;
+    line-height: 32px;
+    position: relative;
+    padding: 2px;
+}
+.search-books{
+    padding: 6px 0 0 2px;
+    line-height: 17px;
+    font-size: 12px;
+    height: 17px;
+    display: block;
+    margin-left: 2em;
+}
+.search-books a{
+    text-decoration:none;
+    color: #8CC3D4;
+    cursor: pointer;
+    margin-right: 1em;
+}
+.search-books a:hover{
+    color: #8CC3D4;
+}
+
+.header-menu{
+    width: 1224px;
+    height: 48px;
+    /* background-color: blue; */
+    border-bottom: 1px solid #ccc;
+}
+.header-menu-con{ 
+    height: 48px;   
+}
+.header-menu-con a{
+    text-decoration: none;
+    color: #666;
+    margin-right: 20px;
+}
+.header-menu-con a:hover{
+    color: #8CC3D4;
+}
+.menu-con-left{
+    display: inline-block;
+    width: 580px;
+    height: 48px;
+    line-height: 48px;
+}
+.menu-con-right{
+    width: 464px;
+    height: 48px;
+    line-height: 48px;
+    display: inline-block;
+    position: absolute;
+    text-align: right;
+    right:0;
+}
+.menu-con-right i{
+    color: #8CC3D4;
+    margin-right: 8px;
+}
+.header-con ul{
+    position: absolute;
+    right: 50px;
+    top: 35px;  
+}
+.header-con ul li{
+    display: inline-block;
+    cursor: pointer;
+}
+.header-con ul li>a{
+    color: teal;
+}
+.header-con ul li a:hover{
+    color: tomato;
+    font-weight: bold;
+}

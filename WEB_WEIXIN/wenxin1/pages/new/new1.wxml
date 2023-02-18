@@ -1,0 +1,14 @@
+<swiper autoplay="true" current="0" circular="true" class="Img">
+      <swiper-item>
+        <image src="/images/haibao/1.jpg" mode="widthFix"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/images/haibao/2.jpg" mode="widthFix"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/images/haibao/3.jpg" mode="widthFix"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="/images/haibao/4.jpg" mode="widthFix"></image>
+      </swiper-item>
+    </swiper>

@@ -1,0 +1,23 @@
+<!-- 图标 -->
+<icon type="info_circle" size="40" color="#90b"></icon>
+<!-- 复选框 -->
+<checkbox-group bindchange="checkbox">
+  <checkbox value="苹果">苹果</checkbox>
+  <checkbox value="香蕉">香蕉</checkbox>
+  <checkbox value="橙子">橙子</checkbox>
+</checkbox-group>
+<text>您选择的是：{{checkbox}}</text>
+<!-- 组件 -->
+<Tabs lele="{{lele}}" binditemChange="kk">
+  <text>父组件向子组件slot中传入的标签1111</text>
+  <text>父组件向子组件slot中传入的标签2222</text>
+  <text>父组件向子组件slot中传入的标签2222</text>
+</Tabs>
+<view>
+  <!-- 姓名 -->
+  <open-data type="userNickName" lang="zh_CN"></open-data>
+  <!-- 性别 -->
+  <open-data type="userGender" lang="zh_CN"></open-data>
+  <!-- 头像 -->
+  <open-data type="userAvatarUrl" class="touxiang"></open-data>
+</view>

@@ -1,0 +1,27 @@
+<view class="subject">
+  <view class="describe">
+    <view>
+      <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3106576791,2015167732&fm=26&gp=0.jpg"
+        class="ReportImg"></image>
+    </view>
+    <view class="describe_text">
+      设备故障报修一直都是设备管理者的难题，电话容易占线，纸质报修时效性差，针对这些问题自助报修功能上线啦！
+    </view>
+    <view class="describe_text">
+      扫码报修：本产品提供扫码快速报修，请扫描设备上的报修二维码，进行报修。
+    </view>
+    <view class="describe_text">
+      手动报修：同时具有手动报修功能，点击手动报修，填写表格随时随地进行报修。
+    </view>
+  </view>
+  <view class="Vbutton">
+    <view class="btnPad">
+      <van-button type="primary" size="large" round color="#1989fa" bindtap="scanCode">
+        <van-icon name="scan" class="dlico" color="#fff" />扫码报修</van-button>
+    </view>
+    <view class="btnPad">
+      <van-button type="primary" size="large" round color="#1989fa" bindtap="Manual">
+        <van-icon name="records" class="dlico" color="#fff" />手动报修</van-button>
+    </view>
+  </view>
+</view>

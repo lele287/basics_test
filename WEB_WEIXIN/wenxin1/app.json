@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/new/new",
+    "pages/demo1/demo1",
+    "pages/information/information",
+    "pages/scrollView/scrollView",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "dome小应用",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#eee"
+  },
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./images/bar/me-0.jpg",
+      "selectedIconPath": "./images/bar/me-1.jpg"
+    },
+      {
+      "pagePath": "pages/new/new",
+      "text": "电影",
+      "iconPath": "./images/bar/movie-0.jpg",
+      "selectedIconPath": "./images/bar/movie-1.jpg"
+    }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

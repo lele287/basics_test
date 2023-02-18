@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮助中心</title>
+    <link rel="stylesheet" href="css/help.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var datas = []
+        $(function () {
+            $.getJSON('json/help.json', function (response) {
+                var strLi = ''
+                for (var i = 0; i < response.length; i++) {
+                    var title = response[i].title
+                    strLi += `<li onclick="showContent(${i})">${title}</li>`
+                }
+                $('.titles').html(strLi)
+                datas = response
+            })
+        })
+        function showContent(index) {
+            $('.con').html(datas[index].content)
+            $('.right-tit').html(datas[index].top)
+        }  
+    </script>
+</head>
+
+<body style="background-color: #f4f4f4;">
+    <div class="wrap">
+        <div id="nav">
+            <div class="nav-box">
+                <div class="nav-left">
+                    <ul>
+                        <li class="site" style="width: 95px;">
+                            <a href="">中文网
+                                <i class="angle"></i>
+                            </a>
+                            <ul class="submenu01">
+                                <li style="width: 95px;">女生网</li>
+                                <li style="width: 95px;">男生网</li>
+                                <li style="width: 95px;">新书院</li>
+                            </ul>
+                        </li>
+                        <li>玄幻</li>
+                        <li>都市</li>
+                        <li>仙侠</li>
+                        <li>科幻</li>
+                        <li>游戏</li>
+                        <li>排行</li>
+                        <li>
+                            <a href="">更多
+                                <i class="angle"></i>
+                            </a>
+                            <ul class="submenu02">
+                                <li>全部作品</li>
+                                <li>轻小说</li>
+                                <li>奇幻</li>
+                                <li>武侠</li>
+                                <li>悬疑</li>
+                                <li>军事</li>
+                                <li>现实</li>
+                                <li>体育</li>
+                                <li>短篇</li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <ul>
+                        <li><a href="index.html">首页</a> </li>   
+                        <li><a href="index.html">退出</a></li>                    
+                        <li><a href="#" style="font-weight: bold;font-size: 16px;">帮助中心</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="help-head">
+                <div class="head-box">
+                    <h2>会员帮助中心</h2>
+                    <div class="head-box-right">
+                        <span style="color: rgba(236, 86, 40, 0.925);">用户指南</span> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <span
+                            class="link">客服中心</span>
+                    </div>
+                </div>
+            </div>
+            <div class="help-box">
+                <div class="box-left">
+                    <h3>我是读者</h3>
+                    <ul class="titles">
+
+                    </ul>
+                    <hr>
+                    <h4>我是作者 &gt;</h4>
+                </div>
+                <div class="box-right">
+                    <div class="right-tit">
+                        <h3>注册与登录</h3>
+                    </div>
+                    <hr>
+                    <div class="con">
+                        <br>
+                        <h4>1.什么是账号</h4><br>
+                        <p>账号是您在使用网站及起点读书APP的重要身份标识，注册账号后，您可登录进行VIP升级、管理书架、充值并阅读付费章节等操作。</p><br>
+                        <h4>2.如何注册账号</h4><br>
+                        <p>您可以通过首页注册帐号进入注册页面。有2种注册方式：手机号注册及邮箱注册；</p><br>
+                        <h4>3.昵称是否可以修改</h4><br>
+                        <p>新用户注册成功后，会自动分配一个“书友”+数字的随机昵称，您可以进行修改，方法如下：
+                            <p /><br>
+                            <p>1） 在正确填写注册信息提交后，可在新手导航页面中进行昵称修改。</p>
+                            <p>2） 在首页右上方登录帐号密码→点击自己的“昵称”跳转至用户主页→点击用户信息下方的“设置”→点击个人资料昵称旁</p>
+                            <p>的“修改昵称”→按要求填写昵称→点击“保存”即可。</p>
+                            <p>3） 昵称设置之后以付费（10000起点币）的方式每隔三个月再次进行修改。修改方式：在个人中心点击个人头像，进入信息</p>
+                            <p>修改页点击修改。</p><br>
+                            <h4>4.为什么会提示“账号被锁定”</h4>
+                            <p>账号在本归属地正确登录后的短时间内，禁止该账号在非归属地进行登录认证。请确认该账号是否是短时间内在其他地方登录</p>
+                            <p>过，如果情况属实请稍后再试。</p><br>
+                            <h4>5.忘记起点账号、密码如何找回？</h4>
+                            <p>在登录框点击右下角“忘记密码”进入找回申请页面。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="help-footer">
+            <div class="black">
+                上海网警提示：网络刷单是违法 切莫轻信有返利，网上交友套路多 卖惨要钱需当心，电子红包莫轻点 个人信息勿填写，仿冒客服来行骗 官方核实最重要，招工诈骗有套路 预交费用需谨慎，低价充值莫轻信
+                莫因游戏陷套路，连接WIFI要规范 确认安全再连接，抢购车票有章法 确认订单再付款，白条赊购慎使用 提升额度莫轻信，网购预付有风险 正规渠道很重要 如网民接到962110电话，请立即接听。<br>
+                <br>
+                关于我们&nbsp; 联系我们&nbsp; 加入我们&nbsp; 帮助中心&nbsp; 提交建议&nbsp; 举报中心&nbsp;<br>
+            </div>
+            <br>
+            <div class="a6a6a6">
+                Copyright © 2002-2020 www.qidian.com All Rights Reserved版权所有 上海玄霆娱乐信息科技有限公司<br>
+
+                沪公网安备 31011502001275号网站备案/许可证号：沪B2-20080046-1 出版经营许可证：新出发沪批字第 U3718 号 网络文化经营许可证：沪网文[2015]0081-031
+                （总）网出证（沪）字第006号<br>
+
+                请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！举报电话：010-59357051<br>
+
+                本站所收录的作品、社区话题、用户评论、用户上传内容或图片等均属用户个人行为。如前述内容侵害您的权益，欢迎举报投诉，一经核实，立即删除，本站不承担任何责任<br>
+
+                联系方式 总机 021-61870500 地址：中国（上海）自由贸易试验区碧波路690号6号楼101、201室<br>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onscroll = function () {
+            var top = document.documentElement.scrollTop
+            if (top >= 60) {
+                nav.className = 'fixed'
+            } else {
+                nav.className = 'static'
+            }
+        }
+    </script>
+</body>
+
+</html>

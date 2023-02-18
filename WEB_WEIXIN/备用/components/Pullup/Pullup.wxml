@@ -1,0 +1,10 @@
+<!--components/PullUp/PullUp.wxml-->
+<view>
+  <view>
+    <van-cell title="设备信息：" is-link bind:click="showPopup" value='{{Deviceto}}' />
+    <van-popup show="{{ show }}" round position="bottom" custom-style="height: 20%" bind:close="onCloseBtn" />
+    <van-action-sheet show="{{ show }}" actions="{{ lele }}" bind:close="onClose" bind:select="onSelect"
+      cancel-text="取消" bind:cancel='onCancelBtn' />
+  </view>
+  <slot></slot>
+</view>

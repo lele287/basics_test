@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的首页</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/user.css">
+    <script src="js/user.js"></script>
+</head>
+<body style="background-color: #f4f4f4;">
+    <div class="container">
+        <div class="nav">
+            <div class="nav_center">
+                <img src="images/logo3.png" width="185" height="61" alt="">
+                <p>个人中心</p>
+                <div id="aa">
+                    <ul class="nav_a">
+                        <li><a href="index.html">回到首页</a></li>
+                        <li><a href="bookcase.html">我的书架</a> </li>
+                        <li>消息中心</li>
+                        <li>游戏</li>
+                        <li >我的首页</li>
+                        <li>用户
+                            <ul class="nav_b">
+                                <li><a href="Recharge.html">充值</a></li>
+                                <li>设置</li>
+                                <li><a href="login.html">退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main_left">
+                <div class="main_left_a">
+                    <ul class="uull">
+                        <li>首页</li>
+                        <li>账务中心</li>
+                        <li>我的票夹</li>
+                        <li>我的红包</li>
+                        <li>我的书评</li>
+                        <li>我的本章说</li>
+                    </ul>
+                </div>
+                <div class="main_left_b">
+                    <ul class="uull">
+                        <li>经验值等级</li>
+                        <li>任务</li>
+                        <li>徽章</li>
+                    </ul>
+                </div>
+                <div class="main_left_c uull">
+                    <ul>
+                        <li>会员中心</li>
+                        <li>安全中心</li>
+                        <li>作家专区</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_right">
+                <div class="main_right_a">
+                    <div class="main_right_a_a">
+                        <button>个人主页</button>
+                        <p id="user1">书友</p>
+                        <div class="liv">Lv0</div>
+                    </div>
+                    <div class="bighead">
+                        <img src="https://qidian.gtimg.com/qd/images/ico/default_user.0.2.png"onclick="add()">
+                        <input type="file" name="" >
+                    </div>
+                    <div class="main_right_a_b">
+                        <div class="degree"></div>
+                        <div class="main_right_a_b_a">
+                            <p>安全级别</p>
+                            <div class="main_right_a_b_a_div"></div>
+                            <span><i>0</i>/100</span>
+                        </div>
+                        <div class="main_right_a_b_b">
+                            <ul>
+                                <li>关注&nbsp;&nbsp;<i>0</i></li>
+                                <li>粉丝&nbsp;&nbsp;<i>0</i></li>
+                                <li>大神之光&nbsp;&nbsp;<i>0</i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_right_b">
+                    <div class="main_right_b1">
+                        <p><strong>账户余额</strong> </p>
+                        <p><i> <strong id="aq">0</strong> </i>￥</p>
+                        <hr align=center width=150 color=#ccc SIZE=1>
+                        <a href="Recharge.html">充值</a>
+                    </div>
+                    <div class="main_right_b2">
+                        <p><strong>我的票夹</strong> </p>
+                        <p><i> <strong>0</strong> </i>月票</p>
+                        <hr align=center width=150 color=#ccc SIZE=1>
+                        <a href="">立即查看</a>
+                    </div>
+                    <div class="main_right_b3">
+                        <p><strong>我的书架</strong> </p>
+                        <p><i> <strong>0</strong> </i>本藏书</p>
+                        <hr align=center width=150 color=#ccc SIZE=1>
+                        <a href="">立即查看</a>
+                    </div>
+                    <div class="main_right_b4">
+                        <p><strong>我的书单</strong> </p>
+                        <p><i> <strong id="bb">0</strong> </i>起点币</p>
+                        <hr align=center width=150 color=#ccc SIZE=1>
+                        <a href="">立即查看</a>
+                    </div>
+                </div>
+                <div class="main_right_c">
+                    <p> <strong>猜你喜欢</strong> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-in">
+            <ul class="footer-ul">
+                <li>关于Dream</li>
+                <li>联系我们</li>
+                <li>我要举报</li>
+                <li>用户协议</li>
+                <li>隐私协议</li>
+                <li>版权声明</li>
+                <li>作品登载规则</li>
+                <li>我要当作家</li>
+            </ul>
+            <div class="footer-p">
+                <p>上海七猫文化传媒有限公司 © 2017 www.qimao.com All rights reserved 沪ICP备17012825号-6 沪公网安备 31011502010023号 </p>
+                <p>出版物经营许可证 新出发沪批字第Y7129号 沪网文 [2017] 4325-303号 沪ICP证：沪B2-20190085</p>
+                <div class="footer-img">
+                    <a href="#"><img src="images/about/company_pic1.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic2.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic3.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic4.png" alt=""></a>
+                    <a href="#"><img src="images/about/company_pic6.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

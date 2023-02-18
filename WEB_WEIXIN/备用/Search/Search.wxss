@@ -1,0 +1,18 @@
+/* pages/Search/Search.wxss */
+.History{
+  color: #b5b6b7;
+  display: flex;
+  justify-content: space-between;
+}
+.HistoryList{
+  display: flex;
+  flex-wrap: wrap;
+}
+.HistoryList_Text{
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  margin: 10rpx 10rpx;
+  border: 1px solid transparent;
+  border-radius: 10rpx;
+  background-color: #f6f6f6;
+}

@@ -1,0 +1,95 @@
+<view class="subject">
+  <!-- <view class="trademarkImg">
+    <image src="../../images/icon/setUp1.png" class="imageIcon"></image>
+  </view> -->
+  <view class="TipsTit">基本信息</view>
+  <view class="InformationBorder">
+    <view class="row">
+      <view class="tit">设备编号</view>
+      <view class="Val">{{Report.EquipmentCode}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">设备类型</view>
+      <view class="Val">{{Report.EquipmentTypeName}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">设备名称</view>
+      <view class="Val">{{Report.EquipmentName}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">设备型号</view>
+      <view class="Val">{{Report.EquipmentModelName}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">时间</view>
+      <view class="Val">{{Report.InfoTime}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">维护</view>
+      <view class="Val">{{Report.MaintenanceAging}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">门店码</view>
+      <view class="Val">{{Report.ShopCode}}</view>
+    </view>
+    <view class="row">
+      <view class="tit">门店名称</view>
+      <view class="Val">{{Report.ShopName}}</view>
+    </view>
+  </view>
+  <view class="TipsTit">详细信息</view>
+  <view>
+    <van-cell-group border="{{ false }}">
+      <view class="spacing">
+        <!-- <van-field model:value="{{ FaultClassification }}" label="故障分类:" placeholder="请输入故障分类" /> -->
+        <!--设备分类 弹出层 -->
+        <view>
+          <!-- <text class="Marked {{Marked[0]?'':'MarkedHidden'}}">*</text> -->
+          <van-cell bind:click="onFaultClassificationDisplay" is-link title="故障分类" model:value="{{FaultClassificationVal}}" />
+          <!-- 下拉选中 -->
+          <van-dialog show="{{ FaultClassificationState }}" title="请选择故障分类" use-slot show-cancel-button
+            bind:close="onFaultClassificationBlank" bind:confirm="FaultClassificationYes"
+            bind:cancel="FaultClassificationNo">
+            <van-picker columns="{{ FaultClassificationData }}" bind:change="onFaultClassification" />
+          </van-dialog>
+        </view>
+      </view>
+      <view class="spacing">
+        <van-field model:value="{{ TroubleShooting }}" label="故障问题：" placeholder="请输入故障问题" />
+      </view>
+      <view class="spacing">
+        <van-field model:value="{{ Repairman }}" label="报修人：" placeholder="请输入报修人" />
+      </view>
+      <view class="spacing">
+        <van-field model:value="{{ describe }}" label="描述：" autosize placeholder="请输入描述" />
+      </view>
+      <view class="spacing">
+        <van-field model:value="{{ remarks }}" label="备注：" autosize placeholder="请输入备注" />
+      </view>
+    </van-cell-group>
+  </view>
+  <view>
+    <view>
+      <van-cell title="是否派工" center="true" size="large" border="{{false}}">
+        <van-switch checked="{{ DispatchNot }}" bind:change="onDispatch" size="50rpx" />
+      </van-cell>
+    </view>
+    <view wx:if="{{DispatchNot}}">
+      <van-cell-group border="{{ false }}">
+        <view class="spacing">
+          <van-field model:value="{{ ServiceProvider }}" label="服务商：" placeholder="请输入服务商" />
+        </view>
+        <view class="spacing">
+          <van-field model:value="{{ AssignEngineer }}" label="指派工程师：" placeholder="请输入指派工程师" />
+        </view>
+      </van-cell-group>
+    </view>
+  </view>
+  <view class="btnSubmit">
+    <van-button type="primary" size="large" round color="#1989fa" bindtap="Submit">
+      <van-icon name="completed" class="dlico" color="#fff" />提交</van-button>
+  </view>
+</view>
+
+<!-- 组件 -->
+<!-- <van-toast id="van-toast" /> -->

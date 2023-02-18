@@ -1,0 +1,15 @@
+<view class="top">
+  <text bindtap="rebo" class="{{index==0?'default':'active'}}">基本信息</text>
+  <text bindtap="shang" class="{{index==1?'default':'active'}}">站点设备</text>
+</view>
+<swiper current="{{index}}" class="swiperContent" bindchange="change">
+  <swiper-item>
+    <include src="basicInformation.wxml"></include>
+  </swiper-item>
+  <swiper-item>
+    <include src="siteEquipment.wxml"></include>
+  </swiper-item>
+</swiper>
+
+<!-- 组件 -->
+<van-toast id="van-toast" />

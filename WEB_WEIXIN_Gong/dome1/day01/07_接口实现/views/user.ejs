@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <!-- <form>
+            <div class="form-group">
+                <label for="inputEmail1" class="control-label">EquipmentCode":</label>
+                <div class="">
+                    <input type="text" class="form-control" id="inputEmail1" placeholder="EquipmentCode" value="01180001" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail2" class="control-label">EquipmentTypeName</label>
+                <div class="">
+                    <input type="text" class="form-control" id="inputEmail2" placeholder="EquipmentTypeName" readonly value="网关路由器">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="control-label">EquipmentName</label>
+                <div class="">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="EquipmentName" value="深信服MIG" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail4" class="control-label">EquipmentModelName</label>
+                <div class="">
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="EquipmentModelName" value="MIG-1000-A500" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail5" class="control-label">"InfoTime</label>
+                <div class="">
+                    <input type="text" class="form-control" id="inputEmail5" placeholder="InfoTime" value="2018-12-04T17:06:25+08:00" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail6" class="control-label">MaintenanceAging</label>
+                <div class="">
+                    <input type="text" class="form-control" id="inputEmail6" placeholder="MaintenanceAging" value="3" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail6" class="control-label">ShopCode</label>
+                <div class="">
+                    <input type="text" class="form-control" id="inputEmail6" placeholder="ShopCode" value="203238" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail6" class="control-label">ShopName</label>
+                <div class="">
+                    <input type="text" class="form-control" id="inputEmail6" placeholder="ShopName" value="眉州路店" readonly>
+                </div>
+            </div>
+        </form> -->
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <td>EquipmentCode</td>
+                    <td>01180001</td>
+                </tr>
+                <tr>
+                    <td>EquipmentTypeName</td>
+                    <td>网关路由器</td>
+                </tr>
+                <tr>
+                    <td>EquipmentName</td>
+                    <td>深信服MIG</td>
+                </tr>
+                <tr>
+                    <td>EquipmentModelName</td>
+                    <td>MIG-1000-A500</td>
+                </tr>
+                <tr>
+                    <td>InfoTime</td>
+                    <td>2018-12-04T17:06:25+08:00</td>
+                </tr>
+                <tr>
+                    <td>MaintenanceAging</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>ShopCode</td>
+                    <td>203238</td>
+                </tr>
+                <tr>
+                    <td>ShopName</td>
+                    <td>眉州路店</td>
+                </tr>
+            </table>
+        </div>
+        <div class="container">
+            <div class="dropdown upDownPadd">
+                <span>设备信息：</span>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                请选择设备信息
+              </button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item" onclick="DropDownToSelect(this)">dddddd</li>
+                </ul>
+            </div>
+            <div class="dropdown upDownPadd">
+                <span>故障分类：</span>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    请选择故障分类
+              </button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item" onclick="DropDownToSelect(this)">dddddd</li>
+                    <li class="dropdown-item" onclick="DropDownToSelect(this)">dddddd</li>
+                </ul>
+            </div>
+            <div class="dropdown upDownPadd">
+                <span>故障问题：</span>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    请选择故障问题
+              </button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item" onclick="DropDownToSelect(this)">1dddddd</li>
+                    <li class="dropdown-item" onclick="DropDownToSelect(this)">2dddddd</li>
+                </ul>
+            </div>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="Repairmana">报修人：</label>
+                <input type="text" class="form-control" id="Repairmana" placeholder="请输入报修人" value="管理员">
+            </div>
+            <div class="form-group">
+                <span>描述：</span>
+                <textarea class="form-control" placeholder="请输入描述信息" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="Repairmanb">备注：</label>
+                <input type="text" class="form-control" id="Repairmanb" placeholder="请输入备注信息" value="">
+            </div>
+            <div class="btn-group" role="group" aria-label="...">
+                <span class="dispatch">是否派遣员工：</span>
+                <button type="button" class="btn btn-default guan">否</button>
+                <button type="button" class="btn btn-default kai" style="background-color: #007bff;">是</button>
+            </div>
+            <div id="staffs">
+                <div class="form-group">
+                    <label for="Repairmacn">服务商：</label>
+                    <input type="text" class="form-control" id="Repairmanc" placeholder="请输入服务商信息" value="">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    $('.guan').click(function() {
+        $('.kai').css('backgroundColor', '')
+        $('.guan').css('backgroundColor', '#007bff')
+        $("#staffs").hide();
+    })
+    $('.kai').click(function() {
+        $('.guan').css('backgroundColor', '')
+        $('.kai').css('backgroundColor', '#007bff')
+        $("#staffs").show();
+    })
+
+    function DropDownToSelect(data) {
+        $(data).parent().prev().text($(data).text())
+    }
+</script>
+<style>
+    html {
+        font-size: 16px;
+    }
+    
+    @media only screen and (min-width: 401px) {
+        html {
+            font-size: 25px !important;
+        }
+    }
+    
+    @media only screen and (min-width: 428px) {
+        html {
+            font-size: 26.75px !important;
+        }
+    }
+    
+    @media only screen and (min-width: 481px) {
+        html {
+            font-size: 30px !important;
+        }
+    }
+    
+    @media only screen and (min-width: 569px) {
+        html {
+            font-size: 35px !important;
+        }
+    }
+    
+    @media only screen and (min-width: 641px) {
+        html {
+            font-size: 40px !important;
+        }
+    }
+    
+    .form-group {
+        margin: 0 0.8rem;
+    }
+    
+    .upDownPadd {
+        padding: 0.2rem 0;
+    }
+    
+    .kai,
+    .guan {
+        line-height: 1em;
+        height: 2rem;
+        padding: 0.3rem 0.5rem!important;
+        border: 1px solid #007bff;
+    }
+    
+    .btn-group {
+        margin: 0.5rem 0 !important;
+    }
+    
+    .guan {
+        border-top-left-radius: 5px!important;
+        border-bottom-left-radius: 5px!important;
+    }
+    
+    .kai {
+        border-top-right-radius: 5px!important;
+        border-bottom-right-radius: 5px!important;
+    }
+    
+    .btn-group {
+        padding: 0 0.8rem;
+    }
+    
+    .dispatch {
+        line-height: 2rem;
+    }
+    
+    #staffs {
+        padding-bottom: 1rem;
+    }
+</style>
+<!-- {"EquipmentCode":"01180001","EquipmentTypeName":"网关路由器","EquipmentName":"深信服MIG","EquipmentModelName":"MIG-1000-A500","InfoTime":"2018-12-04T17:06:25+08:00","MaintenanceAging":3,"ShopCode":"203238","ShopName":"眉州路店"} -->
+
+</html>

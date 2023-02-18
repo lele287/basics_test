@@ -1,0 +1,13 @@
+<!--pages/myimg/myimg.wxml-->
+<image src="/images/haibao/game01.jpg"></image>
+<text>默认方式</text>
+<image src="/images/haibao/game01.jpg" mode="scaleToFill"></image>
+<text>scaleToFill</text>
+<image src="/images/haibao/game01.jpg" mode="aspectFill"></image>
+<text>aspectFill</text>
+<image src="/images/haibao/game01.jpg" mode="aspectFit"></image>
+<text>aspectFit</text>
+<image src="/images/haibao/game01.jpg" mode="widthFix"></image>
+<text>widthFix</text>
+<image src="/images/haibao/game01.jpg" mode="top"></image>
+<text>top</text>

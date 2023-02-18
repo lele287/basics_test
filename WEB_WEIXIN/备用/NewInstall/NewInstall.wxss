@@ -1,0 +1,21 @@
+/* pages/NewInstall/NewInstall.wxss */
+.Marked{
+  color: #f00;
+  position: relative;
+  left: 15rpx;
+  top: 85rpx;
+  z-index: 1;
+}
+.MarkedHidden{
+  visibility:hidden;
+}
+.dlico{
+  font-size: 40rpx;
+  position: relative;
+  top: 8rpx;
+}
+
+
+.van-button{
+  height: 80rpx!important;
+}
